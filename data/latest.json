@@ -1,366 +1,417 @@
 {
-  "date": "2026-06-04",
+  "date": "2026-06-05",
   "updatedCount": 20,
   "items": [
     {
-      "id": "github-langchain-framework",
-      "slug": "github-langchain-framework",
-      "author": "langchain-ai",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/langchain-ai/langchain",
-      "sourceKind": "link",
-      "publishedAt": "2026-06-04T08:00:00.000+08:00",
-      "title": "LangChain：构建 LLM 应用和 Agent 工作流的开源框架",
-      "summary": "LangChain 适合放进推荐流，因为它不是单篇资讯，而是一套围绕 LLM 应用、工具调用、检索和 Agent 编排的开源基础设施。读者可以从项目结构和文档学习 AI 应用工程化方法。",
-      "tags": [
-        "GitHub",
-        "LangChain",
-        "AI Agent",
-        "LLM 应用"
-      ],
-      "featured": true
-    },
-    {
-      "id": "github-autogen-agent-framework",
-      "slug": "github-autogen-agent-framework",
-      "author": "microsoft",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/microsoft/autogen",
-      "sourceKind": "link",
-      "publishedAt": "2026-06-04T07:50:00.000+08:00",
-      "title": "AutoGen：学习多智能体协作的开源框架",
-      "summary": "AutoGen 的学习价值在于它把多个 Agent 的对话、协作、工具调用和任务分解组织成框架。想理解多智能体系统如何从 demo 走向工程实现，可以从这个项目开始。",
-      "tags": [
-        "GitHub",
-        "AutoGen",
-        "多智能体",
-        "AI Agent"
-      ]
-    },
-    {
-      "id": "github-mcp-servers",
-      "slug": "github-mcp-servers",
-      "author": "modelcontextprotocol",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/modelcontextprotocol/servers",
-      "sourceKind": "link",
-      "publishedAt": "2026-06-04T07:40:00.000+08:00",
-      "title": "MCP Servers：给 AI 助手接入外部工具和数据源的开源集合",
-      "summary": "这个项目适合关注 MCP 的读者。它展示了 AI 助手如何通过标准协议连接文件、数据库、浏览器、开发工具等外部能力，是理解 MCP 生态和插件化工作流的入口。",
-      "tags": [
-        "GitHub",
-        "MCP",
-        "工具调用",
-        "插件"
-      ]
-    },
-    {
-      "id": "github-openai-cookbook",
-      "slug": "github-openai-cookbook",
-      "author": "openai",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/openai/openai-cookbook",
-      "sourceKind": "link",
-      "publishedAt": "2026-06-04T07:30:00.000+08:00",
-      "title": "OpenAI Cookbook：用示例学习 OpenAI API、RAG 和工具调用",
-      "summary": "OpenAI Cookbook 的价值是把抽象 API 文档转成可运行示例。它适合用来学习结构化输出、函数调用、RAG、评估和应用开发，比单纯看产品更新更有复用价值。",
-      "tags": [
-        "GitHub",
-        "OpenAI",
-        "RAG",
-        "API 教程"
-      ]
-    },
-    {
-      "id": "youtube-codex-plugins-agent-demo",
-      "slug": "youtube-codex-plugins-agent-demo",
+      "id": "0",
+      "slug": "codex-10-plugins-demo",
       "author": "松小鼠呀",
       "platform": "YouTube",
       "sourceUrl": "https://www.youtube.com/watch?v=kxBCLl6eexE",
       "sourceKind": "video",
       "youtubeVideoId": "kxBCLl6eexE",
-      "publishedAt": "2026-06-03T22:00:00.000+08:00",
+      "publishedAt": "2026-06-04T23:21:47.837Z",
       "title": "Codex 10个必装插件！实战演示：自动生成酷炫动画、视频、网页游戏和手机App，快速上手AI Agent",
-      "summary": "这条视频适合想快速理解 Codex 插件价值的人。它用演示型内容展示插件如何把动画、视频、网页游戏和 App 生成串成一条 AI Agent 工作流。",
+      "summary": "围绕 Codex 插件和 AI Agent 实战展开，用演示型内容帮助读者理解插件如何把生成动画、视频、网页游戏和 App 的流程串起来。适合希望快速掌握 Codex 扩展能力、通过插件实现复杂自动化生成的开发者。",
       "tags": [
         "Codex",
         "插件",
         "AI Agent"
-      ]
+      ],
+      "featured": true
     },
     {
-      "id": "youtube-codex-beginner-office-automation",
-      "slug": "youtube-codex-beginner-office-automation",
+      "id": "1",
+      "slug": "codex-beginner-tutorial",
       "author": "木子不写代码",
       "platform": "YouTube",
       "sourceUrl": "https://www.youtube.com/watch?v=hGaKA3cfMjk",
       "sourceKind": "video",
       "youtubeVideoId": "hGaKA3cfMjk",
-      "publishedAt": "2026-06-03T21:30:00.000+08:00",
-      "title": "Codex 零基础终极教程：功能、办公、编程、自动化一次讲透",
-      "summary": "它把 Codex 从编程助手扩展到办公、自动化和日常任务处理，适合新手建立工具全局观，也适合判断哪些任务可以交给 AI 协作完成。",
+      "publishedAt": "2026-06-04T23:21:47.837Z",
+      "title": "Codex 零基础终极教程：功能、办公、编程、自动化一次讲透！",
+      "summary": "面向零基础用户系统讲 Codex 的办公、编程和自动化用途，适合作为新用户理解 AI 编程助手与通用自动化工作流的入口。内容覆盖全面，适合希望从零建立 AI 辅助工作流认知的读者。",
       "tags": [
         "Codex",
         "自动化",
-        "办公提效"
-      ]
+        "教程"
+      ],
+      "featured": false
     },
     {
-      "id": "youtube-codex-agent-complete-guide",
-      "slug": "youtube-codex-agent-complete-guide",
+      "id": "2",
+      "slug": "activepieces-ai-automation",
+      "author": "activepieces",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/activepieces/activepieces",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T22:08:01.000Z",
+      "title": "Activepieces：AI Agents & MCPs & AI Workflow Automation",
+      "summary": "Activepieces 是一个强大的 AI 自动化平台，支持约 400 个 MCP 服务器，用于构建 AI Agent 和工作流。适合需要集成多种 AI 工具、实现复杂自动化流程的开发者和团队，提供高可扩展性的 AI 工作流解决方案。",
+      "tags": [
+        "GitHub",
+        "MCP",
+        "开源项目",
+        "AI 工作流",
+        "TypeScript"
+      ],
+      "metrics": {
+        "stars": "22565"
+      },
+      "featured": false
+    },
+    {
+      "id": "3",
+      "slug": "hexabot-ai-automation",
+      "author": "hexabot-ai",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/hexabot-ai/Hexabot",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T08:04:46.000Z",
+      "title": "Hexabot v3：AI 自动化平台，整合工作流、Agent 和对话渠道",
+      "summary": "Hexabot v3 是一个 AI 自动化平台，将工作流、动作、Agent 和对话渠道整合在一个运行时中。适合需要构建多模态 AI 交互应用、自动化业务流程的团队，提供统一的 AI 应用开发环境。",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
+        "AI Agent",
+        "TypeScript"
+      ],
+      "metrics": {
+        "stars": "969"
+      },
+      "featured": false
+    },
+    {
+      "id": "4",
+      "slug": "codex-interactive-prototypes",
+      "author": "OpenAI",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=_9ImjmzAyus",
+      "sourceKind": "video",
+      "youtubeVideoId": "_9ImjmzAyus",
+      "publishedAt": "2026-06-04T18:06:29.000Z",
+      "title": "在 Codex 中构建和分享交互式原型",
+      "summary": "OpenAI 发布的 Codex 产品设计插件演示，帮助团队从粗糙想法快速构建可交互原型。通过安装插件，Codex 能辅助产品团队探索方向、构建原型并快速迭代，适合产品经理和设计师提升原型制作效率。",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "AI 工作流",
+        "视频"
+      ],
+      "featured": false
+    },
+    {
+      "id": "5",
+      "slug": "skales-local-ai-agent",
+      "author": "skalesapp",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/skalesapp/skales",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T16:38:36.000Z",
+      "title": "Skales：本地优先的 AI 桌面 Agent，支持多平台自动化",
+      "summary": "Skales 是一个本地优先的 AI 桌面 Agent，支持 Windows、macOS、Linux 和 Android。它支持目标驱动自动化、多 Agent 协作、工作流和桌面/浏览器自动化，无需 Docker 或终端，适合追求隐私和高效本地 AI 自动化的用户。",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
+        "AI Agent",
+        "TypeScript"
+      ],
+      "metrics": {
+        "stars": "1057"
+      },
+      "featured": false
+    },
+    {
+      "id": "6",
+      "slug": "nanobrowser-ai-automation",
+      "author": "nanobrowser",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/nanobrowser/nanobrowser",
+      "sourceKind": "link",
+      "publishedAt": "2025-11-24T11:10:03.000Z",
+      "title": "Nanobrowser：开源 Chrome 扩展，实现 AI 驱动的网页自动化",
+      "summary": "Nanobrowser 是一个开源 Chrome 扩展，允许用户使用自己的 LLM API 键运行多 Agent 工作流，作为 OpenAI Operator 的替代方案。适合需要自定义网页自动化流程、保护数据隐私的开发者，支持灵活的 AI 集成。",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
+        "AI Agent",
+        "TypeScript"
+      ],
+      "metrics": {
+        "stars": "13087"
+      },
+      "featured": false
+    },
+    {
+      "id": "7",
+      "slug": "github-mcp-server",
+      "author": "github",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/github/github-mcp-server",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T21:27:03.000Z",
+      "title": "GitHub MCP Server：GitHub 官方 MCP 服务器",
+      "summary": "GitHub 官方发布的 MCP 服务器，允许 AI 助手直接访问 GitHub 功能。适合需要将代码仓库管理、Issue 跟踪等集成到 AI 工作流的开发者，提供安全、官方的 GitHub 数据接入方式。",
+      "tags": [
+        "GitHub",
+        "MCP",
+        "开源项目",
+        "AI 工作流",
+        "Go"
+      ],
+      "metrics": {
+        "stars": "30429"
+      },
+      "featured": false
+    },
+    {
+      "id": "8",
+      "slug": "skyvern-ai-browser-automation",
+      "author": "Skyvern-AI",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/Skyvern-AI/skyvern",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T22:20:09.000Z",
+      "title": "Skyvern：使用 AI 自动化基于浏览器的复杂工作流",
+      "summary": "Skyvern 是一个利用 AI 自动化浏览器工作流的开源项目，支持复杂的网页交互任务。适合需要批量处理网页操作、数据抓取或表单填写的场景，提供高可靠性的 AI 驱动自动化解决方案。",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
+        "AI Agent",
+        "Python"
+      ],
+      "metrics": {
+        "stars": "21824"
+      },
+      "featured": false
+    },
+    {
+      "id": "9",
+      "slug": "fastmcp-python-mcp",
+      "author": "PrefectHQ",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/PrefectHQ/fastmcp",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T17:12:48.000Z",
+      "title": "FastMCP：快速构建 MCP 服务器和客户端的 Python 库",
+      "summary": "FastMCP 是一个 Python 库，提供快速、Pythonic 的方式构建 MCP 服务器和客户端。适合 Python 开发者快速集成 MCP 协议，构建 AI 工具接口，简化 MCP 服务器的开发和维护过程。",
+      "tags": [
+        "GitHub",
+        "MCP",
+        "开源项目",
+        "Python"
+      ],
+      "metrics": {
+        "stars": "25489"
+      },
+      "featured": false
+    },
+    {
+      "id": "10",
+      "slug": "bytechef-ai-orchestration",
+      "author": "bytechefhq",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/bytechefhq/bytechef",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T19:46:07.000Z",
+      "title": "ByteChef：统一 AI Agent 编排和工作流自动化的开源平台",
+      "summary": "ByteChef 是一个开源平台，统一了 AI Agent 编排和工作流自动化，强调自主性和精确性。适合需要构建复杂 AI 应用、管理多 Agent 协作和自动化流程的企业级用户，提供强大的平台支持。",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
+        "AI Agent",
+        "Java"
+      ],
+      "metrics": {
+        "stars": "770"
+      },
+      "featured": false
+    },
+    {
+      "id": "11",
+      "slug": "dify-agentic-workflow",
+      "author": "langgenius",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/langgenius/dify",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T18:31:09.000Z",
+      "title": "Dify：生产就绪的 Agent 工作流开发平台",
+      "summary": "Dify 是一个生产就绪的 AI 应用开发平台，专注于 Agent 工作流开发。适合需要快速构建、部署和管理 AI Agent 应用的团队，提供可视化工具和强大的后端支持，降低 AI 应用开发门槛。",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
+        "AI Agent",
+        "TypeScript"
+      ],
+      "metrics": {
+        "stars": "143882"
+      },
+      "featured": false
+    },
+    {
+      "id": "12",
+      "slug": "nanobot-lightweight-agent",
+      "author": "HKUDS",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/HKUDS/nanobot",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T18:00:31.000Z",
+      "title": "NanoBot：轻量级开源 AI Agent，用于工具、聊天和工作流",
+      "summary": "NanoBot 是一个轻量级、开源的 AI Agent，适用于工具调用、聊天和工作流自动化。适合需要嵌入式或轻量级 AI 解决方案的开发者，提供易于集成和扩展的 Agent 框架。",
+      "tags": [
+        "GitHub",
+        "AI Agent",
+        "开源项目",
+        "Python"
+      ],
+      "metrics": {
+        "stars": "43671"
+      },
+      "featured": false
+    },
+    {
+      "id": "13",
+      "slug": "codex-complete-tutorial",
       "author": "學長Ethan",
       "platform": "YouTube",
       "sourceUrl": "https://www.youtube.com/watch?v=tfeCwDT-5m0",
       "sourceKind": "video",
       "youtubeVideoId": "tfeCwDT-5m0",
-      "publishedAt": "2026-06-03T21:00:00.000+08:00",
-      "title": "Codex 保姆级完整教学：从入门到进阶，学会指挥你的 AI Agent",
-      "summary": "这条视频覆盖从入门到进阶的 Codex 指挥方式，重点不是看功能清单，而是学习如何把内容、网页、影片和 App 生成拆成可执行任务。",
+      "publishedAt": "2026-06-04T23:21:47.837Z",
+      "title": "Codex 保姆级完整教学：从入门到进阶，自动生成内容、网页、影片和 App",
+      "summary": "从入门到进阶详细讲解 Codex 与 AI Agent 的指挥方式，覆盖内容、网页、影片和 App 的自动生成。符合本站对可复用实操教程的筛选标准，适合希望系统掌握 Codex 高级用法的用户。",
       "tags": [
         "Codex",
         "AI Agent",
         "内容生成"
-      ]
+      ],
+      "featured": false
     },
     {
-      "id": "blog-simon-llm-practical-notes",
-      "slug": "blog-simon-llm-practical-notes",
+      "id": "14",
+      "slug": "cowagent-super-assistant",
+      "author": "zhayujie",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/zhayujie/CowAgent",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T15:17:59.000Z",
+      "title": "CowAgent：开源超级 AI 助手与 Agent 框架，支持多模型多通道",
+      "summary": "CowAgent 是一个开源超级 AI 助手和 Agent 框架，支持任务规划、工具运行和技能扩展，具备记忆和知识增长能力。支持多模型、多通道，轻量且易于扩展，适合构建个性化 AI 助手应用。",
+      "tags": [
+        "GitHub",
+        "AI Agent",
+        "开源项目",
+        "Python"
+      ],
+      "metrics": {
+        "stars": "45059"
+      },
+      "featured": false
+    },
+    {
+      "id": "15",
+      "slug": "codex-sales-teams",
+      "author": "OpenAI",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=U2C55LC0ZLM",
+      "sourceKind": "video",
+      "youtubeVideoId": "U2C55LC0ZLM",
+      "publishedAt": "2026-06-04T19:32:57.000Z",
+      "title": "Codex 助力销售团队：更快解决客户问题",
+      "summary": "展示销售团队如何利用 Codex 进行准备工作，如快速提取客户数据、创建演示原型、发送定期 Slack 更新等。适合销售团队和 B2B 业务人员，提升客户响应速度和服务质量。",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "AI 工作流",
+        "视频"
+      ],
+      "featured": false
+    },
+    {
+      "id": "16",
+      "slug": "n8n-free-templates",
+      "author": "wassupjay",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/wassupjay/n8n-free-templates",
+      "sourceKind": "link",
+      "publishedAt": "2025-08-01T16:55:04.000Z",
+      "title": "200+ 免费 n8n 工作流模板，融合经典自动化与 AI 栈",
+      "summary": "提供 200 多个即插即用的 n8n 工作流模板，结合向量数据库、嵌入和 LLM 等 AI 技术。用户导入 JSON 并添加凭证即可激活，适合快速演示、原型开发或直接投入生产，加速 AI 自动化项目落地。",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
+        "AI 工作流"
+      ],
+      "metrics": {
+        "stars": "5840"
+      },
+      "featured": false
+    },
+    {
+      "id": "17",
+      "slug": "cancelling-ai-subscription",
       "author": "Simon Willison",
       "platform": "个人博客",
-      "sourceUrl": "https://simonwillison.net/",
+      "sourceUrl": "https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/#atom-everything",
       "sourceKind": "article",
-      "publishedAt": "2026-06-03T18:00:00.000+08:00",
-      "title": "Simon Willison 的 LLM 实战笔记：从工具使用看 AI 应用开发",
-      "summary": "这是英文内容也应该进入推荐流的典型例子。Simon 的文章通常围绕真实工具、模型限制、提示词和应用实现展开，适合读者学习可验证的 AI 开发经验。",
+      "publishedAt": "2026-05-31T16:31:32.000Z",
+      "title": "解决方案可能是取消我的 AI 订阅",
+      "summary": "作者反思 AI 工具使用中的注意力分散问题，指出许多 AI 项目往往偏离初衷。文章引发对 AI 工具使用效率和订阅价值的思考，适合关注 AI 工具实际效用和成本管理的读者。",
       "tags": [
-        "英文文章",
         "LLM",
         "AI 工具",
-        "实战"
-      ]
+        "英文文章"
+      ],
+      "featured": false
     },
     {
-      "id": "blog-langchain-agent-workflow",
-      "slug": "blog-langchain-agent-workflow",
-      "author": "LangChain",
-      "platform": "官方博客",
-      "sourceUrl": "https://blog.langchain.com/",
-      "sourceKind": "article",
-      "publishedAt": "2026-06-03T17:00:00.000+08:00",
-      "title": "LangChain 官方博客：学习 Agent 工作流和工具调用设计",
-      "summary": "LangChain 官方博客适合跟进 Agent 工程化实践。即使原文是英文，标题和推荐理由也应中文化，让读者先判断是否值得进入原文深入学习。",
+      "id": "18",
+      "slug": "pipelex-declarative-workflows",
+      "author": "Pipelex",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/Pipelex/pipelex",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T15:30:07.000Z",
+      "title": "Pipelex：用于组合 AI 工作流的声明式语言",
+      "summary": "Pipelex 是一种用于构建可组合 AI 工作流的声明式语言，专为 Agent 和普通开发者设计。适合需要清晰、模块化定义 AI 工作流的团队，提供简洁的工作流描述方式。",
       "tags": [
-        "英文文章",
-        "LangChain",
-        "AI Agent",
-        "工作流"
-      ]
-    },
-    {
-      "id": "juejin-codex-agents-skills-mcp",
-      "slug": "juejin-codex-agents-skills-mcp",
-      "author": "Lei_official",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7616666752521404416",
-      "sourceKind": "article",
-      "publishedAt": "2026-03-14T09:00:00.000+08:00",
-      "title": "Codex 工程化实践指南：深入理解 AGENTS.md、SKILL.md 与 MCP",
-      "summary": "这篇文章把 AGENTS.md、SKILL.md 和 MCP 放到同一个工程化框架里讲，适合想把 Codex 从聊天工具用成团队协作 Agent 的读者。",
-      "tags": [
-        "Codex",
-        "AGENTS.md",
-        "MCP"
+        "GitHub",
+        "LLM",
+        "工作流",
+        "Python"
       ],
       "metrics": {
-        "reads": "2275"
-      }
+        "stars": "679"
+      },
+      "featured": false
     },
     {
-      "id": "juejin-gemini-doubao-watermark",
-      "slug": "juejin-gemini-doubao-watermark",
-      "author": "AI方叔",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7594103243686166571",
-      "sourceKind": "article",
-      "publishedAt": "2026-01-13T09:00:00.000+08:00",
-      "title": "AI 生图去水印终极指南：Gemini + 豆包，一行命令搞定",
-      "summary": "文章围绕 Gemini 和豆包生图后的水印处理给出具体工具和操作路径。它的价值在于把一个常见内容生产问题变成可执行的小流程。",
+      "id": "19",
+      "slug": "claude-forge-plugin-framework",
+      "author": "sangrokjung",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/sangrokjung/claude-forge",
+      "sourceKind": "link",
+      "publishedAt": "2026-05-20T07:34:18.000Z",
+      "title": "Claude Forge：为 Claude Code 增强的 11 个 AI Agent 插件框架",
+      "summary": "Claude Forge 是一个受 oh-my-zsh 启发的 Claude Code 插件框架，提供 11 个 AI Agent、36 个命令和 15 个技能，包含 6 层安全钩子。适合希望扩展 Claude Code 功能、提升开发效率的开发者。",
       "tags": [
-        "Gemini",
-        "豆包",
-        "AI 生图"
+        "GitHub",
+        "LLM",
+        "工作流",
+        "Shell"
       ],
       "metrics": {
-        "reads": "1432"
-      }
-    },
-    {
-      "id": "juejin-yuanbao-doubao-jimeng-video",
-      "slug": "juejin-yuanbao-doubao-jimeng-video",
-      "author": "沐言AIGC创业",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7495648783343108107",
-      "sourceKind": "article",
-      "publishedAt": "2025-04-22T09:00:00.000+08:00",
-      "title": "用腾讯元宝、豆包和即梦拆解 AI 视频项目工作流",
-      "summary": "这是一篇典型 AI 视频项目拆解，覆盖腾讯元宝生成分镜、豆包生成图片、即梦生成视频和剪映剪辑，适合学习内容变现型工作流。",
-      "tags": [
-        "腾讯元宝",
-        "豆包",
-        "即梦"
-      ],
-      "metrics": {
-        "reads": "1043"
-      }
-    },
-    {
-      "id": "juejin-jimeng-prompt-guide",
-      "slug": "juejin-jimeng-prompt-guide",
-      "author": "软件之家",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7615445777147838500",
-      "sourceKind": "article",
-      "publishedAt": "2026-03-11T09:00:00.000+08:00",
-      "title": "即梦 AI 必记指令：保姆级提示词完整入门教程",
-      "summary": "这篇文章适合刚接触即梦 AI 的读者，用简单路径解释提示词、图片和视频生成的基础玩法，可以作为生图和视频工具入门材料。",
-      "tags": [
-        "即梦",
-        "提示词",
-        "AI 视频"
-      ],
-      "metrics": {
-        "reads": "877"
-      }
-    },
-    {
-      "id": "juejin-doubao-desktop-guide",
-      "slug": "juejin-doubao-desktop-guide",
-      "author": "编程干货铺",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7473027144920203275",
-      "sourceKind": "article",
-      "publishedAt": "2025-02-19T09:00:00.000+08:00",
-      "title": "豆包桌面版高效使用指南",
-      "summary": "文章把豆包桌面版的网页总结、文档伴读、划词提问、翻译和快捷键整理成使用指南，适合把 AI 助手嵌入日常学习工作。",
-      "tags": [
-        "豆包",
-        "桌面助手",
-        "效率工具"
-      ],
-      "metrics": {
-        "reads": "9034"
-      }
-    },
-    {
-      "id": "juejin-doubao-api-workflow",
-      "slug": "juejin-doubao-api-workflow",
-      "author": "AI淇橦学",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7606923064946573352",
-      "sourceKind": "article",
-      "publishedAt": "2026-02-19T09:00:00.000+08:00",
-      "title": "了解豆包 API：把聊天能力接入自动化和工作流",
-      "summary": "文章用小白能理解的方式解释免费聊天和 API 的区别，适合想把豆包能力接入自动化、产品或工作流的人建立基础概念。",
-      "tags": [
-        "豆包 API",
-        "自动化",
-        "工作流"
-      ],
-      "metrics": {
-        "reads": "315"
-      }
-    },
-    {
-      "id": "juejin-mcp-agent-executor",
-      "slug": "juejin-mcp-agent-executor",
-      "author": "花千树_010",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7632205670868795442",
-      "sourceKind": "article",
-      "publishedAt": "2026-04-24T09:00:00.000+08:00",
-      "title": "McpAgentExecutor：用几行代码让模型自主调用 HTTP 工具多步推理",
-      "summary": "它关注 MCP、Function Calling 和 Agent 多步推理的工程落地，适合已经会调模型但想把工具链封装成可复用执行器的开发者。",
-      "tags": [
-        "MCP",
-        "Function Calling",
-        "Agent"
-      ],
-      "metrics": {
-        "reads": "43"
-      }
-    },
-    {
-      "id": "juejin-agent-core-loop",
-      "slug": "juejin-agent-core-loop",
-      "author": "掘金作者",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7623356498711117851",
-      "sourceKind": "article",
-      "publishedAt": "2026-04-01T09:00:00.000+08:00",
-      "title": "从零开始理解 Agent：100 行代码理解 AI 智能体核心循环",
-      "summary": "这篇文章适合作为 Agent 入门材料，因为它尝试用少量代码解释智能体循环，比单纯概念介绍更容易让读者理解工具调用和状态推进。",
-      "tags": [
-        "AI Agent",
-        "入门教程",
-        "代码实践"
-      ]
-    },
-    {
-      "id": "juejin-rpa-doubao-geo",
-      "slug": "juejin-rpa-doubao-geo",
-      "author": "用户916887000755",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7618141138446532617",
-      "sourceKind": "article",
-      "publishedAt": "2026-03-18T09:00:00.000+08:00",
-      "title": "火语言 RPA：豆包问答内容采集案例",
-      "summary": "文章展示用 RPA 批量向豆包提问、采集回答并写入 Excel 的流程。它对自动化采集、GEO 分析和 AI 问答数据整理有实操参考。",
-      "tags": [
-        "豆包",
-        "RPA",
-        "GEO"
-      ],
-      "metrics": {
-        "reads": "57"
-      }
-    },
-    {
-      "id": "juejin-claude-code-skills",
-      "slug": "juejin-claude-code-skills",
-      "author": "Flittly",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7614884374551183395",
-      "sourceKind": "article",
-      "publishedAt": "2026-03-09T09:00:00.000+08:00",
-      "title": "从零手写 Claude Code：理解 Skill 技能加载机制",
-      "summary": "这篇把 Skill 的按需加载机制讲得很具体，能帮助读者理解为什么 AI Agent 不应该把所有知识塞进系统提示，而要按任务加载能力。",
-      "tags": [
-        "Claude Code",
-        "Skill",
-        "Agent"
-      ],
-      "metrics": {
-        "reads": "156"
-      }
-    },
-    {
-      "id": "juejin-implement-claude-code-skill",
-      "slug": "juejin-implement-claude-code-skill",
-      "author": "镜花水月linyi",
-      "platform": "掘金",
-      "sourceUrl": "https://juejin.cn/post/7622650862809694262",
-      "sourceKind": "article",
-      "publishedAt": "2026-03-30T09:00:00.000+08:00",
-      "title": "如何实现一个 Claude Code Skill：从底层原理到生产实践",
-      "summary": "这篇不只是介绍 Skill 概念，而是从发现、触发、上下文传递和执行调度讲到生产实践，适合想自己设计 Skill 的读者。",
-      "tags": [
-        "Claude Code",
-        "Skill",
-        "生产实践"
-      ],
-      "metrics": {
-        "reads": "340"
-      }
+        "stars": "733"
+      },
+      "featured": false
     }
   ]
 }
