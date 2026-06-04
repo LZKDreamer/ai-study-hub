@@ -16,6 +16,7 @@ out/
 
 # Local logs and caches
 *.log
+*.tsbuildinfo
 .cache/
 .DS_Store
 Thumbs.db

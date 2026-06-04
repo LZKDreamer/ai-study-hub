@@ -1,0 +1,40 @@
+name: Daily AI Study Hub Content
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "10 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate daily content
+        run: npm run generate:daily
+        env:
+          AI_PROVIDER: agnes
+          AI_BASE_URL: https://apihub.agnes-ai.com/v1
+          AI_API_KEY: ${{ secrets.AGNES_AI_API_KEY }}
+          AI_MODEL: agnes-2.0-flash
+          MAX_DAILY_AI_CALLS: 25
+
+      - name: Commit generated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update daily AI Study Hub content"
+          file_pattern: "data/latest.json data/daily/*.json"

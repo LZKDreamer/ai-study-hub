@@ -1,0 +1,1555 @@
+{
+  "date": "2026-06-04",
+  "updatedCount": 20,
+  "items": [
+    {
+      "id": "news-codex-cli-workflow",
+      "slug": "codex-cli-end-to-end-workflow",
+      "type": "AI最新资讯",
+      "category": "AI最新资讯",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/news/",
+      "publishedAt": "2026-06-04T08:30:00+08:00",
+      "relativeTime": "2 小时前",
+      "title": "Codex CLI 工作流能力增强：AI 编程更接近端到端执行",
+      "summary": "这条更新的学习价值在于，它把 AI 编程从单次问答推进到项目级任务执行。对经常让 Codex 改页面、写脚本、补测试的人来说，关键不是模型会不会写代码，而是它能否理解仓库、执行命令、根据反馈继续修正。",
+      "tags": [
+        "Codex",
+        "CLI",
+        "AI 编程",
+        "开发工具"
+      ],
+      "attentionLabel": "为什么值得关注",
+      "attention": "它会直接影响 AI 编程助手的使用方式，让需求分析、代码修改、命令验证和结果复盘更容易串成一个闭环。",
+      "audience": "用 Codex 做真实项目、脚本自动化和前端页面的人。",
+      "visualKind": "codex",
+      "featured": true,
+      "article": {
+        "quote": "真正值得关注的不是多了一个命令，而是 AI 开始更稳定地进入完整工程流程。",
+        "originalContent": [
+          "这条内容适合放在 AI Study Hub 的资讯区，因为它直接影响工具用法。Codex CLI 的价值不只是生成代码，而是把读取仓库、制定修改计划、执行命令、观察报错和继续修复这些步骤放进同一个工作流。",
+          "对个人开发者来说，这意味着你可以把一个模糊需求交给 AI 拆成可执行任务；对团队来说，它更像一个可以参与工程流程的协作者，但最终判断仍然需要人来完成。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个内容在讲什么？",
+            "paragraphs": [
+              "它讲的是 AI 编程工具从“回答代码问题”走向“参与项目执行”。CLI 形态的价值在于接近真实开发环境，可以读取文件、运行检查、根据输出继续调整。"
+            ]
+          },
+          {
+            "heading": "02. 它为什么值得关注？",
+            "paragraphs": [
+              "很多人用 AI 写代码失败，并不是模型完全不会写，而是上下文不完整、反馈不连续。端到端工作流让 AI 能看到更多项目状态，减少只靠复制粘贴的断裂。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "实践时可以先从小任务开始，例如修一个样式问题、补一个测试、重构一个函数。让 Codex 先读项目，再给出计划，然后执行并验证。不要一开始就交给它大范围重构。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Codex 负责理解和修改代码，终端命令负责验证，Git 负责观察变更。人负责定义边界、确认风险和决定是否合并。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "把常见任务写成固定提示模板：改页面、补测试、修 CI、整理文档。每次都要求 AI 说明改了什么、如何验证、还有哪些风险。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得持续跟进。它不是魔法按钮，但会改变个人开发者使用 AI 的基本姿势。越是重复、可验证、边界清晰的工程任务，越适合先接入。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Codex",
+            "role": "理解仓库、修改代码、解释实现取舍。"
+          },
+          {
+            "name": "CLI",
+            "role": "提供真实命令执行环境，让 AI 能根据结果迭代。"
+          },
+          {
+            "name": "Git",
+            "role": "记录变更边界，方便人类审查和回滚。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "news-chatgpt-research",
+      "slug": "chatgpt-research-to-implementation-brief",
+      "type": "AI最新资讯",
+      "category": "AI最新资讯",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/news/",
+      "publishedAt": "2026-06-04T06:10:00+08:00",
+      "relativeTime": "5 小时前",
+      "title": "ChatGPT 研究型工作流更适合产出可执行需求说明",
+      "summary": "研究型能力的关键用途不是让模型写一篇很长的报告，而是把多来源材料压缩成明确的背景、限制、方案和待验证问题。它很适合作为 Codex 开始编码前的需求整理步骤。",
+      "tags": [
+        "ChatGPT",
+        "深度研究",
+        "需求说明",
+        "资料整理"
+      ],
+      "attentionLabel": "为什么值得关注",
+      "attention": "它能把“先看懂资料”这一步结构化，减少直接让 AI 写代码时需求不清导致的返工。",
+      "audience": "产品经理、开发者、内容研究和咨询顾问。",
+      "visualKind": "research",
+      "article": {
+        "quote": "研究能力最有价值的输出不是长文，而是能交给下一步工具执行的清晰 brief。",
+        "originalContent": [
+          "这条资讯的学习点在于 ChatGPT 可以承担前置研究角色。它把网页、文档、视频摘要和用户想法合并，整理成目标、约束、可选方案和风险。",
+          "当这个 brief 再交给 Codex、设计工具或自动化脚本时，后续执行会更稳定。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个内容在讲什么？",
+            "paragraphs": [
+              "它讲的是把 ChatGPT 当作研究和需求整理工具，而不是只让它写答案。核心输出应该是结构化信息。"
+            ]
+          },
+          {
+            "heading": "02. 它为什么值得关注？",
+            "paragraphs": [
+              "AI 项目失败常常不是编码能力问题，而是输入问题。先整理清楚资料和边界，后续工具才有机会做对。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "给 ChatGPT 一组材料，让它输出背景、用户目标、关键约束、实现建议、待确认问题。再把这份结果交给 Codex 实现。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "ChatGPT 负责研究和归纳，Codex 负责实现，GitHub Issues 或 Markdown 文档负责沉淀需求。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "把研究输出模板固定下来，每个新项目先生成 brief，再开始写代码或做页面。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它能显著减少“想到哪问到哪”的低效工作方式。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "ChatGPT",
+            "role": "整理多来源材料，形成结构化 brief。"
+          },
+          {
+            "name": "Codex",
+            "role": "根据 brief 执行具体代码修改。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "news-image-workflow",
+      "slug": "nano-banana-visual-assets-workflow",
+      "type": "AI最新资讯",
+      "category": "AI最新资讯",
+      "source": "Model Release Notes",
+      "sourceUrl": "https://example.com/source-placeholder",
+      "publishedAt": "2026-06-04T04:20:00+08:00",
+      "relativeTime": "7 小时前",
+      "title": "图像生成模型更适合批量制作教程配图和产品素材",
+      "summary": "图像模型升级的重点应从“画得好不好看”转向“能不能稳定服务内容流程”。如果模型能保持风格一致、支持局部修正，就可以用于文章封面、步骤图、产品图和社媒素材批量生产。",
+      "tags": [
+        "Nano Banana",
+        "AI 绘图",
+        "内容素材",
+        "批量生产"
+      ],
+      "attentionLabel": "为什么值得关注",
+      "attention": "它能降低图文教程和产品展示的制作成本，让技术文章不再只有文字说明。",
+      "audience": "内容创作者、电商运营、独立开发者。",
+      "visualKind": "image",
+      "article": {
+        "quote": "内容生产真正需要的是稳定输出，而不是偶尔生成一张惊艳图片。",
+        "originalContent": [
+          "这类更新值得收录，是因为它影响 AI 内容工作流。模型如果能保持主体一致、局部可控、批量生成，就能进入真实生产流程。",
+          "对 AI Study Hub 这类站点来说，它还可以用于为每篇案例生成统一风格的封面和流程示意图。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个内容在讲什么？",
+            "paragraphs": [
+              "它关注图像模型在真实内容生产里的可控性，包括风格一致、局部修改和批量生成。"
+            ]
+          },
+          {
+            "heading": "02. 它为什么值得关注？",
+            "paragraphs": [
+              "教程和案例需要大量配图。人工设计慢，纯随机生成又不稳定，可控模型能填补这个空档。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "先定义固定视觉模板，再把文章标题、工具名、场景关键词填入提示词。生成后只允许局部调整，不要每次重新发散。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "图像模型负责素材生成，内容脚本负责批量组织提示词，人工负责最后筛选和品牌一致性检查。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "为每类文章建立封面模板：资讯、案例、教程、Skill。保持色彩和构图一致。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得，但要把它当作流程工具，而不是单张图玩具。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Nano Banana",
+            "role": "生成封面、产品图和局部修正素材。"
+          },
+          {
+            "name": "批量脚本",
+            "role": "把表格或 JSON 转成稳定提示词。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "news-mcp-agent",
+      "slug": "mcp-agent-tool-boundary",
+      "type": "AI最新资讯",
+      "category": "AI最新资讯",
+      "source": "MCP Community",
+      "sourceUrl": "https://modelcontextprotocol.io/",
+      "publishedAt": "2026-06-04T02:00:00+08:00",
+      "relativeTime": "9 小时前",
+      "title": "MCP 生态继续扩展：Agent 工具边界变得更清晰",
+      "summary": "MCP 的价值不是多接几个插件，而是把模型能访问的数据、动作和权限边界标准化。对想做 AI Agent 的人来说，理解 MCP 比盲目堆工具更重要。",
+      "tags": [
+        "MCP",
+        "AI Agent",
+        "工具调用",
+        "插件"
+      ],
+      "attentionLabel": "为什么值得关注",
+      "attention": "它决定了 AI Agent 如何安全地读取上下文、调用工具、写回结果，是后续自动化系统的基础设施。",
+      "audience": "正在做 Agent、插件、自动化助手的开发者。",
+      "visualKind": "agent",
+      "article": {
+        "quote": "Agent 的能力上限不只取决于模型，也取决于它能安全使用哪些工具。",
+        "originalContent": [
+          "MCP 相关内容值得优先关注，因为它连接了模型和外部系统。一个 Agent 如果不能稳定读取文件、搜索资料、操作应用，就很难解决真实问题。",
+          "但工具越多，权限边界越重要。MCP 的学习价值在于让工具接入和上下文传递更标准。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个内容在讲什么？",
+            "paragraphs": [
+              "它讲的是 MCP 作为模型上下文和工具协议，如何让 Agent 更标准地接入外部能力。"
+            ]
+          },
+          {
+            "heading": "02. 它为什么值得关注？",
+            "paragraphs": [
+              "没有清晰工具边界的 Agent 很容易变成演示玩具。MCP 让数据源、工具调用和权限管理有了统一接口。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "先从只读工具开始，例如读取文档、查询任务、检索代码。确认稳定后再开放写操作。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "MCP Server 暴露资源和动作，模型负责推理，宿主应用负责权限和执行。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "把重复查询、资料整理、代码上下文读取做成 MCP 工具，先解决一个小场景。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它是理解下一代 AI 工具生态的关键入口。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "MCP",
+            "role": "标准化上下文、资源和工具调用。"
+          },
+          {
+            "name": "AI Agent",
+            "role": "基于目标选择工具并组织执行步骤。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-codex-pr-review",
+      "slug": "codex-github-actions-pr-review",
+      "type": "实战案例",
+      "category": "实战案例",
+      "source": "YouTube",
+      "sourceUrl": "https://example.com/codex-github-actions-pr-review",
+      "publishedAt": "2026-06-04T09:20:00+08:00",
+      "relativeTime": "2 小时前",
+      "title": "用 Codex + GitHub Actions 搭建 AI 自动化 PR 审查助手",
+      "summary": "这个案例把 Codex 接入 GitHub Actions，在 PR 提交后自动检查代码风格、测试结果和潜在问题，并生成审查建议。它适合想提升团队代码质量但人手有限的小团队。",
+      "tags": [
+        "Codex",
+        "GitHub Actions",
+        "代码审查",
+        "DevOps"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "人工审查 PR 耗时、标准不一，容易漏掉重复问题。这个工作流让基础检查先由 AI 自动完成。",
+      "audience": "开发团队、开源维护者、技术负责人。",
+      "visualKind": "codex",
+      "article": {
+        "quote": "把 AI 放进 PR 流程，不是替代 Reviewer，而是先处理重复、低风险、容易遗漏的检查。",
+        "originalContent": [
+          "用 Codex + GitHub Actions 搭建自动化 PR 审查助手，本质上是在把 AI 从临时问答工具变成团队流程的一部分。开发者提交 PR 后，系统自动收集代码 diff、测试结果和项目规范，再让 Codex 根据固定标准输出审查意见。",
+          "这种做法的价值不在于让 AI 完全替代人工 Review，而是让 AI 先处理命名、测试缺口、异常处理、项目约定等基础问题。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个案例在讲什么？",
+            "paragraphs": [
+              "它演示的是一个典型 AI 编程自动化场景：PR 创建或更新时，GitHub Actions 自动触发，把本次改动交给 Codex 分析。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "小团队常见问题是审查很重要但没人有足够时间。AI 可以先做基础扫描，让人类 Reviewer 聚焦架构、业务和风险判断。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "添加 PR 触发 workflow，读取 diff 和测试结果，调用 Codex 输出结构化审查建议，再写回 PR 评论。提示词要明确检查项，不要只写“帮我看看”。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Codex 分析代码，GitHub Actions 触发流程并发布评论，测试命令提供客观验证结果。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "个人项目可以先让 AI 每天检查最近提交、生成变更说明，或者列出还缺测试的文件。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得小范围试用。它不会让代码审查完全自动化，但能把很多重复检查提前完成。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Codex",
+            "role": "分析代码 diff，输出审查建议。"
+          },
+          {
+            "name": "GitHub Actions",
+            "role": "监听 PR 事件并写回结果。"
+          },
+          {
+            "name": "测试命令",
+            "role": "提供可验证反馈，避免只看文本。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tutorial-chatgpt-industry-brief",
+      "slug": "chatgpt-custom-instructions-industry-analysis",
+      "type": "工具教程",
+      "category": "工具教程",
+      "source": "公众号",
+      "sourceUrl": "https://example.com/chatgpt-industry-analysis",
+      "publishedAt": "2026-06-04T07:40:00+08:00",
+      "relativeTime": "4 小时前",
+      "title": "ChatGPT 深度研究：如何用自定义指令做行业分析",
+      "summary": "文章演示如何把行业背景、输出格式和判断标准写进自定义指令，让 ChatGPT 生成更稳定的行业分析初稿，并减少来回修改的时间。",
+      "tags": [
+        "ChatGPT",
+        "提示词",
+        "行业分析",
+        "效率提升"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "临时提问容易输出泛泛内容。固定指令能让模型按你的业务标准产出更接近可用的分析。",
+      "audience": "市场分析、咨询顾问、产品经理、内容创作者。",
+      "visualKind": "research",
+      "article": {
+        "quote": "好的自定义指令不是写得长，而是把判断标准提前告诉模型。",
+        "originalContent": [
+          "这个教程适合需要重复产出行业分析的人。它把背景、目标、输出格式、参考口径写成固定指令，让 ChatGPT 每次都按相同框架工作。",
+          "这样做可以减少来回追问，也方便后续把结果交给团队讨论或交给 Codex 实现原型。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个教程在讲什么？",
+            "paragraphs": [
+              "它讲的是用自定义指令稳定 ChatGPT 的输出，而不是每次临时写一大段提示词。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "行业分析最怕空泛。固定背景和判断标准后，模型更容易输出可比较、可复用的内容。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "先写清业务场景，再定义输出结构：市场变化、用户痛点、竞品动作、机会判断、可执行建议。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "ChatGPT 负责归纳和生成，资料来源负责事实输入，人负责判断可信度和筛选结论。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "为不同工作建立不同指令：行业分析、竞品拆解、选题判断、会议纪要。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它是低成本提升 ChatGPT 稳定性的基础方法。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "ChatGPT",
+            "role": "根据固定标准生成行业分析初稿。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-nano-banana-product-images",
+      "slug": "nano-banana-batch-product-images",
+      "type": "实战案例",
+      "category": "实战案例",
+      "source": "GitHub",
+      "sourceUrl": "https://example.com/nano-banana-product-images",
+      "publishedAt": "2026-06-04T05:30:00+08:00",
+      "relativeTime": "6 小时前",
+      "title": "Nano Banana 批量生成电商产品图的完整工作流",
+      "summary": "这个项目把商品信息表、图片生成提示词和批量导出脚本结合起来，适合快速生成统一风格的商品展示图、文章配图和社媒素材。",
+      "tags": [
+        "Nano Banana",
+        "批量生成",
+        "电商",
+        "图片工作流"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "手工做产品图慢且风格不统一。批量工作流可以把图像生产变成可重复执行的流程。",
+      "audience": "电商运营、自媒体、独立开发者。",
+      "visualKind": "image",
+      "article": {
+        "quote": "批量图像生成的重点是控制变量，而不是每一张都重新发明提示词。",
+        "originalContent": [
+          "这个案例把商品表格、提示词模板和导出脚本串起来。每个商品只替换名称、卖点、颜色和场景，整体视觉保持一致。",
+          "它适合电商 SKU 多、内容节奏快、又没有设计团队的场景。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个案例在讲什么？",
+            "paragraphs": [
+              "它讲的是把图像生成变成批处理流程，而不是人工一张张提示。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "产品图制作慢、风格不统一、改版成本高。模板化之后，更新一批图只需要改数据和少量提示词。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "准备商品 CSV，建立提示词模板，批量调用图像模型，统一命名导出，再人工筛选。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "表格存数据，Nano Banana 生成图片，脚本负责批量调用和文件管理。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "把教程封面、公众号配图、短视频封面也做成同样的数据驱动流程。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得，尤其适合高频内容生产。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Nano Banana",
+            "role": "根据模板生成统一风格产品图。"
+          },
+          {
+            "name": "CSV/脚本",
+            "role": "批量组织商品信息和导出结果。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "skill-ui-ux-pro-max",
+      "slug": "ui-ux-pro-max-skill-for-codex",
+      "type": "Skill/插件",
+      "category": "Skill/插件",
+      "source": "GitHub",
+      "sourceUrl": "https://example.com/ui-ux-pro-max-skill",
+      "publishedAt": "2026-06-04T02:40:00+08:00",
+      "relativeTime": "9 小时前",
+      "title": "ui-ux-pro-max-skill：让 Codex 做前端页面时更懂设计",
+      "summary": "这个 Skill 提供设计系统、配色、排版和 UX 检查建议，能帮助 Codex 在生成页面前先确定设计语言，减少“功能能跑但页面不好看”的问题。",
+      "tags": [
+        "Codex",
+        "Skill",
+        "UI/UX",
+        "前端"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "AI 生成页面容易缺少视觉判断。这个 Skill 把设计规范前置，让实现更接近真实产品页面。",
+      "audience": "用 Codex 做网站、SaaS、仪表盘和原型的人。",
+      "visualKind": "skill",
+      "article": {
+        "quote": "前端生成质量的差距，很多时候来自设计判断，而不是代码语法。",
+        "originalContent": [
+          "这个 Skill 的价值在于给 Codex 增加设计前置约束。它会提醒模型考虑信息密度、按钮形态、卡片半径、配色比例和移动端适配。",
+          "对于经常让 AI 做页面的人来说，这类 Skill 能减少返工。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个 Skill 在讲什么？",
+            "paragraphs": [
+              "它把 UI/UX 规则写成 Codex 可遵循的工作说明，让模型在写代码前先形成视觉策略。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "很多 AI 页面能跑但不像产品。原因是缺少布局密度、交互控件和视觉层级判断。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "在前端任务中启用 Skill，先要求 Codex 读取现有样式，再按目标用户和页面场景做实现。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Skill 提供规则，Codex 执行代码实现，浏览器截图负责验证视觉结果。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "把自己的品牌色、组件规则和页面禁忌写进专属 Skill。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它能让 AI 前端工作从“能生成”靠近“可上线”。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Codex Skill",
+            "role": "把设计规则注入任务上下文。"
+          },
+          {
+            "name": "Browser",
+            "role": "用截图检查真实页面。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workflow-mcp-notion-research",
+      "slug": "mcp-notion-research-assistant",
+      "type": "工作流",
+      "category": "工作流",
+      "source": "Community",
+      "sourceUrl": "https://example.com/mcp-notion-research",
+      "publishedAt": "2026-06-03T23:10:00+08:00",
+      "relativeTime": "12 小时前",
+      "title": "MCP + Notion：把资料收集变成可追踪研究库",
+      "summary": "这个工作流用 MCP 读取网页收藏、会议纪要和 Notion 数据库，再让 AI 自动整理成主题卡片。它适合长期做 AI 工具研究和选题积累。",
+      "tags": [
+        "MCP",
+        "Notion",
+        "研究库",
+        "自动整理"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "资料分散在网页、笔记和聊天记录里，很难复用。MCP 可以让 AI 在受控范围内读取并整理这些信息。",
+      "audience": "研究员、内容创作者、产品经理。",
+      "visualKind": "agent",
+      "article": {
+        "quote": "研究资料不整理，就只是收藏夹；接入 MCP 后，它可以变成可查询的工作资产。",
+        "originalContent": [
+          "这个工作流把 Notion 当作资料库，把 MCP 当作连接层，让 AI 读取指定数据库并整理主题。",
+          "它适合每天收集 AI 工具更新的人，把零散链接变成可复用选题。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个工作流在讲什么？",
+            "paragraphs": [
+              "它讲的是用 MCP 连接 Notion，让 AI 在授权范围内读取资料并归类。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "收藏资料容易失控。自动整理可以把链接变成主题、摘要、标签和下一步行动。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "建立 Notion 数据库字段，配置 MCP 只读权限，让 AI 按固定模板输出研究卡片。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Notion 存资料，MCP 提供访问接口，AI 负责归纳和生成结构化内容。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "可以用于竞品库、选题库、客户反馈库和学习笔记库。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得，尤其适合资料量持续增长的人。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "MCP",
+            "role": "连接 Notion 数据和 AI。"
+          },
+          {
+            "name": "Notion",
+            "role": "沉淀结构化研究资料。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-agent-customer-support",
+      "slug": "ai-agent-customer-support-triage",
+      "type": "实战案例",
+      "category": "实战案例",
+      "source": "Hacker News",
+      "sourceUrl": "https://news.ycombinator.com/",
+      "publishedAt": "2026-06-03T21:30:00+08:00",
+      "relativeTime": "14 小时前",
+      "title": "AI Agent 客服分流：先分类，再交给人处理复杂问题",
+      "summary": "这个案例没有追求全自动客服，而是让 Agent 先识别问题类型、紧急程度和所需资料，再把复杂问题交给人工。它更符合真实团队的风险控制。",
+      "tags": [
+        "AI Agent",
+        "客服",
+        "分类",
+        "人工协同"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "客服消息多且优先级混乱，人工先读一遍很耗时。Agent 可以先做分流和资料补齐。",
+      "audience": "SaaS 团队、客服主管、运营负责人。",
+      "visualKind": "agent",
+      "article": {
+        "quote": "很多 Agent 场景不需要全自动，先把问题分对类就已经很有价值。",
+        "originalContent": [
+          "这个案例强调人机协同。Agent 负责读取客户消息、判断类别和紧急程度，人工负责复杂沟通和最终决策。",
+          "这种边界更安全，也更容易落地。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个案例在讲什么？",
+            "paragraphs": [
+              "它讲的是客服分流 Agent，而不是完全自动回复机器人。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "大量客服请求需要先判断优先级和责任人，这一步重复且耗时。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "定义分类标签、紧急程度和升级规则，让 Agent 只输出判断和建议，不直接承诺客户。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Agent 负责分类，知识库负责提供事实，人工客服负责处理复杂问题。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "也可以用于销售线索分级、Bug 报告整理和用户反馈归类。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它是 Agent 落地里风险较低、收益清晰的方向。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "AI Agent",
+            "role": "分类、提取字段、建议处理路径。"
+          },
+          {
+            "name": "知识库",
+            "role": "提供产品事实，减少幻觉。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tutorial-codex-static-site",
+      "slug": "codex-static-site-to-nextjs",
+      "type": "工具教程",
+      "category": "Codex",
+      "source": "GitHub",
+      "sourceUrl": "https://github.com/",
+      "publishedAt": "2026-06-03T20:20:00+08:00",
+      "relativeTime": "15 小时前",
+      "title": "用 Codex 把静态 HTML 迁移成 Next.js 数据驱动站点",
+      "summary": "教程展示如何先保留视觉语言，再抽出数据结构、组件和动态路由。它适合从静态预览走向正式网站，但又不想过早接入复杂数据库的项目。",
+      "tags": [
+        "Codex",
+        "Next.js",
+        "迁移",
+        "静态数据"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "静态页面改内容很快失控。迁移成数据驱动后，首页和详情页可以由 JSON/Markdown 自动生成。",
+      "audience": "独立开发者、内容站站长、前端学习者。",
+      "visualKind": "codex",
+      "article": {
+        "quote": "迁移的第一步不是重做视觉，而是把内容从 HTML 里解耦出来。",
+        "originalContent": [
+          "这个教程适合 AI Study Hub 当前阶段：已有静态预览，需要转成正式站点。",
+          "核心做法是建立数据文件、卡片组件、动态详情页和部署脚本。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个教程在讲什么？",
+            "paragraphs": [
+              "它讲的是从静态 HTML 迁移到 Next.js，而不是推翻重做设计。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "内容站每天更新，手写 HTML 会越来越难维护。数据驱动后可以让脚本生成内容。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "先抽出 JSON 数据，再写首页列表组件和 slug 详情页，最后接入生成脚本。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Next.js 负责路由和渲染，Tailwind 负责样式，Codex 负责迁移和验证。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "任何静态内容站都可以先按这个路径迁移。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它是从原型到可维护产品的关键一步。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Next.js",
+            "role": "提供静态生成和动态路由。"
+          },
+          {
+            "name": "Codex",
+            "role": "协助拆组件、改结构、跑验证。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workflow-youtube-rss",
+      "slug": "youtube-rss-ai-learning-pipeline",
+      "type": "工作流",
+      "category": "工作流",
+      "source": "YouTube RSS",
+      "sourceUrl": "https://www.youtube.com/",
+      "publishedAt": "2026-06-03T18:10:00+08:00",
+      "relativeTime": "17 小时前",
+      "title": "YouTube RSS + 字幕：把视频教程自动转成中文学习笔记",
+      "summary": "这个工作流通过频道 RSS 获取新视频，再读取标题、描述和字幕，让 AI 生成中文摘要、步骤拆解和工具标签。它适合跟踪 AI 工具频道。",
+      "tags": [
+        "YouTube",
+        "RSS",
+        "字幕",
+        "学习笔记"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "视频内容信息密度高但检索困难。自动转成笔记后，可以更快判断是否值得观看和复用。",
+      "audience": "AI 学习者、内容运营、技术博主。",
+      "visualKind": "research",
+      "article": {
+        "quote": "视频不一定要完整看完，先让 AI 判断它有没有学习价值。",
+        "originalContent": [
+          "这个工作流适合每天追踪 AI 教程频道。系统先读取 RSS，再拉取字幕或描述，最后生成中文学习笔记。",
+          "如果字幕不足，AI 只能写摘要和启发，不能编造操作步骤。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个工作流在讲什么？",
+            "paragraphs": [
+              "它讲的是把视频更新转成结构化中文内容。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "视频很难快速筛选，笔记化后可以先看价值再决定是否深看。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "订阅频道 RSS，获取新视频，读取字幕，调用 AI 生成摘要、步骤和标签。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "RSS 发现内容，字幕提供原始信息，AI 负责总结和拆解。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "可以用于课程追踪、竞品视频监控和选题库建设。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它能把视频学习变成可检索知识库。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "YouTube RSS",
+            "role": "发现新视频。"
+          },
+          {
+            "name": "字幕",
+            "role": "提供可总结文本。"
+          },
+          {
+            "name": "Agnes AI",
+            "role": "生成中文学习文章。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "skill-plugin-marketplace",
+      "slug": "codex-plugin-workflow-skill-packaging",
+      "type": "Skill/插件",
+      "category": "Skill/插件",
+      "source": "Codex Plugin",
+      "sourceUrl": "https://example.com/codex-plugin-skill",
+      "publishedAt": "2026-06-03T17:00:00+08:00",
+      "relativeTime": "18 小时前",
+      "title": "Codex 插件与 Skill 打包：把常用流程沉淀成团队能力",
+      "summary": "这篇内容展示如何把重复使用的提示词、脚本和工具说明打包成 Skill 或插件。相比每次复制提示词，团队可以维护一个统一入口。",
+      "tags": [
+        "Codex",
+        "插件",
+        "Skill",
+        "团队流程"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "个人提示词难以复用和协作。Skill/插件能把流程、脚本和规则固化下来，让团队共享。",
+      "audience": "使用 Codex 的团队、自动化爱好者。",
+      "visualKind": "skill",
+      "article": {
+        "quote": "当一个提示词重复出现三次，它就应该考虑变成 Skill。",
+        "originalContent": [
+          "这篇内容关注 Codex 能力沉淀。把提示词、脚本、模板和注意事项放进 Skill，能减少每次重新说明的成本。",
+          "团队还可以把工具接入做成插件，让成员通过统一能力完成任务。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个内容在讲什么？",
+            "paragraphs": [
+              "它讲的是把个人经验打包成可复用能力。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "重复流程靠口头说明容易丢失细节，Skill 可以把规则固定下来。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "整理触发场景、操作步骤、脚本和边界条件，写成 SKILL.md，并放入仓库或 Codex 技能目录。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Skill 提供流程知识，插件提供工具能力，Codex 负责执行。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "为代码审查、前端设计、内容生成、部署发布分别建立 Skill。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它能把 AI 使用经验从个人习惯变成团队资产。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Skill",
+            "role": "沉淀流程和判断标准。"
+          },
+          {
+            "name": "Plugin",
+            "role": "提供可调用工具和集成能力。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-github-release-monitor",
+      "slug": "github-release-monitor-ai-summary",
+      "type": "实战案例",
+      "category": "实战案例",
+      "source": "GitHub Releases",
+      "sourceUrl": "https://github.com/trending",
+      "publishedAt": "2026-06-03T15:30:00+08:00",
+      "relativeTime": "20 小时前",
+      "title": "GitHub Release 监控：每天自动总结 AI 工具新版本",
+      "summary": "这个案例用 GitHub API 追踪重点仓库 Release，把更新内容交给 AI 判断是否影响实际使用，再生成中文摘要。它适合做工具学习站的资讯源。",
+      "tags": [
+        "GitHub",
+        "Release",
+        "AI 摘要",
+        "自动采集"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "工具更新分散且英文较多，人工每天看很耗时。自动监控可以筛出真正影响使用方式的更新。",
+      "audience": "AI 工具站、开发者、技术运营。",
+      "visualKind": "codex",
+      "article": {
+        "quote": "不是所有 Release 都值得写，关键是判断它是否改变用户的工具用法。",
+        "originalContent": [
+          "这个案例适合 AI Study Hub 的自动化采集。脚本每天读取重点仓库 Release，再让 AI 判断学习价值。",
+          "输出不是翻译 changelog，而是解释对使用方式的影响。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个案例在讲什么？",
+            "paragraphs": [
+              "它讲的是用 GitHub Release 作为 AI 工具资讯源。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "人工追踪更新容易漏掉重点，自动筛选能提高稳定性。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "维护仓库白名单，读取最新 Release，去重后让 AI 生成中文摘要和关注理由。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "GitHub API 负责数据，AI 负责筛选和总结，静态 JSON 负责发布。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "可用于跟踪框架、模型库、开源 Agent 项目。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得，是内容站自动化的基础管道。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "GitHub API",
+            "role": "获取 Release 和仓库信息。"
+          },
+          {
+            "name": "Agnes AI",
+            "role": "判断更新价值并生成中文内容。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tutorial-agnes-adapter",
+      "slug": "agnes-openai-compatible-adapter",
+      "type": "工具教程",
+      "category": "工具教程",
+      "source": "Agnes AI Docs",
+      "sourceUrl": "https://agnes-ai.com/doc/agnes-20-flash",
+      "publishedAt": "2026-06-03T14:10:00+08:00",
+      "relativeTime": "21 小时前",
+      "title": "Agnes AI OpenAI-compatible Adapter：低成本生成中文学习文章",
+      "summary": "教程展示如何用 OpenAI-compatible API 形态接入 Agnes AI，并通过每日调用上限控制成本。它适合内容站把摘要、问题说明和详情文章自动生成。",
+      "tags": [
+        "Agnes AI",
+        "OpenAI-compatible",
+        "内容生成",
+        "成本控制"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "直接在业务代码里写死模型调用会难维护。Provider adapter 可以之后切换模型而不改内容流程。",
+      "audience": "内容站开发者、自动化脚本维护者。",
+      "visualKind": "agent",
+      "article": {
+        "quote": "先做 provider adapter，再做内容生成；这样未来换模型不会牵动整个系统。",
+        "originalContent": [
+          "这个教程对应本站自动化架构。Agnes AI 使用 OpenAI-compatible 形态，可以通过统一 adapter 调用。",
+          "API Key 放在环境变量，不提交仓库；脚本设置每日调用上限，避免异常循环。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个教程在讲什么？",
+            "paragraphs": [
+              "它讲的是如何把 Agnes AI 接成可替换的生成服务。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "模型、价格和可用性会变。adapter 能把变化限制在一层。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "读取 AI_BASE_URL、AI_API_KEY、AI_MODEL，按 OpenAI chat completions 格式发请求。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Agnes AI 负责生成内容，脚本负责组织提示词和写文件，GitHub Actions 负责定时运行。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "任何需要多模型切换的项目都可以采用 provider adapter。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它是低成本自动化内容站的关键模块。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Agnes AI",
+            "role": "生成中文摘要和文章。"
+          },
+          {
+            "name": "Provider Adapter",
+            "role": "隐藏不同模型供应商差异。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workflow-vercel-static-json",
+      "slug": "vercel-static-json-content-deploy",
+      "type": "工作流",
+      "category": "工作流",
+      "source": "Vercel",
+      "sourceUrl": "https://vercel.com/docs",
+      "publishedAt": "2026-06-03T12:00:00+08:00",
+      "relativeTime": "23 小时前",
+      "title": "Vercel + 静态 JSON：不接数据库也能每天更新内容站",
+      "summary": "这个工作流用 GitHub Actions 生成 JSON，再提交到仓库触发 Vercel 部署。它适合早期内容站，避免一开始就引入数据库和后台系统。",
+      "tags": [
+        "Vercel",
+        "静态 JSON",
+        "GitHub Actions",
+        "部署"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "数据库会增加运维复杂度。早期内容站可以先用静态文件验证内容结构和用户需求。",
+      "audience": "独立站开发者、内容产品负责人。",
+      "visualKind": "codex",
+      "article": {
+        "quote": "早期内容站最重要的是稳定更新和可维护，不是复杂后台。",
+        "originalContent": [
+          "这个工作流适合 AI Study Hub v1。每天脚本生成 data/latest.json，提交后 Vercel 自动部署。",
+          "它保留了静态站的简单性，也为后续迁移数据库留下空间。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个工作流在讲什么？",
+            "paragraphs": [
+              "它讲的是用静态 JSON 驱动内容更新。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "不用维护数据库和管理后台，也能每天自动发布新内容。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "GitHub Actions 定时运行脚本，生成 JSON，自动提交，Vercel 监听 main 分支部署。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "GitHub Actions 生成数据，Git 保存版本，Vercel 部署页面。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "适合博客、导航站、日报、工具榜单等轻内容产品。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它是验证内容产品的低复杂度路线。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "GitHub Actions",
+            "role": "定时生成内容。"
+          },
+          {
+            "name": "Vercel",
+            "role": "自动构建和部署。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-reddit-agent-ideas",
+      "slug": "reddit-ai-agent-idea-mining",
+      "type": "实战案例",
+      "category": "实战案例",
+      "source": "Reddit",
+      "sourceUrl": "https://www.reddit.com/",
+      "publishedAt": "2026-06-03T10:10:00+08:00",
+      "relativeTime": "1 天前",
+      "title": "Reddit 需求挖掘：用 AI 找出 Agent 产品的真实痛点",
+      "summary": "这个案例抓取公开讨论标题和评论摘要，让 AI 提取高频痛点、现有替代方案和用户愿意付费的信号。它适合做 Agent 产品选题。",
+      "tags": [
+        "Reddit",
+        "AI Agent",
+        "需求挖掘",
+        "产品验证"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "闭门造 Agent 容易做成演示玩具。公开社区讨论能帮助判断真实需求和场景边界。",
+      "audience": "独立开发者、产品经理、创业团队。",
+      "visualKind": "research",
+      "article": {
+        "quote": "先找真实痛点，再决定 Agent 做什么工具调用。",
+        "originalContent": [
+          "这个案例用公开社区讨论作为需求源。AI 不是直接给产品创意，而是从大量用户抱怨里提取重复问题。",
+          "它能帮助 Agent 项目先验证场景，而不是先写复杂自动化。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个案例在讲什么？",
+            "paragraphs": [
+              "它讲的是用 AI 分析 Reddit 公开讨论，寻找 Agent 产品机会。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "很多 Agent 产品没有真实需求，只是技术展示。需求挖掘能提高方向命中率。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "收集主题帖，提取问题、现有方案、付费信号和失败原因，再人工筛选。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Reddit 提供用户讨论，AI 负责归纳，产品人员负责判断机会。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "也可用于插件、SaaS、内容选题和教程需求分析。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得，但要遵守平台规则和隐私边界。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "AI 摘要",
+            "role": "提取高频痛点和场景。"
+          },
+          {
+            "name": "人工判断",
+            "role": "过滤噪音和不可行方向。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tutorial-prompt-eval",
+      "slug": "prompt-evaluation-for-ai-workflows",
+      "type": "工具教程",
+      "category": "工具教程",
+      "source": "LangChain Blog",
+      "sourceUrl": "https://blog.langchain.com/",
+      "publishedAt": "2026-06-03T09:00:00+08:00",
+      "relativeTime": "1 天前",
+      "title": "提示词评测：让 AI 工作流从“感觉不错”变成可比较",
+      "summary": "教程介绍如何为摘要、分类和文章生成建立测试样例，比较不同提示词的稳定性。它适合已经开始自动生成内容但担心质量波动的团队。",
+      "tags": [
+        "提示词",
+        "评测",
+        "工作流",
+        "质量控制"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "只凭肉眼感觉很难判断提示词是否变好。评测样例能让修改有依据。",
+      "audience": "AI 产品开发者、内容自动化维护者。",
+      "visualKind": "agent",
+      "article": {
+        "quote": "没有评测的提示词优化，本质上只是凭印象调参。",
+        "originalContent": [
+          "这个教程强调 AI 工作流需要质量控制。对内容站来说，摘要长度、分类准确度、是否编造步骤，都应该有测试样例。",
+          "每次改提示词，都用同一批样例比较输出。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个教程在讲什么？",
+            "paragraphs": [
+              "它讲的是为提示词建立评测，而不是只靠人工感觉。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "提示词改动可能让某些样例变好、另一些变差。评测能暴露这种变化。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "准备典型输入和期望标准，记录模型输出，对分类、长度、事实性和格式做检查。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "测试集提供基准，AI 生成输出，脚本计算规则检查，人复核少量样本。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "用于摘要、标题生成、标签分类、客服回复等所有重复任务。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得。它是 AI 自动化从玩具到系统的分界线。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Eval 数据集",
+            "role": "提供稳定比较基准。"
+          },
+          {
+            "name": "生成脚本",
+            "role": "批量运行提示词并记录结果。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workflow-huggingface-spaces",
+      "slug": "huggingface-spaces-demo-monitor",
+      "type": "工作流",
+      "category": "工作流",
+      "source": "Hugging Face",
+      "sourceUrl": "https://huggingface.co/spaces",
+      "publishedAt": "2026-06-03T08:00:00+08:00",
+      "relativeTime": "1 天前",
+      "title": "Hugging Face Spaces 监控：发现可学习的 AI Demo",
+      "summary": "这个工作流定期查看热门 Spaces，提取项目说明、模型标签和演示方式，再让 AI 判断是否值得拆解。它适合寻找可复用的 AI 工具案例。",
+      "tags": [
+        "Hugging Face",
+        "Spaces",
+        "Demo",
+        "案例库"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "优秀 Demo 分散且更新快。自动监控可以把值得学习的实现方式沉淀成案例。",
+      "audience": "AI 开发者、技术博主、工具研究者。",
+      "visualKind": "image",
+      "article": {
+        "quote": "Demo 的价值不只是试用，还在于拆解它背后的输入、模型和交互方式。",
+        "originalContent": [
+          "这个工作流把 Hugging Face Spaces 当作案例来源。脚本读取项目说明和标签，AI 判断它是否有学习价值。",
+          "适合为 AI Study Hub 补充实战案例。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个工作流在讲什么？",
+            "paragraphs": [
+              "它讲的是监控 Hugging Face Spaces，发现值得拆解的 AI Demo。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "手动浏览 Demo 效率低，自动筛选能快速建立案例库。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "读取热门 Spaces，提取 README、标签和示例，生成中文拆解。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Spaces 提供 Demo，AI 负责总结，人工负责验证是否真的可用。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "用于发现模型应用、交互模式和开源实现。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得，是寻找实战素材的好来源。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Hugging Face Spaces",
+            "role": "提供可试用 Demo。"
+          },
+          {
+            "name": "AI 摘要",
+            "role": "拆解模型、输入和交互方式。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-producthunt-tools",
+      "slug": "product-hunt-ai-tool-digest",
+      "type": "实战案例",
+      "category": "实战案例",
+      "source": "Product Hunt",
+      "sourceUrl": "https://www.producthunt.com/",
+      "publishedAt": "2026-06-03T07:10:00+08:00",
+      "relativeTime": "1 天前",
+      "title": "Product Hunt AI 工具日报：只保留能改变工作流的新品",
+      "summary": "这个案例不是简单搬运新品榜，而是让 AI 判断每个工具解决什么任务、替代什么旧流程、是否适合个人或团队复用。",
+      "tags": [
+        "Product Hunt",
+        "AI 工具",
+        "日报",
+        "筛选"
+      ],
+      "attentionLabel": "解决什么问题",
+      "attention": "新品太多但真正有用的不多。按工作流影响筛选，比按热度搬运更有学习价值。",
+      "audience": "AI 工具爱好者、内容运营、产品经理。",
+      "visualKind": "research",
+      "article": {
+        "quote": "工具榜单的重点不是多，而是说明它到底替代了哪一步工作。",
+        "originalContent": [
+          "这个案例把 Product Hunt 当作候选池，但不直接照搬榜单。AI 需要判断工具的实际场景。",
+          "只有能改变工作流、降低成本或带来新能力的工具才进入日报。"
+        ],
+        "sections": [
+          {
+            "heading": "01. 这个案例在讲什么？",
+            "paragraphs": [
+              "它讲的是按学习价值筛选 AI 新工具。"
+            ]
+          },
+          {
+            "heading": "02. 它解决了什么实际问题？",
+            "paragraphs": [
+              "新品太多，读者需要知道哪个工具值得试、适合谁。"
+            ]
+          },
+          {
+            "heading": "03. 具体怎么做？",
+            "paragraphs": [
+              "抓取新品信息，提取定位和功能，按场景、替代流程、学习价值打分。"
+            ]
+          },
+          {
+            "heading": "04. 用到的工具分别负责什么？",
+            "paragraphs": [
+              "Product Hunt 提供候选，AI 负责归纳，人工负责最终筛选。"
+            ]
+          },
+          {
+            "heading": "05. 我可以怎么复用？",
+            "paragraphs": [
+              "可用于 Chrome 插件、SaaS 工具、开源项目日报。"
+            ]
+          },
+          {
+            "heading": "06. 值不值得关注？",
+            "paragraphs": [
+              "值得，但不要变成单纯搬运。"
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "Product Hunt",
+            "role": "提供新品候选。"
+          },
+          {
+            "name": "AI 分类",
+            "role": "判断工具使用场景和价值。"
+          }
+        ]
+      }
+    }
+  ]
+}

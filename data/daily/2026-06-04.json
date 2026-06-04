@@ -1,0 +1,26 @@
+{
+  "date": "2026-06-04",
+  "source": "data/latest.json",
+  "itemIds": [
+    "news-codex-cli-workflow",
+    "news-chatgpt-research",
+    "news-image-workflow",
+    "news-mcp-agent",
+    "case-codex-pr-review",
+    "tutorial-chatgpt-industry-brief",
+    "case-nano-banana-product-images",
+    "skill-ui-ux-pro-max",
+    "workflow-mcp-notion-research",
+    "case-agent-customer-support",
+    "tutorial-codex-static-site",
+    "workflow-youtube-rss",
+    "skill-plugin-marketplace",
+    "case-github-release-monitor",
+    "tutorial-agnes-adapter",
+    "workflow-vercel-static-json",
+    "case-reddit-agent-ideas",
+    "tutorial-prompt-eval",
+    "workflow-huggingface-spaces",
+    "case-producthunt-tools"
+  ]
+}
