@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+dist/
+out/
+
+# Deployment
+.vercel/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Local logs and caches
+*.log
+.cache/
+.DS_Store
+Thumbs.db
+
+# Generated preview artifacts
+preview-*.png

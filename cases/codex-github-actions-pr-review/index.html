@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>用 Codex + GitHub Actions 搭建 AI 自动化 PR 审查助手 - AI Study Hub</title>
+    <meta
+      name="description"
+      content="一篇 AI Study Hub 示例详情页，展示公众号式中文文章结构。"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../index.html" aria-label="AI Study Hub 首页">
+        <span class="logo" aria-hidden="true">
+          <span class="logo-dot"></span>
+          <span class="logo-line"></span>
+        </span>
+        <span>
+          <strong>AI Study Hub</strong>
+          <small>AI tools, cases, workflows</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <span>今日已更新 20 条</span>
+        <button class="icon-button" type="button" aria-label="刷新">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12a9 9 0 0 1-15.3 6.4M3 12A9 9 0 0 1 18.3 5.6" />
+            <path d="M21 4v6h-6M3 20v-6h6" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="article-shell">
+      <a class="back-link" href="../../index.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        返回列表
+      </a>
+
+      <article class="article-page">
+        <div class="article-meta">
+          <span class="type-pill">实战案例</span>
+          <span>YouTube</span>
+          <span>2026 年 6 月 4 日</span>
+          <span>阅读约 6 分钟</span>
+        </div>
+
+        <h1>用 Codex + GitHub Actions 搭建 AI 自动化 PR 审查助手</h1>
+
+        <blockquote>
+          下面是这条内容的站内原文示例。它不是左右分栏预览，而是一篇完整阅读页：
+          先讲清楚案例本身，再拆解它解决的问题、使用方式和可复用场景。
+        </blockquote>
+
+        <div class="article-cover" aria-label="Codex 与 GitHub Actions 工作流示意图">
+          <div class="cover-node">Codex</div>
+          <div class="cover-arrow"></div>
+          <div class="cover-node">GitHub<br />Actions</div>
+          <div class="cover-arrow"></div>
+          <div class="cover-checks">
+            <span>Lint</span>
+            <span>Tests</span>
+            <span>Security</span>
+            <span>Review</span>
+          </div>
+        </div>
+
+        <section class="original-note">
+          <h2>原文内容</h2>
+          <p>
+            用 Codex + GitHub Actions 搭建一个自动化 PR 审查助手，本质上是在把 AI
+            从“临时问答工具”变成“团队流程的一部分”。开发者提交 PR 之后，系统自动收集代码 diff、
+            测试结果和项目规范，再让 Codex 根据固定标准输出审查意见。
+          </p>
+          <p>
+            这种做法的价值不在于让 AI 完全替代人工 Review，而是让 AI 先处理重复、低风险、
+            但又容易被忽略的检查项。比如命名是否清晰、是否缺少测试、是否存在明显异常处理遗漏、
+            是否违反项目约定等。
+          </p>
+        </section>
+
+        <section>
+          <h2>01. 这个案例在讲什么？</h2>
+          <p>
+            这个案例演示的是一个很典型的 AI 编程自动化场景：当开发者提交 Pull Request
+            后，GitHub Actions 自动触发审查流程，把改动内容交给 Codex 分析，再生成代码质量、测试风险和潜在问题的建议。
+          </p>
+          <p>
+            它不是要替代资深工程师做最终判断，而是把基础检查前置。比如命名是否混乱、改动是否缺少测试、
+            是否有明显的异常处理遗漏，这些问题都可以先让 AI 做一轮初筛。
+          </p>
+        </section>
+
+        <section>
+          <h2>02. 它解决了什么实际问题？</h2>
+          <p>
+            小团队最常见的问题是：PR 审查很重要，但每个人都很忙。结果要么审得很慢，
+            要么只看核心逻辑，忽略了边界条件、代码风格和测试覆盖。
+          </p>
+          <p>
+            把 Codex 接入 GitHub Actions 后，团队可以把一部分重复检查交给自动化流程。
+            人仍然负责架构、业务判断和最终合并，但 AI 可以先把明显问题列出来，让 Review 更聚焦。
+          </p>
+        </section>
+
+        <section>
+          <h2>03. 具体怎么做？</h2>
+          <ol>
+            <li>在仓库里添加 GitHub Actions workflow，让它在 PR 创建或更新时触发。</li>
+            <li>读取本次 PR 的 diff、相关文件和测试结果，整理成 Codex 可以理解的上下文。</li>
+            <li>让 Codex 按固定标准输出审查建议，例如风险等级、问题位置、修改建议。</li>
+            <li>把结果写回 PR 评论，供开发者和 Reviewer 参考。</li>
+          </ol>
+          <p>
+            真正有价值的地方在于标准化提示词。不要只让 AI “帮我看看代码”，而是明确告诉它要检查什么：
+            代码风格、测试缺口、安全风险、可维护性，以及是否符合项目约定。
+          </p>
+        </section>
+
+        <section>
+          <h2>04. 用到的工具分别负责什么？</h2>
+          <div class="tool-table" role="table" aria-label="工具分工">
+            <div role="row">
+              <strong role="cell">Codex</strong>
+              <span role="cell">分析代码改动，生成审查建议和修改方向。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">GitHub Actions</strong>
+              <span role="cell">负责自动触发流程，收集上下文并发布结果。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">项目测试</strong>
+              <span role="cell">提供客观验证结果，让 AI 不只看代码文本。</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>05. 我可以怎么复用？</h2>
+          <p>
+            如果你经常用 Codex 做网站、脚本或自动化工具，可以先从个人项目开始复用这个思路。
+            不一定一开始就做完整 PR 审查，也可以让它每天检查最近提交、生成变更说明，或者帮你总结还没补测试的地方。
+          </p>
+          <p>
+            对内容创作者来说，这个案例也有启发：AI 不只是一次性问答工具，更适合放进固定流程里。
+            当输入、标准和输出格式稳定后，它才能持续降低重复劳动。
+          </p>
+        </section>
+
+        <section>
+          <h2>06. 值不值得关注？</h2>
+          <p>
+            值得收藏并小范围试用。它不会让代码审查完全自动化，但能把很多低价值、重复性的检查提前完成。
+            如果你的团队已经使用 GitHub Actions，又经常用 Codex 辅助开发，这类工作流很适合作为第一个 AI 工程化实践。
+          </p>
+        </section>
+
+        <footer class="source-box">
+          <strong>原文链接</strong>
+          <a href="#" aria-label="示例原文链接">https://example.com/codex-github-actions-pr-review</a>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
