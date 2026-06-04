@@ -9,7 +9,8 @@ async function main() {
         candidateCount: candidates.length,
         failures,
         topCandidates: candidates.slice(0, 10).map((candidate) => ({
-          source: candidate.source,
+          author: candidate.author,
+          platform: candidate.platform,
           title: candidate.title,
           url: candidate.url,
           publishedAt: candidate.publishedAt,

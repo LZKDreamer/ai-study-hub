@@ -1,15 +1,16 @@
 # AI Study Hub
 
-AI Study Hub is an AI learning website focused on practical AI tool usage, workflows, and important AI updates.
+AI Study Hub is an AI learning content recommendation site. It helps readers find high-value articles, videos, and open source projects about AI tools, workflows, Skills, plugins, MCP, Agents, and practical AI monetization.
 
-The project has moved from a static HTML preview to a Next.js data-driven site:
+The current implementation is a Next.js data-driven static site:
 
-- `app/page.tsx`: homepage feed with filters and full-card links.
-- `app/cases/[slug]/page.tsx`: generated article detail pages.
-- `data/latest.json`: the current 20-item homepage and article data.
+- `app/page.tsx`: homepage recommendation feed with full-card original-source links.
+- `components/`: shared UI components.
+- `app/globals.css`: global dark space-themed reading style.
+- `data/latest.json`: current 20-item recommendation data.
 - `data/daily/YYYY-MM-DD.json`: daily index snapshots.
-- `scripts/generate-daily.ts`: daily data generation/validation entrypoint.
-- `.github/workflows/daily-content.yml`: scheduled content generation workflow.
+- `scripts/collect-candidates.ts`: candidate collection preview.
+- `scripts/generate-daily.ts`: daily data validation/generation entrypoint.
 
 The original `index.html`, `styles.css`, and `cases/.../index.html` files are kept as static preview references.
 
@@ -35,14 +36,55 @@ http://localhost:3000/
 
 ## Content Direction
 
-This project is not a generic AI news site. The priority is:
+The site is not a generic AI news site. The homepage is a recommendation feed for readable learning content. Sources are not limited to Chinese content; English titles should be translated or adapted into Chinese for display.
 
-1. AI latest updates that affect how tools are used.
-2. Practical cases using Codex, ChatGPT, Nano Banana, AI Agents, MCP, Skills, and plugins.
-3. Tool tutorials and reusable workflows.
-4. General AI news only when it has clear learning value.
+Priority content:
 
-Each item explains why it matters or what problem it solves, and each item has a full article page.
+1. Publicly accessible articles about AI tools, projects, workflows, Skills/plugins, AI Agents, MCP, and monetization.
+2. YouTube videos with tutorials, demos, project walkthroughs, and tool reviews.
+3. GitHub AI open source projects when repository description, stars, language, and update time are publicly available.
+4. Juejin and other technical/creator platforms covering AI development, automation, prompts, plugins, and real projects.
+5. AI updates only when they affect actual tool usage and are explained with learning value.
+
+Homepage cards open the original article or video directly. There are no internal secondary article pages in the current product direction.
+
+## Recommendation Algorithm
+
+Candidates are filtered and ranked by:
+
+- Topic match: ChatGPT, Codex, Claude, Gemini, OpenAI, Seedance, 豆包, 即梦, RunningHub, libtv, MCP, Agent, Skill, 插件, AI 工作流, GitHub 开源, AI 项目, AI 变现.
+- Learning value: whether the content explains tool usage, steps, workflow, cost, limitations, or reusable methods.
+- Practical value: whether it includes a real project, case, monetization path, automation workflow, or concrete output.
+- Quality signals: trustworthy title, specific content, readable structure, and public engagement data when available.
+- Freshness and source credibility.
+
+Low-value items are filtered out:
+
+- Pure news reposts.
+- Empty opinions.
+- Clickbait.
+- Version-only updates.
+- GitHub releases/changelogs without a Chinese learning article or video explaining practical value.
+
+WeChat public account content cannot be reliably searched from the web. The collector should only process publicly accessible WeChat links or public metadata discovered through external indexes; it must not rely on private WeChat search or anti-crawler bypasses.
+
+AI generation may create recommendation summaries and tags only. It must not invent article content or replace the original source.
+
+## Data Shape
+
+Each item in `data/latest.json` should include:
+
+- `author`: author, channel, or account name.
+- `platform`: WeChat, YouTube, Juejin, or another public platform.
+- `sourceUrl`: original article or video URL.
+- `sourceKind`: `article`, `video`, or `link`.
+- `publishedAt`: ISO timestamp.
+- `title`: original article or video title.
+- `summary`: Chinese recommendation reason.
+- `tags`: 2-6 generated tags.
+- `youtubeVideoId` or `imageUrl` only when real media is available.
+
+Keep `data/latest.json` at exactly 20 items unless the product requirement changes.
 
 ## AI Provider
 
@@ -62,8 +104,6 @@ Never commit API keys. Use `.env.local`, GitHub Secrets, or Vercel environment v
 
 ## Daily Automation
 
-The v1 automation is intentionally static-data first and failure tolerant.
-
 Useful commands:
 
 ```powershell
@@ -73,14 +113,7 @@ npm.cmd run generate:daily
 
 Behavior:
 
-- `collect:candidates` fetches public RSS/Atom candidates from official blogs, GitHub releases, Product Hunt, Hacker News, and similar open sources.
+- `collect:candidates` gathers public candidates from RSS/Atom feeds, YouTube feeds, GitHub Search API, and manual public seed links.
 - `generate:daily` uses Agnes AI only when `AI_API_KEY` is set.
-- Without `AI_API_KEY`, `generate:daily` validates and keeps the checked-in sample data.
-- Generated data must stay at exactly 20 items, with the first 3-5 items as `AI最新资讯`.
+- Without `AI_API_KEY`, `generate:daily` validates and keeps the checked-in data.
 - If too few candidates are collected or generated content fails validation, the script falls back to checked-in data instead of publishing broken content.
-
-Required user-side setup for full automation:
-
-1. Add GitHub secret `AGNES_AI_API_KEY`.
-2. Add the same AI environment variables in Vercel if server-side generation is later moved into runtime code.
-3. Ensure the GitHub repository is connected to Vercel so pushes to `main` trigger deployment.

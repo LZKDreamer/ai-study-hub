@@ -3,1557 +3,363 @@
   "updatedCount": 20,
   "items": [
     {
-      "id": "item-001",
-      "slug": "openai-codex-rust-v0-138-0-alpha-1",
-      "type": "AI最新资讯",
-      "category": "AI最新资讯",
-      "source": "OpenAI Codex Releases",
-      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.1",
-      "publishedAt": "2026-06-04T05:04:40.000Z",
-      "relativeTime": "2026-06-04",
-      "title": "OpenAI Codex 发布 Rust 版 v0.138.0-alpha.1",
-      "summary": "OpenAI 发布了 Codex 的 Rust 版本 v0.138.0-alpha.1。作为 AI 编程助手的重要更新，该版本继续推进底层架构的重构与优化。对于开发者而言，关注 Codex 的迭代节奏有助于把握 AI 辅助编程工具的最新能力边界，特别是在代码生成与调试场景下的稳定性提升。",
+      "id": "github-langchain-framework",
+      "slug": "github-langchain-framework",
+      "author": "langchain-ai",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/langchain-ai/langchain",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T08:00:00.000+08:00",
+      "title": "LangChain：构建 LLM 应用和 Agent 工作流的开源框架",
+      "summary": "LangChain 适合放进推荐流，因为它不是单篇资讯，而是一套围绕 LLM 应用、工具调用、检索和 Agent 编排的开源基础设施。读者可以从项目结构和文档学习 AI 应用工程化方法。",
       "tags": [
-        "Codex",
-        "AI 编程",
-        "GitHub"
-      ],
-      "attentionLabel": "为什么值得关注",
-      "attention": "Codex 作为 OpenAI 推出的自主 AI 编程代理，其底层语言从 Python 向 Rust 迁移标志着性能与稳定性的重大升级。开发者应关注其在复杂代码库处理上的表现，以及新架构对插件生态的兼容性影响。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": true,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Release 0.138.0-alpha.1"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Codex",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "AI 编程",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-002",
-      "slug": "openai-codex-rust-v0-137-0",
-      "type": "AI最新资讯",
-      "category": "AI最新资讯",
-      "source": "OpenAI Codex Releases",
-      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.137.0",
-      "publishedAt": "2026-06-04T01:38:37.000Z",
-      "relativeTime": "2026-06-04",
-      "title": "Codex v0.137.0 重大更新：TUI 控制与企业级功能增强",
-      "summary": "Codex v0.137.0 版本带来了多项重要更新，包括 TUI 界面支持 F13-F24 快捷键、可搜索菜单粘贴功能，以及企业级管理员流程中的月度信用额度显示。此外，远程客户端现在可以通过 app-server v2 RPC 进行配对和控制权管理，插件工作流也获得了机器级支持。",
-      "tags": [
-        "Codex",
-        "AI 编程",
-        "GitHub"
-      ],
-      "attentionLabel": "为什么值得关注",
-      "attention": "该版本显著提升了 Codex 的用户体验和企业级管理能力。TUI 的快捷键支持和企业信用额度显示，使得 Codex 更适合专业开发者和大型团队使用。远程控制的增强也为分布式开发团队提供了更灵活的管理方式。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "New Features TUI controls now support F13-F24 keybindings, paste in searchable menus, and a compact reasoning-only status/title item ( #25329 , #25400 , #25504 ). Enterprise/admin flows now show monthly credit limits and can apply cloud-managed config bundles, including EDU workspaces ( #24812 , #24617 , #24619 , #24620 , #24622 , #25963 ). Remote-control clients can start pairing and list or revoke controller grants through app-server v2 RPCs ( #25675 , #25785 ). Plugin workflows gained machine-readable codex plugin list --json output and cached remote catalog suggestions ( #25330 , #25457 ). Hosted web and image tools are available in more code-mode flows, with standalone web searches able to run in parallel ( #25176 , #25702 , #25890 , #25923 ). Multi-agent v2 keeps runtime choice with each thread and exposes cleaner follow-up and metadata defaults for spawned agents ( #25266 , #25636"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Codex",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "AI 编程",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-003",
-      "slug": "openai-codex-python-v0-1-0b3",
-      "type": "AI最新资讯",
-      "category": "AI最新资讯",
-      "source": "OpenAI Codex Releases",
-      "sourceUrl": "https://github.com/openai/codex/releases/tag/python-v0.1.0b3",
-      "publishedAt": "2026-06-03T19:15:12.000Z",
-      "relativeTime": "2026-06-03",
-      "title": "Codex Python SDK 发布 v0.1.0b3 版本",
-      "summary": "OpenAI 发布了 Codex 的 Python SDK v0.1.0b3 版本。作为早期 beta 版本，该 SDK 为开发者提供了通过 Python 代码集成 Codex 能力的途径。虽然具体变更细节未详细披露，但 beta 版本的发布通常意味着 API 趋于稳定，适合进行初步集成测试。",
-      "tags": [
-        "Codex",
-        "AI 编程",
-        "GitHub"
-      ],
-      "attentionLabel": "为什么值得关注",
-      "attention": "Python SDK 的发布使得开发者能够以编程方式集成 Codex 功能，为构建自定义 AI 辅助开发工具提供了基础。对于希望将 AI 能力嵌入现有工作流的团队来说，这是一个重要的里程碑。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Release 0.137.0-alpha.5"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Codex",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "AI 编程",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-004",
-      "slug": "openai-gpt-rosalind-capabilities",
-      "type": "AI最新资讯",
-      "category": "AI最新资讯",
-      "source": "OpenAI News",
-      "sourceUrl": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
-      "publishedAt": "2026-06-03T13:15:00.000Z",
-      "relativeTime": "2026-06-03",
-      "title": "GPT-Rosalind 增强生命科学推理与实验工作流能力",
-      "summary": "OpenAI 宣布 GPT-Rosalind 在生命科学领域取得重大进展，增强了生物推理、药物化学专业知识、基因组分析和实验工作流能力。这一更新使得 GPT-Rosalind 能够更准确地支持生物医学研究，加速新药发现和实验设计过程。",
-      "tags": [
-        "OpenAI",
-        "ChatGPT",
-        "AI最新资讯",
-        "Codex",
-        "AI 编程"
-      ],
-      "attentionLabel": "为什么值得关注",
-      "attention": "GPT-Rosalind 的增强标志着 AI 在专业科学领域的深入应用。对于生物医学研究人员而言，这意味着可以利用 AI 加速实验设计和数据分析，缩短研发周期。",
-      "audience": "科研人员",
-      "visualKind": "research",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Release 0.137.0-alpha.4"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "OpenAI",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "ChatGPT",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-005",
-      "slug": "wasmer-codex-nodejs-runtime",
-      "type": "实战案例",
-      "category": "实战案例",
-      "source": "OpenAI News",
-      "sourceUrl": "https://openai.com/index/wasmer",
-      "publishedAt": "2026-06-03T12:00:00.000Z",
-      "relativeTime": "2026-06-03",
-      "title": "Wasmer 利用 Codex 构建边缘 Node.js 运行时，开发速度提升 10-20 倍",
-      "summary": "Wasmer 公司分享了如何使用 Codex 与 GPT-5.5 合作构建边缘 Node.js 运行时的案例。通过 AI 辅助开发，Wasmer 将开发周期从数月缩短至数周，开发速度提升了 10 到 20 倍。这一案例展示了 AI 在复杂系统开发中的巨大潜力。",
-      "tags": [
-        "OpenAI",
-        "ChatGPT",
-        "AI最新资讯",
-        "Codex",
-        "AI 编程"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "Wasmer 的案例证明了 AI 在构建复杂系统时的效率提升。对于希望加速边缘计算开发的团队来说，这是一个值得借鉴的成功范例。",
-      "audience": "开发者",
-      "visualKind": "research",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Release Python SDK 0.1.0b3"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "OpenAI",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "ChatGPT",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-006",
-      "slug": "mcp-server-2-0-0-alpha-2",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "MCP TypeScript SDK Releases",
-      "sourceUrl": "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/%40modelcontextprotocol%2Fserver%402.0.0-alpha.2",
-      "publishedAt": "2026-04-01T16:44:31.000Z",
-      "relativeTime": "2026-04-01",
-      "title": "MCP Server SDK v2.0.0-alpha.2 发布：修复导出解析问题",
-      "summary": "MCP TypeScript SDK 发布了 server 包的 v2.0.0-alpha.2 版本。该版本主要修复了 tsdown 导出解析问题，确保模块导出正确。对于使用 MCP 构建 AI Agent 的开发者来说，这一修复有助于解决潜在的依赖冲突和模块加载错误。",
-      "tags": [
-        "MCP",
-        "AI Agent",
-        "SDK",
-        "OpenAI",
-        "ChatGPT"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本修复了关键的模块导出问题，解决了开发者在使用 MCP Server SDK 时可能遇到的依赖冲突。对于构建 AI Agent 的团队来说，这是一个重要的稳定性更新。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "GPT-Rosalind advances life sciences research with enhanced biological reasoning, medicinal chemistry expertise, genomics analysis, and experimental workflow capabilities."
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "MCP",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-007",
-      "slug": "mcp-server-2-0-0-alpha-1",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "MCP TypeScript SDK Releases",
-      "sourceUrl": "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/%40modelcontextprotocol%2Fserver%402.0.0-alpha.1",
-      "publishedAt": "2026-04-01T14:46:44.000Z",
-      "relativeTime": "2026-04-01",
-      "title": "MCP Server SDK v2.0.0-alpha.1：错误处理机制重大变更",
-      "summary": "MCP Server SDK v2.0.0-alpha.1 版本对错误处理机制进行了重大变更，以符合 MCP 规范。未知工具调用现在返回 JSON-RPC 协议错误，而非旧的 isError 标志。这一变更要求调用者调整错误处理逻辑，以捕获拒绝的承诺。",
-      "tags": [
-        "MCP",
-        "AI Agent",
-        "SDK",
-        "OpenAI",
-        "ChatGPT"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本修正了错误处理机制，使其更符合 MCP 规范。对于使用 MCP 构建 AI Agent 的开发者来说，这是一个重要的兼容性更新，需要调整错误处理逻辑。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "See how Wasmer used Codex with GPT-5.5 to build a Node.js runtime for the edge, accelerating development 10x to 20x and shipping in weeks instead of months."
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "MCP",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-008",
-      "slug": "mcp-node-2-0-0-alpha-2",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "MCP TypeScript SDK Releases",
-      "sourceUrl": "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/%40modelcontextprotocol%2Fnode%402.0.0-alpha.2",
-      "publishedAt": "2026-04-01T16:44:22.000Z",
-      "relativeTime": "2026-04-01",
-      "title": "MCP Node SDK v2.0.0-alpha.2：依赖更新与修复",
-      "summary": "MCP Node SDK v2.0.0-alpha.2 版本更新了依赖，包括 @modelcontextprotocol/server@2.0.0-alpha.2。该版本主要修复了 tsdown 导出解析问题，确保模块正确加载。对于使用 Node.js 构建 MCP 应用的开发者来说，这是一个重要的稳定性更新。",
-      "tags": [
-        "MCP",
-        "AI Agent",
-        "SDK",
-        "OpenAI",
-        "ChatGPT"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本修复了模块导出问题，解决了开发者在使用 MCP Node SDK 时可能遇到的依赖冲突。对于构建 AI Agent 的团队来说，这是一个重要的稳定性更新。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "OpenAI outlines a blueprint for U.S. governance of frontier AI, proposing a federal framework for safety, resilience, and national security."
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "MCP",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-009",
-      "slug": "mcp-node-2-0-0-alpha-1",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "MCP TypeScript SDK Releases",
-      "sourceUrl": "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/%40modelcontextprotocol%2Fnode%402.0.0-alpha.1",
-      "publishedAt": "2026-04-01T14:46:32.000Z",
-      "relativeTime": "2026-04-01",
-      "title": "MCP Node SDK v2.0.0-alpha.1：Hono 兼容性与依赖修复",
-      "summary": "MCP Node SDK v2.0.0-alpha.1 版本修复了 Hono 对等依赖缺失问题，并防止 Hono 覆盖全局 Response 对象。这一更新解决了与 Next.js 等框架的兼容性问题，使得 MCP 应用能够更顺畅地集成到现代 Web 框架中。",
-      "tags": [
-        "MCP",
-        "AI Agent",
-        "SDK",
-        "OpenAI",
-        "ChatGPT"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本解决了 Hono 依赖缺失和全局对象覆盖问题，提升了 MCP 应用与现代 Web 框架的兼容性。对于使用 Next.js 等框架的开发者来说，这是一个重要的兼容性更新。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "OpenAI outlines its public policy agenda for AI, including safety, youth protection, workforce transition, and global standards to ensure AI benefits society."
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "MCP",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-010",
-      "slug": "mcp-hono-2-0-0-alpha-2",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "MCP TypeScript SDK Releases",
-      "sourceUrl": "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/%40modelcontextprotocol%2Fhono%402.0.0-alpha.2",
-      "publishedAt": "2026-04-01T16:44:28.000Z",
-      "relativeTime": "2026-04-01",
-      "title": "MCP Hono SDK v2.0.0-alpha.2：依赖更新与修复",
-      "summary": "MCP Hono SDK v2.0.0-alpha.2 版本更新了依赖，包括 @modelcontextprotocol/server@2.0.0-alpha.2。该版本主要修复了 tsdown 导出解析问题，确保模块正确加载。对于使用 Hono 构建 MCP 应用的开发者来说，这是一个重要的稳定性更新。",
-      "tags": [
-        "MCP",
-        "AI Agent",
-        "SDK",
-        "OpenAI",
-        "ChatGPT"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本修复了模块导出问题，解决了开发者在使用 MCP Hono SDK 时可能遇到的依赖冲突。对于构建 AI Agent 的团队来说，这是一个重要的稳定性更新。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Travelers built an AI-powered Claim Assistant with OpenAI to guide customers through filing claims, provide 24/7 support, and scale operations during peak demand."
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "MCP",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-011",
-      "slug": "langchain-js-1-4-2",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "LangChain.js Releases",
-      "sourceUrl": "https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.4.2",
-      "publishedAt": "2026-05-21T22:00:57.000Z",
-      "relativeTime": "2026-05-21",
-      "title": "LangChain.js v1.4.2：修复工具消息输出与中间件问题",
-      "summary": "LangChain.js v1.4.2 版本修复了代理流中工具消息输出的解包问题，并修正了 todoListMiddleware 中 ToolMessages 的名称设置。这些修复提升了 LangChain 在复杂代理工作流中的稳定性和准确性。",
-      "tags": [
-        "AI Agent",
+        "GitHub",
         "LangChain",
-        "工具调用",
-        "OpenAI",
-        "ChatGPT"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本修复了工具消息处理和中间件名称设置问题，解决了开发者在使用 LangChain 构建代理时可能遇到的数据解析错误。对于构建复杂 AI Agent 的团队来说，这是一个重要的稳定性更新。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Discover new Codex plugins, sites, and annotations that help analysts, marketers, designers, investors, and other teams get more done with AI."
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "LangChain",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-012",
-      "slug": "langchain-xai-1-3-19",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "LangChain.js Releases",
-      "sourceUrl": "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain%2Fxai%401.3.19",
-      "publishedAt": "2026-05-21T22:01:18.000Z",
-      "relativeTime": "2026-05-21",
-      "title": "LangChain xAI 集成 v1.3.19：依赖更新",
-      "summary": "LangChain xAI 集成 v1.3.19 版本更新了依赖，包括 @langchain/openai@1.4.7。这一更新确保了与最新 OpenAI 集成的兼容性，为使用 xAI 模型的开发者提供了稳定的基础。",
-      "tags": [
         "AI Agent",
-        "LangChain",
-        "工具调用",
-        "OpenAI",
-        "ChatGPT"
+        "LLM 应用"
       ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本更新了依赖，确保了与最新 OpenAI 集成的兼容性。对于使用 xAI 模型的开发者来说，这是一个重要的兼容性更新，有助于避免潜在的依赖冲突。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "OpenAI calls for global action on youth AI safety, proposing an international institute to strengthen safeguards, standards, and opportunities for young people."
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "LangChain",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
+      "featured": true
     },
     {
-      "id": "item-013",
-      "slug": "next-js-v16-3-0-canary-40",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "Next.js Releases",
-      "sourceUrl": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.40",
-      "publishedAt": "2026-06-04T00:16:12.000Z",
-      "relativeTime": "2026-06-04",
-      "title": "Next.js v16.3.0-canary.40：SSH 认证指导与缓存组件文档更新",
-      "summary": "Next.js v16.3.0-canary.40 版本添加了 GitHub SSH 认证指导文档，弃用了未记录的自定义服务器方法，并更新了缓存组件行为文档。此外，还修复了同步 IO 中止导致构建挂起的问题。",
+      "id": "github-autogen-agent-framework",
+      "slug": "github-autogen-agent-framework",
+      "author": "microsoft",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/microsoft/autogen",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T07:50:00.000+08:00",
+      "title": "AutoGen：学习多智能体协作的开源框架",
+      "summary": "AutoGen 的学习价值在于它把多个 Agent 的对话、协作、工具调用和任务分解组织成框架。想理解多智能体系统如何从 demo 走向工程实现，可以从这个项目开始。",
       "tags": [
-        "Next.js",
-        "Vercel",
-        "前端",
-        "OpenAI",
-        "ChatGPT"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本修复了构建挂起问题，并更新了文档，提升了开发体验。对于使用 Next.js 构建前端应用的开发者来说，这是一个重要的稳定性和文档更新。",
-      "audience": "前端开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "The Next Era of Knowledge Work report explores how Codex is transforming productivity through AI-powered research, data analysis, workflow automation, and content creation."
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Next.js",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "Vercel",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-014",
-      "slug": "langchain-together-ai-0-1-5",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "LangChain.js Releases",
-      "sourceUrl": "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain%2Ftogether-ai%400.1.5",
-      "publishedAt": "2026-05-21T22:01:12.000Z",
-      "relativeTime": "2026-05-21",
-      "title": "LangChain Together AI 集成 v0.1.5：依赖更新",
-      "summary": "LangChain Together AI 集成 v0.1.5 版本更新了依赖，包括 @langchain/openai@1.4.7。这一更新确保了与最新 OpenAI 集成的兼容性，为使用 Together AI 模型的开发者提供了稳定的基础。",
-      "tags": [
-        "AI Agent",
-        "LangChain",
-        "工具调用",
-        "MCP",
-        "SDK"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本更新了依赖，确保了与最新 OpenAI 集成的兼容性。对于使用 Together AI 模型的开发者来说，这是一个重要的兼容性更新，有助于避免潜在的依赖冲突。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Patch Changes #1840 424cbae Thanks @KKonstantinov ! - tsdown exports resolution fix"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "LangChain",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
-    },
-    {
-      "id": "item-015",
-      "slug": "next-js-v16-3-0-canary-39",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "Next.js Releases",
-      "sourceUrl": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.39",
-      "publishedAt": "2026-06-03T08:39:39.000Z",
-      "relativeTime": "2026-06-03",
-      "title": "Next.js v16.3.0-canary.39：React 升级与 Turbopack 修复",
-      "summary": "Next.js v16.3.0-canary.39 版本升级了 React 版本，并修复了 Turbopack 中 pages 索引规范化问题。这一更新提升了开发环境的稳定性和性能。",
-      "tags": [
-        "Next.js",
-        "Vercel",
-        "前端",
-        "MCP",
+        "GitHub",
+        "AutoGen",
+        "多智能体",
         "AI Agent"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本升级了 React 并修复了 Turbopack 问题，提升了开发环境的稳定性。对于使用 Next.js 构建前端应用的开发者来说，这是一个重要的更新。",
-      "audience": "前端开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Major Changes #1389 108f2f3 Thanks @DePasqualeOrg ! - Fix error handling for unknown tools and resources per MCP spec. Tools: Unknown or disabled tool calls now return JSON-RPC protocol errors with code -32602 (InvalidParams) instead of CallToolResult with isError: true . Callers who checked result.isError for unknown tools should catch rejected promises instead. Resources: Unknown resource reads now return error code -32002 (ResourceNotFound) instead of -32602 (InvalidParams). Added ProtocolErrorCode.ResourceNotFound . Minor Changes #1673 462c3fc Thanks @KKonstantinov ! - refactor: extract task orchestration from Protocol into TaskManager Breaking changes: taskStore , taskMessageQueue , defaultTaskPollInterval , and maxTaskQueueSize moved from ProtocolOptions to capabilities.tasks on ClientOptions / ServerOptions #1689 0784be1 Thanks @felixweinberger ! - Support Standard Schema for tool"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Next.js",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "Vercel",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
+      ]
     },
     {
-      "id": "item-016",
-      "slug": "langchain-openrouter-0-3-0",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "LangChain.js Releases",
-      "sourceUrl": "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain%2Fopenrouter%400.3.0",
-      "publishedAt": "2026-05-21T22:01:06.000Z",
-      "relativeTime": "2026-05-21",
-      "title": "LangChain OpenRouter 集成 v0.3.0：推理内容标准化",
-      "summary": "LangChain OpenRouter 集成 v0.3.0 版本将推理内容标准化为 v1 标准内容块。新的 ChatOpenRouterTranslator 注册在 @langchain/core 下，支持 OpenRouter 的推理字段。这一更新提升了推理内容的兼容性和可用性。",
+      "id": "github-mcp-servers",
+      "slug": "github-mcp-servers",
+      "author": "modelcontextprotocol",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/modelcontextprotocol/servers",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T07:40:00.000+08:00",
+      "title": "MCP Servers：给 AI 助手接入外部工具和数据源的开源集合",
+      "summary": "这个项目适合关注 MCP 的读者。它展示了 AI 助手如何通过标准协议连接文件、数据库、浏览器、开发工具等外部能力，是理解 MCP 生态和插件化工作流的入口。",
       "tags": [
-        "AI Agent",
-        "LangChain",
+        "GitHub",
+        "MCP",
         "工具调用",
-        "MCP",
-        "SDK"
-      ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该版本将推理内容标准化，提升了 OpenRouter 模型的兼容性。对于使用 OpenRouter 的开发者来说，这是一个重要的功能更新，有助于更好地利用推理能力。",
-      "audience": "开发者",
-      "visualKind": "codex",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Patch Changes #1840 424cbae Thanks @KKonstantinov ! - tsdown exports resolution fix Updated dependencies [ 424cbae ]: @modelcontextprotocol/server@2.0.0-alpha.2"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "AI Agent",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "LangChain",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
-      }
+        "插件"
+      ]
     },
     {
-      "id": "item-017",
-      "slug": "huggingface-dpo-beyond-chatbots",
-      "type": "工作流",
-      "category": "工作流",
-      "source": "Hugging Face Blog",
-      "sourceUrl": "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
-      "publishedAt": "2026-06-03T12:55:11.000Z",
-      "relativeTime": "2026-06-03",
-      "title": "直接偏好优化（DPO）在聊天机器人之外的应用探索",
-      "summary": "本文探讨了直接偏好优化（DPO）技术在聊天机器人之外的应用场景。DPO 不仅限于对话生成，还可以用于代码生成、图像编辑等任务。通过调整偏好数据，可以优化模型在特定任务上的表现。",
+      "id": "github-openai-cookbook",
+      "slug": "github-openai-cookbook",
+      "author": "openai",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/openai/openai-cookbook",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T07:30:00.000+08:00",
+      "title": "OpenAI Cookbook：用示例学习 OpenAI API、RAG 和工具调用",
+      "summary": "OpenAI Cookbook 的价值是把抽象 API 文档转成可运行示例。它适合用来学习结构化输出、函数调用、RAG、评估和应用开发，比单纯看产品更新更有复用价值。",
       "tags": [
-        "Hugging Face",
-        "模型",
-        "Demo",
-        "MCP",
+        "GitHub",
+        "OpenAI",
+        "RAG",
+        "API 教程"
+      ]
+    },
+    {
+      "id": "youtube-codex-plugins-agent-demo",
+      "slug": "youtube-codex-plugins-agent-demo",
+      "author": "松小鼠呀",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=kxBCLl6eexE",
+      "sourceKind": "video",
+      "youtubeVideoId": "kxBCLl6eexE",
+      "publishedAt": "2026-06-03T22:00:00.000+08:00",
+      "title": "Codex 10个必装插件！实战演示：自动生成酷炫动画、视频、网页游戏和手机App，快速上手AI Agent",
+      "summary": "这条视频适合想快速理解 Codex 插件价值的人。它用演示型内容展示插件如何把动画、视频、网页游戏和 App 生成串成一条 AI Agent 工作流。",
+      "tags": [
+        "Codex",
+        "插件",
         "AI Agent"
+      ]
+    },
+    {
+      "id": "youtube-codex-beginner-office-automation",
+      "slug": "youtube-codex-beginner-office-automation",
+      "author": "木子不写代码",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=hGaKA3cfMjk",
+      "sourceKind": "video",
+      "youtubeVideoId": "hGaKA3cfMjk",
+      "publishedAt": "2026-06-03T21:30:00.000+08:00",
+      "title": "Codex 零基础终极教程：功能、办公、编程、自动化一次讲透",
+      "summary": "它把 Codex 从编程助手扩展到办公、自动化和日常任务处理，适合新手建立工具全局观，也适合判断哪些任务可以交给 AI 协作完成。",
+      "tags": [
+        "Codex",
+        "自动化",
+        "办公提效"
+      ]
+    },
+    {
+      "id": "youtube-codex-agent-complete-guide",
+      "slug": "youtube-codex-agent-complete-guide",
+      "author": "學長Ethan",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=tfeCwDT-5m0",
+      "sourceKind": "video",
+      "youtubeVideoId": "tfeCwDT-5m0",
+      "publishedAt": "2026-06-03T21:00:00.000+08:00",
+      "title": "Codex 保姆级完整教学：从入门到进阶，学会指挥你的 AI Agent",
+      "summary": "这条视频覆盖从入门到进阶的 Codex 指挥方式，重点不是看功能清单，而是学习如何把内容、网页、影片和 App 生成拆成可执行任务。",
+      "tags": [
+        "Codex",
+        "AI Agent",
+        "内容生成"
+      ]
+    },
+    {
+      "id": "blog-simon-llm-practical-notes",
+      "slug": "blog-simon-llm-practical-notes",
+      "author": "Simon Willison",
+      "platform": "个人博客",
+      "sourceUrl": "https://simonwillison.net/",
+      "sourceKind": "article",
+      "publishedAt": "2026-06-03T18:00:00.000+08:00",
+      "title": "Simon Willison 的 LLM 实战笔记：从工具使用看 AI 应用开发",
+      "summary": "这是英文内容也应该进入推荐流的典型例子。Simon 的文章通常围绕真实工具、模型限制、提示词和应用实现展开，适合读者学习可验证的 AI 开发经验。",
+      "tags": [
+        "英文文章",
+        "LLM",
+        "AI 工具",
+        "实战"
+      ]
+    },
+    {
+      "id": "blog-langchain-agent-workflow",
+      "slug": "blog-langchain-agent-workflow",
+      "author": "LangChain",
+      "platform": "官方博客",
+      "sourceUrl": "https://blog.langchain.com/",
+      "sourceKind": "article",
+      "publishedAt": "2026-06-03T17:00:00.000+08:00",
+      "title": "LangChain 官方博客：学习 Agent 工作流和工具调用设计",
+      "summary": "LangChain 官方博客适合跟进 Agent 工程化实践。即使原文是英文，标题和推荐理由也应中文化，让读者先判断是否值得进入原文深入学习。",
+      "tags": [
+        "英文文章",
+        "LangChain",
+        "AI Agent",
+        "工作流"
+      ]
+    },
+    {
+      "id": "juejin-codex-agents-skills-mcp",
+      "slug": "juejin-codex-agents-skills-mcp",
+      "author": "Lei_official",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7616666752521404416",
+      "sourceKind": "article",
+      "publishedAt": "2026-03-14T09:00:00.000+08:00",
+      "title": "Codex 工程化实践指南：深入理解 AGENTS.md、SKILL.md 与 MCP",
+      "summary": "这篇文章把 AGENTS.md、SKILL.md 和 MCP 放到同一个工程化框架里讲，适合想把 Codex 从聊天工具用成团队协作 Agent 的读者。",
+      "tags": [
+        "Codex",
+        "AGENTS.md",
+        "MCP"
       ],
-      "attentionLabel": "解决什么问题",
-      "attention": "本文扩展了 DPO 技术的应用范围，为开发者提供了在聊天机器人之外优化模型的新思路。对于希望提升特定任务性能的团队来说，这是一个有价值的参考。",
-      "audience": "研究人员",
-      "visualKind": "research",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Patch Changes #1504 327243c Thanks @corvid-agent ! - Add missing hono peer dependency to @modelcontextprotocol/node . The package already depends on @hono/node-server which requires hono at runtime, but hono was only listed in the workspace root, not as a peer dependency of the package itself. #1410 9296459 Thanks @mattzcarey ! - Prevent Hono from overriding global Response object by passing overrideGlobalObjects: false to getRequestListener() . This fixes compatibility with frameworks like Next.js whose response classes extend the native Response. #1419 dcf708d Thanks @KKonstantinov ! - remove deprecated .tool, .prompt, .resource method signatures #1534 69a0626 Thanks @josefaidt ! - remove npm references, use pnpm #1534 69a0626 Thanks @josefaidt ! - clean up package manager usage, all pnpm #1419 dcf708d Thanks @KKonstantinov ! - deprecated .tool, .prompt, .resource method removal Update"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Hugging Face",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "模型",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
+      "metrics": {
+        "reads": "2275"
       }
     },
     {
-      "id": "item-018",
-      "slug": "huggingface-mcp-tools-reachy-mini",
-      "type": "工作流",
-      "category": "工作流",
-      "source": "Hugging Face Blog",
-      "sourceUrl": "https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini",
-      "publishedAt": "2026-06-03T00:00:00.000Z",
-      "relativeTime": "2026-06-03",
-      "title": "为 Reachy Mini 机器人添加 MCP 工具集成",
-      "summary": "本文介绍了如何将 MCP 工具集成到 Reachy Mini 机器人中，使其能够利用 AI 能力执行更复杂的任务。通过 MCP，机器人可以访问外部工具和 API，提升其自主性和灵活性。",
+      "id": "juejin-gemini-doubao-watermark",
+      "slug": "juejin-gemini-doubao-watermark",
+      "author": "AI方叔",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7594103243686166571",
+      "sourceKind": "article",
+      "publishedAt": "2026-01-13T09:00:00.000+08:00",
+      "title": "AI 生图去水印终极指南：Gemini + 豆包，一行命令搞定",
+      "summary": "文章围绕 Gemini 和豆包生图后的水印处理给出具体工具和操作路径。它的价值在于把一个常见内容生产问题变成可执行的小流程。",
       "tags": [
-        "Hugging Face",
-        "模型",
-        "Demo",
+        "Gemini",
+        "豆包",
+        "AI 生图"
+      ],
+      "metrics": {
+        "reads": "1432"
+      }
+    },
+    {
+      "id": "juejin-yuanbao-doubao-jimeng-video",
+      "slug": "juejin-yuanbao-doubao-jimeng-video",
+      "author": "沐言AIGC创业",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7495648783343108107",
+      "sourceKind": "article",
+      "publishedAt": "2025-04-22T09:00:00.000+08:00",
+      "title": "用腾讯元宝、豆包和即梦拆解 AI 视频项目工作流",
+      "summary": "这是一篇典型 AI 视频项目拆解，覆盖腾讯元宝生成分镜、豆包生成图片、即梦生成视频和剪映剪辑，适合学习内容变现型工作流。",
+      "tags": [
+        "腾讯元宝",
+        "豆包",
+        "即梦"
+      ],
+      "metrics": {
+        "reads": "1043"
+      }
+    },
+    {
+      "id": "juejin-jimeng-prompt-guide",
+      "slug": "juejin-jimeng-prompt-guide",
+      "author": "软件之家",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7615445777147838500",
+      "sourceKind": "article",
+      "publishedAt": "2026-03-11T09:00:00.000+08:00",
+      "title": "即梦 AI 必记指令：保姆级提示词完整入门教程",
+      "summary": "这篇文章适合刚接触即梦 AI 的读者，用简单路径解释提示词、图片和视频生成的基础玩法，可以作为生图和视频工具入门材料。",
+      "tags": [
+        "即梦",
+        "提示词",
+        "AI 视频"
+      ],
+      "metrics": {
+        "reads": "877"
+      }
+    },
+    {
+      "id": "juejin-doubao-desktop-guide",
+      "slug": "juejin-doubao-desktop-guide",
+      "author": "编程干货铺",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7473027144920203275",
+      "sourceKind": "article",
+      "publishedAt": "2025-02-19T09:00:00.000+08:00",
+      "title": "豆包桌面版高效使用指南",
+      "summary": "文章把豆包桌面版的网页总结、文档伴读、划词提问、翻译和快捷键整理成使用指南，适合把 AI 助手嵌入日常学习工作。",
+      "tags": [
+        "豆包",
+        "桌面助手",
+        "效率工具"
+      ],
+      "metrics": {
+        "reads": "9034"
+      }
+    },
+    {
+      "id": "juejin-doubao-api-workflow",
+      "slug": "juejin-doubao-api-workflow",
+      "author": "AI淇橦学",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7606923064946573352",
+      "sourceKind": "article",
+      "publishedAt": "2026-02-19T09:00:00.000+08:00",
+      "title": "了解豆包 API：把聊天能力接入自动化和工作流",
+      "summary": "文章用小白能理解的方式解释免费聊天和 API 的区别，适合想把豆包能力接入自动化、产品或工作流的人建立基础概念。",
+      "tags": [
+        "豆包 API",
+        "自动化",
+        "工作流"
+      ],
+      "metrics": {
+        "reads": "315"
+      }
+    },
+    {
+      "id": "juejin-mcp-agent-executor",
+      "slug": "juejin-mcp-agent-executor",
+      "author": "花千树_010",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7632205670868795442",
+      "sourceKind": "article",
+      "publishedAt": "2026-04-24T09:00:00.000+08:00",
+      "title": "McpAgentExecutor：用几行代码让模型自主调用 HTTP 工具多步推理",
+      "summary": "它关注 MCP、Function Calling 和 Agent 多步推理的工程落地，适合已经会调模型但想把工具链封装成可复用执行器的开发者。",
+      "tags": [
         "MCP",
-        "AI Agent"
+        "Function Calling",
+        "Agent"
       ],
-      "attentionLabel": "解决什么问题",
-      "attention": "本文展示了 MCP 在机器人领域的应用，为开发者提供了将 AI 能力集成到物理设备的新思路。对于机器人开发者来说，这是一个有价值的参考。",
-      "audience": "机器人开发者",
-      "visualKind": "skill",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Patch Changes #1840 424cbae Thanks @KKonstantinov ! - tsdown exports resolution fix Updated dependencies [ 424cbae ]: @modelcontextprotocol/server@2.0.0-alpha.2"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Hugging Face",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "模型",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
+      "metrics": {
+        "reads": "43"
       }
     },
     {
-      "id": "item-019",
-      "slug": "vercel-grok-imagine-video-1-5",
-      "type": "工具教程",
-      "category": "工具教程",
-      "source": "Vercel Blog",
-      "sourceUrl": "https://vercel.com/changelog/grok-imagine-video-1-5-on-ai-gateway",
-      "publishedAt": "2026-06-03T00:00:00.000Z",
-      "relativeTime": "2026-06-03",
-      "title": "Vercel AI Gateway 集成 Grok Imagine Video 1.5",
-      "summary": "Vercel AI Gateway 现在支持 Grok Imagine Video 1.5 模型，允许开发者通过统一接口访问视频生成能力。这一集成简化了视频生成应用的开发流程，提升了开发效率。",
+      "id": "juejin-agent-core-loop",
+      "slug": "juejin-agent-core-loop",
+      "author": "掘金作者",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7623356498711117851",
+      "sourceKind": "article",
+      "publishedAt": "2026-04-01T09:00:00.000+08:00",
+      "title": "从零开始理解 Agent：100 行代码理解 AI 智能体核心循环",
+      "summary": "这篇文章适合作为 Agent 入门材料，因为它尝试用少量代码解释智能体循环，比单纯概念介绍更容易让读者理解工具调用和状态推进。",
       "tags": [
-        "Vercel",
-        "前端",
-        "部署",
         "AI Agent",
-        "LangChain"
+        "入门教程",
+        "代码实践"
+      ]
+    },
+    {
+      "id": "juejin-rpa-doubao-geo",
+      "slug": "juejin-rpa-doubao-geo",
+      "author": "用户916887000755",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7618141138446532617",
+      "sourceKind": "article",
+      "publishedAt": "2026-03-18T09:00:00.000+08:00",
+      "title": "火语言 RPA：豆包问答内容采集案例",
+      "summary": "文章展示用 RPA 批量向豆包提问、采集回答并写入 Excel 的流程。它对自动化采集、GEO 分析和 AI 问答数据整理有实操参考。",
+      "tags": [
+        "豆包",
+        "RPA",
+        "GEO"
       ],
-      "attentionLabel": "解决什么问题",
-      "attention": "该集成简化了视频生成应用的开发流程，为开发者提供了统一的访问接口。对于希望快速构建视频生成应用的团队来说，这是一个重要的功能更新。",
-      "audience": "前端开发者",
-      "visualKind": "skill",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Patch Changes #10900 6bbddca Thanks @christian-bromann ! - fix(langchain): unwrap tool message outputs in agent streams #10706 4ecb660 Thanks @JadenKim-dev ! - fix(langchain): set name on todoListMiddleware ToolMessages"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Vercel",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "前端",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
+      "metrics": {
+        "reads": "57"
       }
     },
     {
-      "id": "item-020",
-      "slug": "huggingface-holo31-local-agents",
-      "type": "工作流",
-      "category": "工作流",
-      "source": "Hugging Face Blog",
-      "sourceUrl": "https://huggingface.co/blog/Hcompany/holo31",
-      "publishedAt": "2026-06-02T14:13:23.000Z",
-      "relativeTime": "2026-06-02",
-      "title": "Holo3.1：快速本地计算机使用代理",
-      "summary": "Holo3.1 是一个快速且支持本地运行的计算机使用代理，旨在提升本地 AI 应用的效率和隐私性。通过优化推理速度和资源占用，Holo3.1 使得在本地设备上运行复杂 AI 任务成为可能。",
+      "id": "juejin-claude-code-skills",
+      "slug": "juejin-claude-code-skills",
+      "author": "Flittly",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7614884374551183395",
+      "sourceKind": "article",
+      "publishedAt": "2026-03-09T09:00:00.000+08:00",
+      "title": "从零手写 Claude Code：理解 Skill 技能加载机制",
+      "summary": "这篇把 Skill 的按需加载机制讲得很具体，能帮助读者理解为什么 AI Agent 不应该把所有知识塞进系统提示，而要按任务加载能力。",
       "tags": [
-        "Hugging Face",
-        "模型",
-        "Demo",
-        "AI Agent",
-        "LangChain"
+        "Claude Code",
+        "Skill",
+        "Agent"
       ],
-      "attentionLabel": "解决什么问题",
-      "attention": "Holo3.1 解决了本地 AI 应用的性能和隐私问题，为开发者提供了在本地设备上运行复杂任务的能力。对于关注隐私和性能的团队来说，这是一个重要的工具。",
-      "audience": "开发者",
-      "visualKind": "agent",
-      "featured": false,
-      "article": {
-        "quote": "这条内容的重点，是把信息转成可复用的 AI 工具学习经验。",
-        "originalContent": [
-          "Patch Changes Updated dependencies [ 3999fab , fce9ab4 ]: @langchain/openai@1.4.7"
-        ],
-        "sections": [
-          {
-            "heading": "01. 这个内容在讲什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "02. 它为什么值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "03. 具体怎么做？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "04. 用到的工具分别负责什么？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "05. 我可以怎么复用？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          },
-          {
-            "heading": "06. 值不值得关注？",
-            "paragraphs": [
-              "原文信息有限，当前只能提炼学习方向；具体执行步骤需要结合原文和工具文档继续验证。"
-            ]
-          }
-        ],
-        "tools": [
-          {
-            "name": "Hugging Face",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          },
-          {
-            "name": "模型",
-            "role": "提供本条内容涉及的工具或主题能力。"
-          }
-        ]
+      "metrics": {
+        "reads": "156"
+      }
+    },
+    {
+      "id": "juejin-implement-claude-code-skill",
+      "slug": "juejin-implement-claude-code-skill",
+      "author": "镜花水月linyi",
+      "platform": "掘金",
+      "sourceUrl": "https://juejin.cn/post/7622650862809694262",
+      "sourceKind": "article",
+      "publishedAt": "2026-03-30T09:00:00.000+08:00",
+      "title": "如何实现一个 Claude Code Skill：从底层原理到生产实践",
+      "summary": "这篇不只是介绍 Skill 概念，而是从发现、触发、上下文传递和执行调度讲到生产实践，适合想自己设计 Skill 的读者。",
+      "tags": [
+        "Claude Code",
+        "Skill",
+        "生产实践"
+      ],
+      "metrics": {
+        "reads": "340"
       }
     }
   ]
