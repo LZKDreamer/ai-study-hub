@@ -59,3 +59,28 @@ MAX_DAILY_AI_CALLS=25
 ```
 
 Never commit API keys. Use `.env.local`, GitHub Secrets, or Vercel environment variables.
+
+## Daily Automation
+
+The v1 automation is intentionally static-data first and failure tolerant.
+
+Useful commands:
+
+```powershell
+npm.cmd run collect:candidates
+npm.cmd run generate:daily
+```
+
+Behavior:
+
+- `collect:candidates` fetches public RSS/Atom candidates from official blogs, GitHub releases, Product Hunt, Hacker News, and similar open sources.
+- `generate:daily` uses Agnes AI only when `AI_API_KEY` is set.
+- Without `AI_API_KEY`, `generate:daily` validates and keeps the checked-in sample data.
+- Generated data must stay at exactly 20 items, with the first 3-5 items as `AI最新资讯`.
+- If too few candidates are collected or generated content fails validation, the script falls back to checked-in data instead of publishing broken content.
+
+Required user-side setup for full automation:
+
+1. Add GitHub secret `AGNES_AI_API_KEY`.
+2. Add the same AI environment variables in Vercel if server-side generation is later moved into runtime code.
+3. Ensure the GitHub repository is connected to Vercel so pushes to `main` trigger deployment.

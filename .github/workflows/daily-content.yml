@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Collect candidate dry run
+        run: npm run collect:candidates
+
       - name: Generate daily content
         run: npm run generate:daily
         env:
@@ -32,6 +35,12 @@ jobs:
           AI_API_KEY: ${{ secrets.AGNES_AI_API_KEY }}
           AI_MODEL: agnes-2.0-flash
           MAX_DAILY_AI_CALLS: 25
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
 
       - name: Commit generated data
         uses: stefanzweifel/git-auto-commit-action@v5

@@ -13,6 +13,7 @@ The current implementation is a Next.js data-driven static site:
 - Current content data: `data/latest.json`
 - Daily indexes: `data/daily/YYYY-MM-DD.json`
 - Daily generation script: `scripts/generate-daily.ts`
+- Candidate collection script: `scripts/collect-candidates.ts`
 
 The original static preview files remain for reference:
 
@@ -59,6 +60,8 @@ Every homepage item must include:
 - AI generation should be provider-adapter based. The preferred default provider is Agnes AI with an OpenAI-compatible API shape.
 - Keep `data/latest.json` at exactly 20 items unless the product requirement changes.
 - Keep the first 3-5 homepage items as `AI最新资讯`; practical cases/tutorials/workflows should remain the majority.
+- Daily automation must be failure tolerant: if public sources, network, or AI generation fail, keep the checked-in data rather than publishing broken JSON.
+- Do not hard-code secrets. Agnes AI credentials must come from `.env.local`, GitHub Secrets, or deployment environment variables.
 
 ## Current User Preferences
 

@@ -1,21 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { createDailyCallLimit, generateText } from "./ai-provider";
-
-type LatestData = {
-  date: string;
-  updatedCount: number;
-  items: Array<{
-    id: string;
-    slug: string;
-    type: string;
-    category: string;
-    title: string;
-    summary: string;
-    attentionLabel: string;
-    attention: string;
-  }>;
-};
+import { createDailyCallLimit } from "./ai-provider";
+import { generateLatestFromCandidates } from "./content-generation";
+import { validateLatest } from "./content-quality";
+import { collectCandidates } from "./content-sources";
+import type { LatestData } from "./content-types";
 
 const root = process.cwd();
 const latestPath = path.join(root, "data", "latest.json");
@@ -35,72 +24,24 @@ function todayInShanghai() {
   return `${year}-${month}-${day}`;
 }
 
-function validateLatest(data: LatestData) {
-  if (data.items.length !== 20) {
-    throw new Error(`Expected exactly 20 items, got ${data.items.length}.`);
-  }
-
-  const firstNonNews = data.items.findIndex((item) => item.type !== "AI最新资讯");
-  const newsCount = firstNonNews === -1 ? data.items.length : firstNonNews;
-
-  if (newsCount < 3 || newsCount > 5) {
-    throw new Error(`Expected first 3-5 items to be AI latest updates, got ${newsCount}.`);
-  }
-
-  for (const item of data.items) {
-    if (!item.title || !item.summary || !item.attention || !item.slug) {
-      throw new Error(`Item ${item.id} is missing required homepage fields.`);
-    }
-  }
-}
-
-async function maybeGenerateEditorialNote(data: LatestData) {
-  if (!process.env.AI_API_KEY) {
-    return "AI_API_KEY not set; kept checked-in static sample data.";
-  }
-
-  const limit = createDailyCallLimit();
-  const digest = data.items
-    .slice(0, 5)
-    .map((item, index) => `${index + 1}. ${item.title}`)
-    .join("\n");
-
-  return generateText(
-    {
-      messages: [
-        {
-          role: "system",
-          content:
-            "你是 AI Study Hub 的中文技术编辑。只输出 80 字以内的站内更新说明，不要编造来源。"
-        },
-        {
-          role: "user",
-          content: `今天的前 5 条内容如下：\n${digest}\n请写一句编辑说明。`
-        }
-      ],
-      temperature: 0.3
-    },
-    limit
-  );
-}
-
-async function main() {
+async function loadCheckedInLatest(date: string) {
   const raw = await readFile(latestPath, "utf8");
   const data = JSON.parse(raw) as LatestData;
-  const date = todayInShanghai();
-
   data.date = date;
   data.updatedCount = data.items.length;
   validateLatest(data);
+  return data;
+}
 
-  const dailyPath = path.join(root, "data", "daily", `${date}.json`);
+async function writeDailyFiles(data: LatestData) {
+  const dailyPath = path.join(root, "data", "daily", `${data.date}.json`);
   await mkdir(path.dirname(dailyPath), { recursive: true });
   await writeFile(latestPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
   await writeFile(
     dailyPath,
     `${JSON.stringify(
       {
-        date,
+        date: data.date,
         source: "data/latest.json",
         itemIds: data.items.map((item) => item.id)
       },
@@ -109,12 +50,44 @@ async function main() {
     )}\n`,
     "utf8"
   );
+}
 
-  const note = await maybeGenerateEditorialNote(data);
+async function buildLatest(date: string) {
+  if (!process.env.AI_API_KEY) {
+    const data = await loadCheckedInLatest(date);
+    return {
+      data,
+      note: "AI_API_KEY not set; kept checked-in static sample data."
+    };
+  }
+
+  const { candidates, failures } = await collectCandidates();
+  if (candidates.length < 20) {
+    const data = await loadCheckedInLatest(date);
+    return {
+      data,
+      note: `Only collected ${candidates.length} candidates; kept checked-in data. Failures: ${failures.slice(0, 3).join(" | ")}`
+    };
+  }
+
+  const limit = createDailyCallLimit();
+  const data = await generateLatestFromCandidates(candidates, date, limit);
+  validateLatest(data);
+
+  return {
+    data,
+    note: `Collected ${candidates.length} candidates, generated ${data.items.length} items, used ${limit.count} AI call(s).${failures.length ? ` Source failures: ${failures.length}.` : ""}`
+  };
+}
+
+async function main() {
+  const date = todayInShanghai();
+  const { data, note } = await buildLatest(date);
+  await writeDailyFiles(data);
   console.log(`Generated daily index for ${date}. ${note}`);
 }
 
-main().catch((error) => {
+main().catch(async (error) => {
   console.error(error);
   process.exitCode = 1;
 });
