@@ -518,7 +518,6 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 1.1rem;
-  min-height: 176px;
   padding: 1rem;
   border: 1px solid var(--border-soft);
   border-radius: 8px;
@@ -530,6 +529,7 @@ button {
 
 .case-card.has-media {
   grid-template-columns: minmax(0, 1fr) 230px;
+  min-height: 176px;
 }
 
 .case-card:hover,
