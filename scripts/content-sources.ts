@@ -76,43 +76,10 @@ const aiKeywords = [
   "实战"
 ];
 
+const excludedVideoIds = new Set(["kxBCLl6eexE", "hGaKA3cfMjk", "tfeCwDT-5m0"]);
+const excludedSourceUrls = new Set(Array.from(excludedVideoIds, (id) => `https://www.youtube.com/watch?v=${id}`));
+
 const sources: Source[] = [
-  {
-    type: "manual",
-    author: "松小鼠呀",
-    platform: "YouTube",
-    url: "https://www.youtube.com/watch?v=kxBCLl6eexE",
-    sourceKind: "video",
-    youtubeVideoId: "kxBCLl6eexE",
-    title: "Codex 10个必装插件！实战演示：自动生成酷炫动画、视频、网页游戏和手机App，快速上手AI Agent #chatgpt #codex #ai",
-    summary: "围绕 Codex 插件和 AI Agent 实战展开，用演示型内容帮助读者理解插件如何把生成动画、视频、网页游戏和 App 的流程串起来。",
-    tags: ["Codex", "插件", "AI Agent"],
-    priority: 95
-  },
-  {
-    type: "manual",
-    author: "木子不写代码",
-    platform: "YouTube",
-    url: "https://www.youtube.com/watch?v=hGaKA3cfMjk",
-    sourceKind: "video",
-    youtubeVideoId: "hGaKA3cfMjk",
-    title: "Codex 零基础终极教程：功能、办公、编程、自动化一次讲透！",
-    summary: "面向零基础用户系统讲 Codex 的办公、编程和自动化用途，适合作为新用户理解 AI 编程助手与通用自动化工作流的入口。",
-    tags: ["Codex", "自动化", "教程"],
-    priority: 94
-  },
-  {
-    type: "manual",
-    author: "學長Ethan",
-    platform: "YouTube",
-    url: "https://www.youtube.com/watch?v=tfeCwDT-5m0",
-    sourceKind: "video",
-    youtubeVideoId: "tfeCwDT-5m0",
-    title: "Codex保姆級完整教學：從入門到進階，自動生成內容、網頁、影片和App，快速學會指揮你的超級AI Agent #chatgpt #codex",
-    summary: "从入门到进阶讲 Codex 与 AI Agent 的指挥方式，覆盖内容、网页、影片和 App 自动生成，符合本站对可复用实操教程的筛选标准。",
-    tags: ["Codex", "AI Agent", "内容生成"],
-    priority: 93
-  },
   {
     type: "rss",
     author: "掘金",
@@ -269,6 +236,14 @@ function looksLikeLowValueUpdate(candidate: Pick<Candidate, "title" | "url" | "s
   if (/\b(alpha|beta|patch|minor release|maintenance release)\b/.test(value)) return true;
 
   return false;
+}
+
+function isExcludedCandidate(candidate: Pick<Candidate, "url" | "sourceUrl" | "youtubeVideoId">) {
+  const normalizedUrl = (candidate.url || candidate.sourceUrl).replace(/[?#].*$/, "");
+  return Boolean(
+    (candidate.youtubeVideoId && excludedVideoIds.has(candidate.youtubeVideoId)) ||
+      excludedSourceUrls.has(normalizedUrl)
+  );
 }
 
 function getMatchedKeywords(candidate: Pick<Candidate, "title" | "summary" | "tags">) {
@@ -531,6 +506,7 @@ export async function collectCandidates() {
       .filter((result): result is PromiseFulfilledResult<Candidate[]> => result.status === "fulfilled")
       .flatMap((result) => result.value)
       .filter((candidate) => candidate.title && candidate.url)
+      .filter((candidate) => !isExcludedCandidate(candidate))
       .filter((candidate) => !looksLikeLowValueUpdate(candidate))
       .filter((candidate) => hasLearningValue(candidate))
   )

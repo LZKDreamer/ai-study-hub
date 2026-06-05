@@ -3,40 +3,56 @@
   "updatedCount": 20,
   "items": [
     {
-      "id": "0",
-      "slug": "codex-10-plugins-demo",
-      "author": "松小鼠呀",
-      "platform": "YouTube",
-      "sourceUrl": "https://www.youtube.com/watch?v=kxBCLl6eexE",
-      "sourceKind": "video",
-      "youtubeVideoId": "kxBCLl6eexE",
-      "publishedAt": "2026-06-04T23:21:47.837Z",
-      "title": "Codex 10个必装插件！实战演示：自动生成酷炫动画、视频、网页游戏和手机App，快速上手AI Agent",
-      "summary": "围绕 Codex 插件和 AI Agent 实战展开，用演示型内容帮助读者理解插件如何把生成动画、视频、网页游戏和 App 的流程串起来。适合希望快速掌握 Codex 扩展能力、通过插件实现复杂自动化生成的开发者。",
+      "id": "github-langchain-framework",
+      "slug": "github-langchain-framework",
+      "author": "langchain-ai",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/langchain-ai/langchain",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T08:00:00.000+08:00",
+      "title": "LangChain：构建 LLM 应用和 Agent 工作流的开源框架",
+      "summary": "LangChain 适合放进推荐流，因为它不是单篇资讯，而是一套围绕 LLM 应用、工具调用、检索和 Agent 编排的开源基础设施。读者可以从项目结构和文档学习 AI 应用工程化方法。",
       "tags": [
-        "Codex",
-        "插件",
-        "AI Agent"
+        "GitHub",
+        "LangChain",
+        "AI Agent",
+        "LLM 应用"
       ],
       "featured": true
     },
     {
-      "id": "1",
-      "slug": "codex-beginner-tutorial",
-      "author": "木子不写代码",
-      "platform": "YouTube",
-      "sourceUrl": "https://www.youtube.com/watch?v=hGaKA3cfMjk",
-      "sourceKind": "video",
-      "youtubeVideoId": "hGaKA3cfMjk",
-      "publishedAt": "2026-06-04T23:21:47.837Z",
-      "title": "Codex 零基础终极教程：功能、办公、编程、自动化一次讲透！",
-      "summary": "面向零基础用户系统讲 Codex 的办公、编程和自动化用途，适合作为新用户理解 AI 编程助手与通用自动化工作流的入口。内容覆盖全面，适合希望从零建立 AI 辅助工作流认知的读者。",
+      "id": "github-autogen-agent-framework",
+      "slug": "github-autogen-agent-framework",
+      "author": "microsoft",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/microsoft/autogen",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T07:50:00.000+08:00",
+      "title": "AutoGen：学习多智能体协作的开源框架",
+      "summary": "AutoGen 的学习价值在于它把多个 Agent 的对话、协作、工具调用和任务分解组织成框架。想理解多智能体系统如何从 demo 走向工程实现，可以从这个项目开始。",
       "tags": [
-        "Codex",
-        "自动化",
-        "教程"
-      ],
-      "featured": false
+        "GitHub",
+        "AutoGen",
+        "多智能体",
+        "AI Agent"
+      ]
+    },
+    {
+      "id": "github-mcp-servers",
+      "slug": "github-mcp-servers",
+      "author": "modelcontextprotocol",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/modelcontextprotocol/servers",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T07:40:00.000+08:00",
+      "title": "MCP Servers：给 AI 助手接入外部工具和数据源的开源集合",
+      "summary": "这个项目适合关注 MCP 的读者。它展示了 AI 助手如何通过标准协议连接文件、数据库、浏览器、开发工具等外部能力，是理解 MCP 生态和插件化工作流的入口。",
+      "tags": [
+        "GitHub",
+        "MCP",
+        "工具调用",
+        "插件"
+      ]
     },
     {
       "id": "2",
@@ -57,8 +73,7 @@
       ],
       "metrics": {
         "stars": "22565"
-      },
-      "featured": false
+      }
     },
     {
       "id": "3",
@@ -79,8 +94,7 @@
       ],
       "metrics": {
         "stars": "969"
-      },
-      "featured": false
+      }
     },
     {
       "id": "4",
@@ -98,8 +112,7 @@
         "ChatGPT",
         "AI 工作流",
         "视频"
-      ],
-      "featured": false
+      ]
     },
     {
       "id": "5",
@@ -120,8 +133,7 @@
       ],
       "metrics": {
         "stars": "1057"
-      },
-      "featured": false
+      }
     },
     {
       "id": "6",
@@ -142,8 +154,7 @@
       ],
       "metrics": {
         "stars": "13087"
-      },
-      "featured": false
+      }
     },
     {
       "id": "7",
@@ -164,8 +175,7 @@
       ],
       "metrics": {
         "stars": "30429"
-      },
-      "featured": false
+      }
     },
     {
       "id": "8",
@@ -186,8 +196,7 @@
       ],
       "metrics": {
         "stars": "21824"
-      },
-      "featured": false
+      }
     },
     {
       "id": "9",
@@ -207,8 +216,7 @@
       ],
       "metrics": {
         "stars": "25489"
-      },
-      "featured": false
+      }
     },
     {
       "id": "10",
@@ -229,8 +237,7 @@
       ],
       "metrics": {
         "stars": "770"
-      },
-      "featured": false
+      }
     },
     {
       "id": "11",
@@ -251,8 +258,7 @@
       ],
       "metrics": {
         "stars": "143882"
-      },
-      "featured": false
+      }
     },
     {
       "id": "12",
@@ -272,26 +278,7 @@
       ],
       "metrics": {
         "stars": "43671"
-      },
-      "featured": false
-    },
-    {
-      "id": "13",
-      "slug": "codex-complete-tutorial",
-      "author": "學長Ethan",
-      "platform": "YouTube",
-      "sourceUrl": "https://www.youtube.com/watch?v=tfeCwDT-5m0",
-      "sourceKind": "video",
-      "youtubeVideoId": "tfeCwDT-5m0",
-      "publishedAt": "2026-06-04T23:21:47.837Z",
-      "title": "Codex 保姆级完整教学：从入门到进阶，自动生成内容、网页、影片和 App",
-      "summary": "从入门到进阶详细讲解 Codex 与 AI Agent 的指挥方式，覆盖内容、网页、影片和 App 的自动生成。符合本站对可复用实操教程的筛选标准，适合希望系统掌握 Codex 高级用法的用户。",
-      "tags": [
-        "Codex",
-        "AI Agent",
-        "内容生成"
-      ],
-      "featured": false
+      }
     },
     {
       "id": "14",
@@ -311,8 +298,7 @@
       ],
       "metrics": {
         "stars": "45059"
-      },
-      "featured": false
+      }
     },
     {
       "id": "15",
@@ -330,8 +316,7 @@
         "ChatGPT",
         "AI 工作流",
         "视频"
-      ],
-      "featured": false
+      ]
     },
     {
       "id": "16",
@@ -351,8 +336,7 @@
       ],
       "metrics": {
         "stars": "5840"
-      },
-      "featured": false
+      }
     },
     {
       "id": "17",
@@ -368,8 +352,7 @@
         "LLM",
         "AI 工具",
         "英文文章"
-      ],
-      "featured": false
+      ]
     },
     {
       "id": "18",
@@ -389,8 +372,7 @@
       ],
       "metrics": {
         "stars": "679"
-      },
-      "featured": false
+      }
     },
     {
       "id": "19",
@@ -410,8 +392,7 @@
       ],
       "metrics": {
         "stars": "733"
-      },
-      "featured": false
+      }
     }
   ]
 }

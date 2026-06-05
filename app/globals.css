@@ -1012,8 +1012,10 @@ button {
 
 @media (max-width: 860px) {
   .site-header {
+    align-items: flex-start;
     width: min(100% - 1rem, 1120px);
     margin-top: 0.5rem;
+    padding: 0.65rem 0;
   }
 
   .header-actions span {
@@ -1022,6 +1024,10 @@ button {
 
   .brand small {
     display: none;
+  }
+
+  .brand {
+    gap: 0.65rem;
   }
 
   .page-shell,
@@ -1036,6 +1042,23 @@ button {
   .case-card {
     grid-template-columns: 1fr;
     min-height: 0;
+  }
+
+  .case-card.has-media {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .card-media {
+    order: -1;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .card-media img {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 
   .thumb {
@@ -1066,34 +1089,61 @@ button {
 
 @media (max-width: 520px) {
   .site-header {
-    padding: 0.7rem;
+    width: min(100% - 0.75rem, 1120px);
+    padding: 0.55rem 0;
   }
 
   .logo {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-network {
+    inset: 10px;
   }
 
   .brand strong {
-    font-size: 1.18rem;
+    font-size: clamp(1.02rem, 8vw, 1.35rem);
   }
 
   .page-shell.compact {
-    margin-top: 1.8rem;
+    margin-top: 1.45rem;
   }
 
   .case-card {
-    padding: 0.85rem;
+    padding: 0.78rem;
   }
 
   .case-card h2 {
-    font-size: 1.04rem;
+    margin-top: 0.48rem;
+    font-size: 1rem;
   }
 
   .summary,
   .article-page p,
   .article-page li {
-    font-size: 0.94rem;
+    font-size: 0.9rem;
+    line-height: 1.62;
+  }
+
+  .meta-row {
+    gap: 0.38rem;
+    font-size: 0.74rem;
+  }
+
+  .meta-row span + span::before {
+    margin-right: 0.38rem;
+  }
+
+  .tags {
+    gap: 0.36rem;
+    margin-top: 0.62rem;
+  }
+
+  .tags span {
+    min-height: 23px;
+    padding: 0.12rem 0.45rem;
+    font-size: 0.72rem;
   }
 
   .article-page {

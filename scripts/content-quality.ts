@@ -2,7 +2,7 @@ import type { ContentItem, LatestData } from "./content-types";
 
 const allowedSourceKinds = new Set(["article", "video", "link"]);
 
-function isNonEmptyString(value: unknown) {
+function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
 }
 
@@ -25,7 +25,7 @@ function isLowValueUpdateUrl(value: string) {
   );
 }
 
-function validateItem(item: ContentItem, index: number, seenSlugs: Set<string>) {
+function validateItem(item: ContentItem, index: number, seenSlugs: Set<string>, seenSourceUrls: Set<string>, seenVideoIds: Set<string>) {
   assert(isNonEmptyString(item.id), `Item ${index} is missing id.`);
   assert(isNonEmptyString(item.slug), `Item ${item.id} is missing slug.`);
   assert(!seenSlugs.has(item.slug), `Duplicate slug: ${item.slug}`);
@@ -35,6 +35,8 @@ function validateItem(item: ContentItem, index: number, seenSlugs: Set<string>) 
   assert(isNonEmptyString(item.platform), `Item ${item.id} is missing platform.`);
   assert(isNonEmptyString(item.sourceUrl), `Item ${item.id} is missing sourceUrl.`);
   assert(!isLowValueUpdateUrl(item.sourceUrl), `Item ${item.id} points to a low-value release/changelog URL.`);
+  assert(!seenSourceUrls.has(item.sourceUrl), `Duplicate sourceUrl: ${item.sourceUrl}`);
+  seenSourceUrls.add(item.sourceUrl);
   assert(allowedSourceKinds.has(item.sourceKind), `Item ${item.id} has invalid sourceKind.`);
   assert(isNonEmptyString(item.publishedAt), `Item ${item.id} is missing publishedAt.`);
   assert(!Number.isNaN(new Date(item.publishedAt).getTime()), `Item ${item.id} has invalid publishedAt.`);
@@ -48,7 +50,10 @@ function validateItem(item: ContentItem, index: number, seenSlugs: Set<string>) 
   assert(isVisibleMetric(item.metrics?.stars), `Item ${item.id} has an unavailable stars metric.`);
 
   if (item.sourceKind === "video") {
-    assert(isNonEmptyString(item.youtubeVideoId), `Video item ${item.id} needs youtubeVideoId.`);
+    const videoId = item.youtubeVideoId;
+    if (!isNonEmptyString(videoId)) throw new Error(`Video item ${item.id} needs youtubeVideoId.`);
+    assert(!seenVideoIds.has(videoId), `Duplicate youtubeVideoId: ${videoId}`);
+    seenVideoIds.add(videoId);
   }
 }
 
@@ -57,5 +62,7 @@ export function validateLatest(data: LatestData) {
   assert(data.updatedCount === 20, `Expected updatedCount to be 20, got ${data.updatedCount}.`);
 
   const seenSlugs = new Set<string>();
-  data.items.forEach((item, index) => validateItem(item, index, seenSlugs));
+  const seenSourceUrls = new Set<string>();
+  const seenVideoIds = new Set<string>();
+  data.items.forEach((item, index) => validateItem(item, index, seenSlugs, seenSourceUrls, seenVideoIds));
 }
