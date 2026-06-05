@@ -364,97 +364,37 @@ button {
   box-shadow: none;
 }
 
-.logo-network {
-  position: absolute;
-  inset: 12px;
+.logo-mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: rgba(5, 5, 16, 0.9);
+  stroke: url("#logoStroke");
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter:
+    drop-shadow(0 0 7px rgba(103, 232, 249, 0.46))
+    drop-shadow(0 0 12px rgba(34, 197, 94, 0.28));
 }
 
-.logo::before,
-.logo::after,
-.logo-network::before,
-.logo-network::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(56, 189, 248, 0.12), rgba(103, 232, 249, 0.84), rgba(34, 197, 94, 0.58));
-  transform-origin: left center;
+.logo-mark circle {
+  fill: #67e8f9;
+  stroke: rgba(248, 250, 252, 0.48);
+  stroke-width: 1.1;
 }
 
-.logo::before {
-  left: 17px;
-  top: 17px;
-  width: 24px;
-  transform: rotate(28deg);
+.logo-mark circle:nth-of-type(3),
+.logo-mark circle:nth-of-type(5) {
+  fill: #22c55e;
 }
 
-.logo::after {
-  left: 17px;
-  bottom: 18px;
-  width: 22px;
-  transform: rotate(-28deg);
-}
-
-.logo-network::before {
-  left: 2px;
-  top: 16px;
-  width: 30px;
-}
-
-.logo-network::after {
-  left: 15px;
-  top: 2px;
-  width: 27px;
-  transform: rotate(118deg);
-}
-
-.logo-network i {
-  position: absolute;
-  z-index: 1;
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: #67e8f9;
-  box-shadow:
-    0 0 0 1px rgba(56, 189, 248, 0.18),
-    0 0 12px rgba(34, 197, 94, 0.8);
-}
-
-.logo-network i:nth-child(1) {
-  left: 0;
-  top: 14px;
-}
-
-.logo-network i:nth-child(2) {
-  right: 0;
-  top: 9px;
-}
-
-.logo-network i:nth-child(3) {
-  left: 15px;
-  top: 0;
-  background: var(--green);
-}
-
-.logo-network i:nth-child(4) {
-  left: 11px;
-  bottom: 1px;
-}
-
-.logo-network i:nth-child(5) {
-  right: 5px;
-  bottom: 3px;
-}
-
-.logo-network b {
-  position: absolute;
-  right: 1px;
-  top: 2px;
-  width: 10px;
-  height: 10px;
-  border-top: 1px solid rgba(34, 197, 94, 0.9);
-  border-right: 1px solid rgba(34, 197, 94, 0.9);
-  transform: rotate(45deg);
-  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.7));
+.logo-spark {
+  fill: none;
+  stroke: #e2e8f0;
+  stroke-width: 1.8;
+  opacity: 0.78;
 }
 
 .header-actions {
@@ -1098,12 +1038,12 @@ button {
     height: 42px;
   }
 
-  .logo-network {
-    inset: 10px;
-  }
-
   .brand strong {
     font-size: clamp(1.02rem, 8vw, 1.35rem);
+  }
+
+  .brand strong::after {
+    display: none;
   }
 
   .page-shell.compact {
