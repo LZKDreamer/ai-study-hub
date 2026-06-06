@@ -87,6 +87,41 @@ function normalizeGeneratedItem(item: Partial<ContentItem>, candidate: Candidate
   };
 }
 
+function itemDedupeKeys(item: ContentItem) {
+  return [item.youtubeVideoId ? `youtube:${item.youtubeVideoId}` : null, `url:${item.sourceUrl}`, `slug:${item.slug}`].filter(
+    (key): key is string => Boolean(key)
+  );
+}
+
+function dedupeAndBackfillItems(items: ContentItem[], selected: Candidate[]) {
+  const seen = new Set<string>();
+  const result: ContentItem[] = [];
+
+  function addItem(item: ContentItem) {
+    const keys = itemDedupeKeys(item);
+    if (keys.some((key) => seen.has(key))) return false;
+
+    keys.forEach((key) => seen.add(key));
+    result.push({
+      ...item,
+      featured: false
+    });
+    return true;
+  }
+
+  items.forEach(addItem);
+
+  for (const candidate of selected) {
+    if (result.length >= 20) break;
+    addItem(normalizeGeneratedItem({}, candidate, result.length));
+  }
+
+  return result.slice(0, 20).map((item, index) => ({
+    ...item,
+    featured: index === 0
+  }));
+}
+
 export async function generateLatestFromCandidates(candidates: Candidate[], date: string, limit: DailyCallLimit): Promise<LatestData> {
   const selected = candidates.slice(0, 60);
   const prompt = `你要为 AI Study Hub 生成今日 20 条 AI 学习内容推荐。站点可以收中文和英文内容，最终展示语言必须是中文。
@@ -103,7 +138,8 @@ export async function generateLatestFromCandidates(candidates: Candidate[], date
 9. 只保留真实候选里有的 imageUrl；不要编造图片。
 10. 如果阅读量、观看量、点赞数或 stars 不存在、未知或为 0，不要输出对应 metrics 字段。
 11. 视频必须 sourceKind 为 "video" 且保留 youtubeVideoId。
-12. 每条必须有 id, slug, author, platform, sourceUrl, sourceKind, publishedAt, title, summary, tags。
+12. 不得重复 candidateIndex、sourceUrl 或 youtubeVideoId。
+13. 每条必须有 id, slug, author, platform, sourceUrl, sourceKind, publishedAt, title, summary, tags。
 
 推荐算法：
 - 先过滤主题：AI 工具使用、项目实践、开源项目、AI 赚钱/副业、工作流、Skill/插件、MCP、Agent、国产 AI 工具实践。
@@ -130,13 +166,14 @@ ${JSON.stringify(selected.map(compactCandidate), null, 2)}`;
 
   const parsed = JSON.parse(extractJson(content)) as { items?: Array<Partial<ContentItem> & { candidateIndex?: number }> };
   const rawItems = parsed.items ?? [];
+  const normalizedItems = rawItems.map((item, index) => {
+    const candidate = selected[item.candidateIndex ?? index] ?? selected[index] ?? selected[0];
+    return normalizeGeneratedItem(item, candidate, index);
+  });
 
   return {
     date,
     updatedCount: 20,
-    items: rawItems.slice(0, 20).map((item, index) => {
-      const candidate = selected[item.candidateIndex ?? index] ?? selected[index] ?? selected[0];
-      return normalizeGeneratedItem(item, candidate, index);
-    })
+    items: dedupeAndBackfillItems(normalizedItems, selected)
   };
 }
