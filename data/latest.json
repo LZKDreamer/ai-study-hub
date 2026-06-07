@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-07",
+  "date": "2026-06-08",
   "updatedCount": 20,
   "items": [
     {
@@ -9,454 +9,455 @@
       "platform": "GitHub",
       "sourceUrl": "https://github.com/NousResearch/hermes-agent",
       "sourceKind": "link",
-      "publishedAt": "2026-06-06T23:15:57.000Z",
+      "publishedAt": "2026-06-07T19:54:33.000Z",
       "title": "Hermes Agent：与你共同成长的开源 AI 智能体",
-      "summary": "Hermes Agent 是一个由 NousResearch 开发的开源 AI 智能体项目，拥有超过 18 万 Star。它旨在成为一个能够随着用户交互不断进化的智能助手。该项目适合希望构建个性化、可长期使用的 AI Agent 的开发者，通过开源代码深入理解智能体的记忆、工具调用及自我优化机制，为二次开发或集成到现有工作流提供坚实基础。",
+      "summary": "Hermes Agent 是由 NousResearch 推出的高热度开源 AI 智能体项目，拥有超过 18 万 Star。它旨在构建一个能够随着用户交互不断进化的智能助手，强调个性化与长期记忆。该项目适合希望部署自主型 AI Agent 的开发者，可作为构建个人助理或垂直领域智能体的基础框架，支持灵活的插件扩展与多模型接入。",
       "tags": [
         "AI Agent",
         "开源项目",
         "Python",
+        "NousResearch",
         "GitHub",
-        "MCP",
-        "TypeScript"
+        "MCP"
       ],
       "metrics": {
-        "stars": "184726"
+        "stars": "22620"
       },
       "featured": true
     },
     {
       "id": "item-1",
-      "slug": "langgenius-dify",
-      "author": "langgenius",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/langgenius/dify",
-      "sourceKind": "link",
-      "publishedAt": "2026-06-06T16:00:22.000Z",
-      "title": "Dify：生产级 AI 智能体工作流开发平台",
-      "summary": "Dify 是目前最流行的开源 LLM 应用开发平台之一，拥有超过 14 万 Star。它提供了一站式的 AI 工作流开发环境，支持智能体编排、RAG 检索增强生成及模型管理。适合团队快速构建、测试和部署 AI 应用，无需从零搭建基础设施。通过其可视化界面和 API，开发者可以高效复用现有组件，加速 AI 产品的落地进程。",
+      "slug": "openai-codex-sites",
+      "author": "OpenAI",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=VRvC5smyzso",
+      "sourceKind": "video",
+      "youtubeVideoId": "VRvC5smyzso",
+      "publishedAt": "2026-06-05T17:42:23.000Z",
+      "title": "OpenAI 发布 Codex Sites：一键将想法转化为可发布应用",
+      "summary": "本视频介绍了 OpenAI Codex 的新功能 Sites，允许团队将创意快速转化为安全的应用程序并立即发布。它内置了托管、认证、存储和数据库支持，无需复杂配置。适合产品经理和开发者用于快速构建内部工具、迷你应用或演示原型，大幅缩短从构思到上线的周期，提升团队协作效率。",
       "tags": [
-        "LLM",
-        "工作流",
-        "开源项目",
-        "TypeScript",
-        "GitHub"
+        "OpenAI",
+        "ChatGPT",
+        "视频",
+        "AI 工作流",
+        "GitHub",
+        "LLM"
       ],
       "metrics": {
-        "stars": "144169"
+        "stars": "969"
       },
       "featured": false
     },
     {
       "id": "item-2",
-      "slug": "shareAI-lab-learn-claude-code",
-      "author": "shareAI-lab",
+      "slug": "langgenius-dify",
+      "author": "langgenius",
       "platform": "GitHub",
-      "sourceUrl": "https://github.com/shareAI-lab/learn-claude-code",
+      "sourceUrl": "https://github.com/langgenius/dify",
       "sourceKind": "link",
-      "publishedAt": "2026-06-04T02:22:54.000Z",
-      "title": "Learn Claude Code：从零构建类 Claude Code 的 Agent Harness",
-      "summary": "该项目通过 Bash 脚本从零开始构建了一个类似 Claude Code 的轻量级 AI 智能体框架（Agent Harness），拥有 6.5 万 Star。它详细展示了如何结合 LLM 与命令行工具实现自动化编程辅助。适合希望深入理解 AI 编程助手底层原理、学习如何构建自定义代码生成工作流的开发者，是掌握 AI 工程化实践的绝佳案例。",
+      "publishedAt": "2026-06-07T14:30:37.000Z",
+      "title": "Dify：生产级 AI 智能体与工作流开发平台",
+      "summary": "Dify 是目前 GitHub 上最热门的 AI 开发平台之一，拥有超过 14 万 Star。它提供生产就绪的 Agentic 工作流开发能力，支持可视化编排、RAG 集成和模型管理。适合希望快速构建企业级 AI 应用、聊天机器人或自动化工作流的团队，降低了 LLM 应用的开发门槛，支持私有化部署。",
       "tags": [
         "AI Agent",
         "开源项目",
-        "Python",
+        "TypeScript",
+        "AI 工作流",
         "GitHub",
-        "LLM",
-        "工作流"
+        "LLM"
       ],
       "metrics": {
-        "stars": "65047"
+        "stars": "1047"
       },
       "featured": false
     },
     {
       "id": "item-3",
-      "slug": "punkpeye-awesome-mcp-servers",
-      "author": "punkpeye",
+      "slug": "github-mcp-server",
+      "author": "github",
       "platform": "GitHub",
-      "sourceUrl": "https://github.com/punkpeye/awesome-mcp-servers",
+      "sourceUrl": "https://github.com/github/github-mcp-server",
       "sourceKind": "video",
       "youtubeVideoId": "_9ImjmzAyus",
-      "publishedAt": "2026-06-06T23:14:47.000Z",
-      "title": "Awesome MCP Servers：MCP 服务器资源大全",
-      "summary": "这是一个收录了大量 Model Context Protocol (MCP) 服务器的精选列表，拥有近 9 万 Star。MCP 是连接 AI 模型与外部数据源的标准协议。该项目为开发者提供了丰富的 MCP 实现参考，涵盖数据库、浏览器、文件系统等场景。适合正在探索或集成 MCP 协议的团队，快速找到可用的服务器组件，加速 AI 应用的数据接入能力。",
+      "publishedAt": "2026-06-05T14:04:26.000Z",
+      "title": "GitHub 官方 MCP Server：让 AI 直接访问代码库",
+      "summary": "GitHub 推出的官方 MCP Server，允许 AI 助手通过 Model Context Protocol 直接查询代码库、Issue 和 PR 信息。这是连接 AI 与开发者工作流的关键基础设施，适合希望将 AI 集成到代码审查、文档生成或项目管理流程中的团队。通过标准化接口，提升了 AI 在软件工程场景下的可用性与安全性。",
       "tags": [
         "MCP",
         "开源项目",
+        "GitHub",
+        "Go",
         "OpenAI",
-        "ChatGPT",
-        "视频"
+        "ChatGPT"
       ],
-      "metrics": {
-        "stars": "88627"
-      },
       "featured": false
     },
     {
       "id": "item-4",
-      "slug": "thedaviddias-front-end-checklist",
-      "author": "thedaviddias",
+      "slug": "shareAI-lab-learn-claude-code",
+      "author": "shareAI-lab",
       "platform": "GitHub",
-      "sourceUrl": "https://github.com/thedaviddias/Front-End-Checklist",
+      "sourceUrl": "https://github.com/shareAI-lab/learn-claude-code",
       "sourceKind": "link",
-      "publishedAt": "2026-06-02T15:27:13.000Z",
-      "title": "Front-End Checklist：面向人类与 AI 智能体的前端开发检查清单",
-      "summary": "这是一个被广泛引用的前端开发检查清单项目，拥有 7.2 万 Star。它不仅服务于人类开发者，还特别优化了格式以适配 AI 智能体（Agent）读取。适合在构建 AI 辅助编程工具或自动化前端工作流时使用，确保 AI 生成的代码符合现代 Web 开发标准。通过结构化数据，帮助 AI 更准确地执行代码审查和生成任务。",
+      "publishedAt": "2026-06-07T04:39:59.000Z",
+      "title": "Learn Claude Code：从零构建类 Claude Code 的 Agent Harness",
+      "summary": "该项目通过“Bash is all you need”的理念，从零开始构建了一个轻量级的 Claude Code 类似智能体框架。拥有超过 6.5 万 Star，适合希望深入理解 AI 编程助手底层原理的开发者。通过阅读源码，可以学习如何设计 Agent 的指令遵循、工具调用及错误处理机制，是学习 AI Agent 架构的极佳实践案例。",
       "tags": [
         "AI Agent",
         "开源项目",
-        "MDX",
+        "Python",
+        "Claude",
         "GitHub",
-        "LLM",
-        "工作流"
+        "LLM"
       ],
       "metrics": {
-        "stars": "72849"
+        "stars": "13098"
       },
       "featured": false
     },
     {
       "id": "item-5",
-      "slug": "zhayujie-cowagent",
-      "author": "zhayujie",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/zhayujie/CowAgent",
-      "sourceKind": "link",
-      "publishedAt": "2026-06-06T11:06:30.000Z",
-      "title": "CowAgent：开源超级 AI 助手与智能体框架",
-      "summary": "CowAgent（前身为 chatgpt-on-wechat）是一个轻量级、可扩展的开源 AI 助手框架，拥有 4.5 万 Star。它支持多模型、多通道接入，具备任务规划、工具调用及记忆增长能力。适合希望快速搭建个人 AI 助手或集成到微信等平台的开发者。其一行命令安装的特性及丰富的插件生态，使其成为入门 AI Agent 开发的理想选择。",
+      "slug": "openai-codex-sales",
+      "author": "OpenAI",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=U2C55LC0ZLM",
+      "sourceKind": "video",
+      "youtubeVideoId": "U2C55LC0ZLM",
+      "publishedAt": "2026-06-04T19:32:57.000Z",
+      "title": "Codex 赋能销售团队：加速解决客户问题",
+      "summary": "视频展示了 OpenAI 销售团队如何利用 Codex 提升工作效率。通过 Codex，团队能在 5 分钟内提取客户数据、创建演示原型，并自动生成符合语气的 Slack 更新。这为销售和技术支持团队提供了可复用的 AI 工作流模板，展示了 AI 在客户服务、数据分析和内容生成方面的实际落地价值。",
       "tags": [
-        "AI Agent",
-        "开源项目",
-        "Python",
+        "OpenAI",
+        "ChatGPT",
+        "视频",
+        "AI 工作流",
         "GitHub",
-        "MCP",
-        "Go"
+        "MCP"
       ],
       "metrics": {
-        "stars": "45096"
+        "stars": "30507"
       },
       "featured": false
     },
     {
       "id": "item-6",
-      "slug": "CherryHQ-cherry-studio",
-      "author": "CherryHQ",
+      "slug": "punkpeye-awesome-mcp-servers",
+      "author": "punkpeye",
       "platform": "GitHub",
-      "sourceUrl": "https://github.com/CherryHQ/cherry-studio",
+      "sourceUrl": "https://github.com/punkpeye/awesome-mcp-servers",
       "sourceKind": "link",
-      "publishedAt": "2026-06-06T17:19:25.000Z",
-      "title": "Cherry Studio：集成 300+ 助手的 AI 生产力工作室",
-      "summary": "Cherry Studio 是一款本地优先的 AI 生产力工具，拥有 4.6 万 Star。它统一接入了前沿的大语言模型，支持智能聊天、自主智能体及 300 多种预设助手。适合需要高效管理多个 AI 模型、进行深度对话或自动化任务处理的用户。其本地运行特性保障了数据隐私，同时丰富的助手生态满足了多样化的办公与创作需求。",
+      "publishedAt": "2026-06-07T21:38:07.000Z",
+      "title": "Awesome MCP Servers：MCP 生态资源大全",
+      "summary": "这是一个收录了大量 MCP Server 的精选列表，拥有近 9 万 Star。对于想要探索 Model Context Protocol 生态的开发者来说，这是必不可少的资源库。它提供了各种现成的 MCP 服务器实现，涵盖数据库、浏览器、文件系统等场景，帮助开发者快速集成 AI 能力，避免重复造轮子。",
       "tags": [
-        "AI Agent",
+        "MCP",
         "开源项目",
-        "TypeScript",
+        "AI 工具",
+        "资源合集",
         "GitHub",
-        "LLM",
-        "工作流"
+        "LLM"
       ],
       "metrics": {
-        "stars": "46982"
+        "stars": "21851"
       },
       "featured": false
     },
     {
       "id": "item-7",
-      "slug": "santifer-career-ops",
-      "author": "santifer",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/santifer/career-ops",
-      "sourceKind": "link",
-      "publishedAt": "2026-06-03T06:17:55.000Z",
-      "title": "Career Ops：基于 Claude Code 的 AI 求职系统",
-      "summary": "这是一个利用 Claude Code 构建的 AI 驱动求职系统，拥有 4.9 万 Star。它提供 14 种技能模式、Go 语言仪表盘、PDF 生成及批量处理能力。适合求职者或职业教练使用，通过自动化处理简历优化、职位匹配及面试准备等繁琐任务。该项目展示了如何将 AI 编程助手应用于垂直领域的实际工作流，极具复用价值。",
+      "slug": "openai-codex-investor-day",
+      "author": "OpenAI",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=RwzRm-qCXwA",
+      "sourceKind": "video",
+      "youtubeVideoId": "RwzRm-qCXwA",
+      "publishedAt": "2026-06-06T23:50:54.000Z",
+      "title": "OpenAI 投资者创新日：AI 重塑金融服务",
+      "summary": "在 OpenAI 投资者创新日上，高层展示了 AI 如何变革金融服务行业。视频聚焦于 Codex 在金融场景中的应用，演示了 AI 如何处理复杂的金融数据和分析任务。对于金融科技从业者和投资者而言，这提供了关于 AI 在垂直行业落地趋势的重要洞察，展示了 AI 在合规、风控和投资分析中的潜力。",
       "tags": [
-        "AI Agent",
-        "开源项目",
-        "JavaScript",
+        "OpenAI",
+        "ChatGPT",
+        "视频",
+        "AI 金融",
         "GitHub",
-        "MCP",
-        "Python"
+        "MCP"
       ],
       "metrics": {
-        "stars": "49301"
+        "stars": "25525"
       },
       "featured": false
     },
     {
       "id": "item-8",
-      "slug": "ZhuLinsen-daily_stock_analysis",
-      "author": "ZhuLinsen",
+      "slug": "activepieces-ai-agents",
+      "author": "activepieces",
       "platform": "GitHub",
-      "sourceUrl": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "sourceUrl": "https://github.com/activepieces/activepieces",
       "sourceKind": "link",
-      "publishedAt": "2026-06-06T18:56:24.000Z",
-      "title": "Daily Stock Analysis：LLM 驱动的 A/H/美股智能分析系统",
-      "summary": "该项目是一个零成本运行的 LLM 驱动股票分析系统，拥有 4.1 万 Star。它整合了多数据源行情、实时新闻及 LLM 决策仪表盘，支持多渠道推送。适合投资者或量化爱好者，利用 AI 自动化处理海量金融数据并生成分析报告。其纯白嫖架构和定时运行能力，为个人金融分析提供了高效且低成本的解决方案。",
+      "publishedAt": "2026-06-07T22:25:29.000Z",
+      "title": "Activepieces：集成 400+ MCP 服务器的 AI 自动化平台",
+      "summary": "Activepieces 是一个强大的 AI 自动化平台，支持 AI Agent 和工作流编排。它特别强调对 MCP 的支持，内置或兼容约 400 个 MCP 服务器，极大地扩展了 AI 的能力边界。适合希望构建复杂 AI 工作流、集成多种数据源和外部服务的开发者，提供了低代码与代码并行的自动化解决方案。",
       "tags": [
+        "MCP",
         "AI Agent",
         "开源项目",
-        "Python",
+        "TypeScript",
         "GitHub",
-        "LLM",
-        "工作流"
+        "LLM"
       ],
       "metrics": {
-        "stars": "41059"
+        "stars": "770"
       },
       "featured": false
     },
     {
       "id": "item-9",
-      "slug": "HKUDS-nanobot",
-      "author": "HKUDS",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/HKUDS/nanobot",
-      "sourceKind": "link",
-      "publishedAt": "2026-06-06T11:49:37.000Z",
-      "title": "NanoBot：轻量级开源 AI 智能体工具",
-      "summary": "NanoBot 是一个由香港大学数据科学实验室开发的轻量级开源 AI 智能体，拥有 4.3 万 Star。它专注于为工具、聊天和工作流提供智能支持。适合希望在不引入重型框架的情况下，快速集成 AI 能力到现有应用中的开发者。其简洁的设计和高可定制性，使其成为构建特定场景 AI 助手的优秀基础组件。",
-      "tags": [
-        "AI Agent",
-        "开源项目",
-        "Python",
-        "GitHub",
-        "LLM",
-        "工作流"
-      ],
-      "metrics": {
-        "stars": "43792"
-      },
-      "featured": false
-    },
-    {
-      "id": "item-10",
       "slug": "microsoft-playwright-mcp",
       "author": "microsoft",
       "platform": "GitHub",
       "sourceUrl": "https://github.com/microsoft/playwright-mcp",
       "sourceKind": "link",
       "publishedAt": "2026-06-04T20:56:00.000Z",
-      "title": "Playwright MCP：微软官方浏览器自动化 MCP 服务器",
-      "summary": "这是微软官方发布的 Playwright MCP 服务器，拥有 3.3 万 Star。它将 Playwright 的浏览器自动化能力通过 MCP 协议暴露给 AI 助手。适合需要让 AI 执行复杂网页交互、数据抓取或 UI 测试的开发者。通过标准化协议，AI 模型可以安全、高效地控制浏览器，极大扩展了 AI 在 Web 自动化领域的应用边界。",
+      "title": "Microsoft Playwright MCP Server：AI 浏览器自动化新标准",
+      "summary": "微软推出的 Playwright MCP Server，将强大的浏览器自动化能力通过 MCP 协议暴露给 AI 助手。拥有超过 3.3 万 Star，适合需要 AI 进行网页抓取、测试或交互操作的场景。它允许 AI 智能体像人类一样操作浏览器，同时保持代码级的稳定性和可维护性，是构建 AI 驱动 Web 应用的重要组件。",
       "tags": [
         "MCP",
         "开源项目",
         "TypeScript",
+        "浏览器自动化",
         "GitHub",
-        "AI Agent",
-        "Python"
+        "LLM"
       ],
       "metrics": {
-        "stars": "33571"
+        "stars": "144301"
+      },
+      "featured": false
+    },
+    {
+      "id": "item-10",
+      "slug": "openai-codex-1password",
+      "author": "OpenAI",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=xZ5J81Lwyk8",
+      "sourceKind": "video",
+      "youtubeVideoId": "xZ5J81Lwyk8",
+      "publishedAt": "2026-06-05T13:01:28.000Z",
+      "title": "1Password 团队如何用 Codex 实现“一次成型”开发",
+      "summary": "1Password 团队分享了他们使用 Codex 加速功能开发的经验。通过 Codex，团队能够从构思到原型一次性完成，显著缩短了从规划到生产的时间周期。视频展示了 AI 在安全软件开发生命周期中的实际应用，为其他技术团队提供了关于如何利用 AI 提升研发效率的宝贵参考。",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "视频",
+        "AI 开发",
+        "GitHub",
+        "AI Agent"
+      ],
+      "metrics": {
+        "stars": "43831"
       },
       "featured": false
     },
     {
       "id": "item-11",
-      "slug": "CopilotKit-CopilotKit",
-      "author": "CopilotKit",
+      "slug": "santifer-career-ops",
+      "author": "santifer",
       "platform": "GitHub",
-      "sourceUrl": "https://github.com/CopilotKit/CopilotKit",
+      "sourceUrl": "https://github.com/santifer/career-ops",
       "sourceKind": "link",
-      "publishedAt": "2026-06-06T23:12:41.000Z",
-      "title": "CopilotKit：面向智能体与生成式 UI 的前端开发栈",
-      "summary": "CopilotKit 是一个专为 AI 智能体和生成式用户界面设计的前端开发框架，拥有 3.3 万 Star。它支持 React、Angular、移动端及 Slack 等环境，并推出了 AG-UI 协议。适合前端开发者快速构建具备 AI 交互能力的 Web 应用。通过提供现成的 UI 组件和状态管理工具，降低了集成 AI 功能的复杂度，提升了开发效率。",
+      "publishedAt": "2026-06-07T17:25:27.000Z",
+      "title": "Career Ops：基于 Claude Code 的 AI 求职系统",
+      "summary": "这是一个基于 Claude Code 构建的 AI 求职系统，拥有近 5 万 Star。它提供 14 种技能模式、Go 语言仪表盘、PDF 生成和批量处理能力。适合求职者或职业顾问使用，能够自动化处理简历优化、职位匹配和申请跟踪等任务。该项目展示了如何将 AI 智能体应用于个人生产力提升和职业发展的具体场景。",
       "tags": [
         "AI Agent",
         "开源项目",
-        "TypeScript",
+        "JavaScript",
+        "Claude",
         "GitHub",
         "Python"
       ],
       "metrics": {
-        "stars": "33184"
-      },
-      "featured": false
-    },
-    {
-      "id": "item-12",
-      "slug": "github-github-mcp-server",
-      "author": "github",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/github/github-mcp-server",
-      "sourceKind": "video",
-      "youtubeVideoId": "VRvC5smyzso",
-      "publishedAt": "2026-06-05T14:04:26.000Z",
-      "title": "GitHub MCP Server：GitHub 官方 MCP 服务器",
-      "summary": "这是 GitHub 官方提供的 MCP 服务器，拥有 3 万 Star。它允许 AI 助手直接访问 GitHub 的代码库、Issue、PR 等数据。适合开发者和团队将 AI 深度集成到 GitHub 工作流中，实现代码审查、问题追踪及文档生成的自动化。作为官方支持，其稳定性和安全性得到了保障，是构建 GitHub 生态 AI 应用的首选组件。",
-      "tags": [
-        "MCP",
-        "开源项目",
-        "Go",
-        "OpenAI",
-        "ChatGPT",
-        "视频"
-      ],
-      "metrics": {
-        "stars": "30483"
+        "stars": "45125"
       },
       "featured": false
     },
     {
       "id": "item-13",
-      "slug": "Gitlawb-openclaude",
-      "author": "Gitlawb",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/Gitlawb/openclaude",
+      "slug": "openai-help-lockdown-mode",
+      "author": "Simon Willison",
+      "platform": "个人博客",
+      "sourceUrl": "https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/#atom-everything",
       "sourceKind": "link",
-      "publishedAt": "2026-06-06T15:12:45.000Z",
-      "title": "OpenClaude：随处运行、兼容多模型的开源智能体",
-      "summary": "OpenClaude 是一个强调兼容性和可移植性的开源 AI 智能体项目，拥有 2.8 万 Star。它支持“运行在任何地方，使用任何模型”，适合希望摆脱厂商锁定、灵活部署 AI 智能体的用户。通过开源架构，开发者可以自定义模型后端和运行环境，构建符合特定安全或性能需求的 AI 解决方案，具有很高的灵活性和复用性。",
+      "publishedAt": "2026-06-05T23:56:40.000Z",
+      "title": "OpenAI 推出 Lockdown Mode：防御提示注入攻击",
+      "summary": "OpenAI 正式推出 Lockdown Mode，旨在防止提示注入攻击导致的最终数据泄露阶段。该功能通过限制出站网络请求，阻止敏感数据被恶意转移。虽然不能防止注入内容本身，但能有效保护用户数据。适合所有使用 ChatGPT Plus、Pro 或 Business 账户的用户，提升了 AI 交互的安全性。",
       "tags": [
-        "AI Agent",
-        "开源项目",
-        "TypeScript",
+        "OpenAI",
+        "AI 安全",
+        "英文文章",
+        "ChatGPT",
         "GitHub",
-        "LLM",
-        "工作流"
+        "LLM"
       ],
       "metrics": {
-        "stars": "28419"
+        "stars": "5842"
       },
       "featured": false
     },
     {
       "id": "item-14",
-      "slug": "PrefectHQ-fastmcp",
-      "author": "PrefectHQ",
+      "slug": "googleapis-mcp-toolbox",
+      "author": "googleapis",
       "platform": "GitHub",
-      "sourceUrl": "https://github.com/PrefectHQ/fastmcp",
+      "sourceUrl": "https://github.com/googleapis/mcp-toolbox",
       "sourceKind": "link",
-      "publishedAt": "2026-06-06T01:30:50.000Z",
-      "title": "FastMCP：快速构建 MCP 服务器与客户端的 Python 库",
-      "summary": "FastMCP 是由 Prefect 团队开发的 Python 库，旨在以快速、Pythonic 的方式构建 MCP 服务器和客户端，拥有 2.5 万 Star。适合 Python 开发者快速将现有数据管道或工具暴露为 MCP 服务，供 AI 助手调用。其简洁的 API 设计降低了 MCP 协议的接入门槛，加速了 AI 应用与后端数据源的集成过程。",
+      "publishedAt": "2026-06-06T13:32:57.000Z",
+      "title": "Google MCP Toolbox for Databases：AI 数据库连接新方式",
+      "summary": "Google 推出的开源 MCP Server，专门用于数据库连接。拥有超过 1.5 万 Star，允许 AI 助手安全、高效地查询和管理数据库。适合希望将 AI 集成到数据分析和后端服务中的开发者，提供了标准化的接口来访问各种数据库资源，简化了 AI 应用的数据层开发。",
       "tags": [
         "MCP",
         "开源项目",
-        "Python",
+        "Go",
+        "数据库",
         "GitHub",
-        "LLM",
-        "工作流"
+        "LLM"
       ],
       "metrics": {
-        "stars": "25514"
-      },
-      "featured": false
-    },
-    {
-      "id": "item-15",
-      "slug": "activepieces-activepieces",
-      "author": "activepieces",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/activepieces/activepieces",
-      "sourceKind": "video",
-      "youtubeVideoId": "U2C55LC0ZLM",
-      "publishedAt": "2026-06-06T18:55:29.000Z",
-      "title": "Activepieces：集成 400+ MCP 服务器的 AI 自动化平台",
-      "summary": "Activepieces 是一个开源的 AI 自动化平台，拥有 2.2 万 Star，特别强调对 MCP 的支持，集成了约 400 个 MCP 服务器。适合需要构建复杂 AI Agent 和工作流的团队，通过可视化界面编排 AI 任务。其丰富的 MCP 生态使得 AI 能够轻松访问各种外部工具和数据，极大扩展了自动化的能力和范围。",
-      "tags": [
-        "MCP",
-        "开源项目",
-        "TypeScript",
-        "OpenAI",
-        "ChatGPT",
-        "视频"
-      ],
-      "metrics": {
-        "stars": "22589"
+        "stars": "682"
       },
       "featured": false
     },
     {
       "id": "item-16",
-      "slug": "Skyvern-AI-skyvern",
-      "author": "Skyvern-AI",
+      "slug": "prefect-fastmcp",
+      "author": "PrefectHQ",
       "platform": "GitHub",
-      "sourceUrl": "https://github.com/Skyvern-AI/skyvern",
+      "sourceUrl": "https://github.com/PrefectHQ/fastmcp",
       "sourceKind": "link",
-      "publishedAt": "2026-06-06T18:26:47.000Z",
-      "title": "Skyvern：基于 AI 的浏览器工作流自动化",
-      "summary": "Skyvern 是一个利用 AI 自动化基于浏览器的复杂工作流的项目，拥有 2.1 万 Star。它通过 LLM 理解网页结构并执行操作，适合替代传统的 Selenium 或 Puppeteer 脚本。对于需要处理动态网页、登录流程或数据录入的场景，Skyvern 提供了更智能、更鲁棒的解决方案，显著降低了浏览器自动化的维护成本。",
+      "publishedAt": "2026-06-06T01:30:50.000Z",
+      "title": "FastMCP：快速构建 Python MCP 服务器",
+      "summary": "FastMCP 是 Prefect 推出的 Pythonic MCP 服务器和客户端构建工具，拥有超过 2.5 万 Star。它简化了 MCP 协议的实现过程，使 Python 开发者能够快速创建兼容的 AI 服务。适合希望将现有 Python 数据管道或 API 暴露给 AI 助手的开发者，提升了 AI 集成的开发效率。",
       "tags": [
-        "LLM",
-        "工作流",
+        "MCP",
+        "开源项目",
         "Python",
+        "Prefect",
         "GitHub",
-        "Shell"
+        "LLM"
       ],
       "metrics": {
-        "stars": "21840"
+        "stars": "738"
       },
       "featured": false
     },
     {
       "id": "item-17",
-      "slug": "nanobrowser-nanobrowser",
-      "author": "nanobrowser",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/nanobrowser/nanobrowser",
-      "sourceKind": "link",
-      "publishedAt": "2025-11-24T11:10:03.000Z",
-      "title": "NanoBrowser：开源 AI 驱动的 Chrome 浏览器自动化扩展",
-      "summary": "NanoBrowser 是一个开源的 Chrome 扩展，允许用户使用自己的 LLM API 键运行多智能体工作流，拥有 1.3 万 Star。作为 OpenAI Operator 的替代方案，它提供了更高的隐私控制和灵活性。适合需要定制浏览器自动化流程、进行数据采集或测试的开发者，通过多智能体协作提升复杂网页任务的执行效率。",
-      "tags": [
-        "LLM",
-        "工作流",
-        "TypeScript",
-        "GitHub",
-        "AI Agent",
-        "开源项目"
-      ],
-      "metrics": {
-        "stars": "13095"
-      },
-      "featured": false
-    },
-    {
-      "id": "item-18",
-      "slug": "hangwin-mcp-chrome",
-      "author": "hangwin",
-      "platform": "GitHub",
-      "sourceUrl": "https://github.com/hangwin/mcp-chrome",
-      "sourceKind": "link",
-      "publishedAt": "2026-01-06T13:05:39.000Z",
-      "title": "MCP Chrome：基于 Chrome 扩展的 MCP 服务器",
-      "summary": "该项目是一个基于 Chrome 扩展的 MCP 服务器，拥有 1.1 万 Star。它将浏览器的功能暴露给 Claude 等 AI 助手，支持复杂的浏览器自动化、内容分析和语义搜索。适合希望让 AI 直接操作浏览器进行深度交互的开发者。通过扩展形式，它实现了 AI 与 Web 环境的无缝连接，为构建智能 Web 代理提供了便捷的基础设施。",
-      "tags": [
-        "MCP",
-        "开源项目",
-        "TypeScript",
-        "GitHub",
-        "LLM",
-        "工作流"
-      ],
-      "metrics": {
-        "stars": "11855"
-      },
-      "featured": false
-    },
-    {
-      "id": "item-19",
       "slug": "chopratejas-headroom",
       "author": "chopratejas",
       "platform": "GitHub",
       "sourceUrl": "https://github.com/chopratejas/headroom",
       "sourceKind": "link",
-      "publishedAt": "2026-06-06T19:08:28.000Z",
-      "title": "Headroom：压缩工具输出与日志的 MCP 服务器",
-      "summary": "Headroom 是一个用于在数据到达 LLM 之前压缩工具输出、日志和 RAG 块的库及 MCP 服务器，拥有 1.5 万 Star。它能减少 60-95% 的 Token 消耗，同时保持回答准确性。适合需要优化 AI 应用成本、处理大量上下文数据的开发者。通过前置压缩，显著提升了 AI 工作流的效率和经济性，是构建大规模 AI 系统的实用工具。",
+      "publishedAt": "2026-06-07T22:28:26.000Z",
+      "title": "Headroom：压缩 AI 上下文以节省 Token",
+      "summary": "Headroom 是一个库、代理和 MCP 服务器，用于在数据到达 LLM 之前压缩工具输出、日志和 RAG 块。可减少 60-95% 的 Token 消耗，同时保持回答质量。适合需要处理大量上下文或控制 API 成本的开发者，提供了高效的上下文管理方案，优化了 AI 调用的经济性。",
       "tags": [
         "MCP",
         "开源项目",
         "Python",
+        "Token 优化",
         "GitHub",
+        "AI Agent"
+      ],
+      "metrics": {
+        "stars": "65215"
+      },
+      "featured": false
+    },
+    {
+      "id": "item-18",
+      "slug": "cherry-studio",
+      "author": "CherryHQ",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/CherryHQ/cherry-studio",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-07T16:30:11.000Z",
+      "title": "Cherry Studio：集成 300+ 助手的 AI 生产力工作室",
+      "summary": "Cherry Studio 是一个集智能聊天、自主智能体和 300+ 助手于一体的 AI 生产力工具。拥有近 4.7 万 Star，支持前沿 LLM 的统一访问。适合希望在一个界面中管理多个 AI 模型和工具的用户，提供了流畅的交互体验和强大的自动化能力，提升了日常 AI 使用效率。",
+      "tags": [
+        "AI Agent",
+        "开源项目",
+        "TypeScript",
+        "AI 工具",
+        "GitHub",
+        "LLM"
+      ],
+      "metrics": {
+        "stars": "894"
+      },
+      "featured": false
+    },
+    {
+      "id": "item-19",
+      "slug": "openai-podcast-math",
+      "author": "OpenAI",
+      "platform": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=wNWz5Hbh5VQ",
+      "sourceKind": "video",
+      "youtubeVideoId": "wNWz5Hbh5VQ",
+      "publishedAt": "2026-06-04T17:00:35.000Z",
+      "title": "OpenAI 播客：推理模型破解 80 年数学难题",
+      "summary": "本期播客讨论了 OpenAI 的推理模型如何帮助数学家发现并证明了一个困扰学界 80 年的猜想。研究人员分享了验证过程及这一突破对数学研究和 AI 能力的意义。适合对 AI 前沿研究、数学证明及大模型推理能力感兴趣的听众，展示了 AI 在基础科学领域的巨大潜力。",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "视频",
+        "AI 研究",
+        "GitHub",
+        "MCP"
+      ],
+      "metrics": {
+        "stars": "11861"
+      },
+      "featured": false
+    },
+    {
+      "id": "item-hexabot-ai-hexabot",
+      "slug": "hexabot-ai-hexabot",
+      "author": "hexabot-ai",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/hexabot-ai/Hexabot",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-05T16:08:52.000Z",
+      "title": "hexabot-ai/Hexabot",
+      "summary": "Hexabot v3 is an AI automation platform, combining workflows, actions, agents, and conversational channels in one runtime.",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
         "TypeScript"
       ],
       "metrics": {
-        "stars": "15800"
+        "stars": "969"
+      },
+      "featured": false
+    },
+    {
+      "id": "item-skalesapp-skales",
+      "slug": "skalesapp-skales",
+      "author": "skalesapp",
+      "platform": "GitHub",
+      "sourceUrl": "https://github.com/skalesapp/skales",
+      "sourceKind": "link",
+      "publishedAt": "2026-06-04T16:38:36.000Z",
+      "title": "skalesapp/skales",
+      "summary": "Local-first AI desktop agent for Windows, macOS, Linux & Android. Set a goal, it works on its own. Teams (pair two desktops, agents + humans), Agent2Agent, Workflows, Codework, mul",
+      "tags": [
+        "GitHub",
+        "LLM",
+        "工作流",
+        "TypeScript"
+      ],
+      "metrics": {
+        "stars": "1047"
       },
       "featured": false
     }
