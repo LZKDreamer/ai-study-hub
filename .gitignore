@@ -24,5 +24,6 @@ Thumbs.db
 # Generated preview artifacts
 preview-*.png
 .superpowers/
+.worktrees/
 
 .vercel
