@@ -1,160 +1,105 @@
-import { XMLParser } from "fast-xml-parser";
-import type { Candidate, CandidateType, SourceKind } from "./content-types";
+import { execFile } from "node:child_process";
+import { readFile, rm } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import { promisify } from "node:util";
+import type { Candidate } from "./content-types";
 
-type RssSource = {
-  type: "rss";
-  author: string;
-  platform: string;
-  url: string;
-  tags: string[];
-  priority: number;
-  sourceKind?: SourceKind;
-  candidateType?: CandidateType;
+const execFileAsync = promisify(execFile);
+
+type YouTubeThumbnail = {
+  url?: string;
+  width?: number;
+  height?: number;
 };
 
-type YouTubeSource = {
-  type: "youtube";
-  author: string;
-  platform: "YouTube";
-  channelId: string;
-  tags: string[];
-  priority: number;
+type YouTubeThumbnails = {
+  default?: YouTubeThumbnail;
+  medium?: YouTubeThumbnail;
+  high?: YouTubeThumbnail;
+  standard?: YouTubeThumbnail;
+  maxres?: YouTubeThumbnail;
 };
 
-type GitHubSearchSource = {
-  type: "github-search";
-  query: string;
-  tags: string[];
-  priority: number;
+type YouTubeSearchItem = {
+  id?: {
+    videoId?: string;
+  };
+  snippet?: {
+    publishedAt?: string;
+    channelId?: string;
+    title?: string;
+    description?: string;
+    thumbnails?: YouTubeThumbnails;
+    channelTitle?: string;
+  };
 };
 
-type ManualSource = {
-  type: "manual";
-  author: string;
-  platform: string;
-  url: string;
-  sourceKind: SourceKind;
-  youtubeVideoId?: string;
-  title: string;
-  summary: string;
-  tags: string[];
-  priority: number;
-  publishedAt?: string;
-  metrics?: Candidate["metrics"];
+type YouTubeSearchResponse = {
+  items?: YouTubeSearchItem[];
 };
 
-type Source = RssSource | YouTubeSource | GitHubSearchSource | ManualSource;
+type YouTubeChannelItem = {
+  id?: string;
+  snippet?: {
+    title?: string;
+    thumbnails?: YouTubeThumbnails;
+  };
+};
+
+type YouTubeChannelsResponse = {
+  items?: YouTubeChannelItem[];
+};
+
+const youtubeSearchQueries = [
+  "AI 教程",
+  "AI 工具 使用",
+  "ChatGPT 工作流",
+  "Codex 使用",
+  "Codex Skill",
+  "Codex 插件",
+  "AI Agent 教程",
+  "MCP 教程",
+  "Claude Code",
+  "Gemini AI 教程",
+  "AI 自动化",
+  "AI 变现"
+];
 
 const aiKeywords = [
+  "ai",
   "chatgpt",
   "codex",
   "claude",
   "gemini",
   "openai",
-  "seedance",
-  "doubao",
-  "jimeng",
-  "runninghub",
-  "libtv",
   "mcp",
   "agent",
   "skill",
   "plugin",
   "workflow",
-  "prompt",
   "automation",
+  "prompt",
   "llm",
   "rag",
-  "豆包",
-  "即梦",
-  "插件",
-  "工作流",
-  "提示词",
-  "自动化",
-  "项目",
   "教程",
-  "实战"
+  "实战",
+  "项目",
+  "案例",
+  "工作流",
+  "插件",
+  "自动化",
+  "提示词",
+  "变现",
+  "智能体",
+  "使用",
+  "演示"
 ];
 
+const searchMaxResults = 25;
+const recentWindowDays = 180;
 const excludedVideoIds = new Set(["kxBCLl6eexE", "hGaKA3cfMjk", "tfeCwDT-5m0"]);
 const excludedSourceUrls = new Set(Array.from(excludedVideoIds, (id) => `https://www.youtube.com/watch?v=${id}`));
-
-const sources: Source[] = [
-  {
-    type: "rss",
-    author: "掘金",
-    platform: "掘金",
-    url: "https://juejin.cn/rss",
-    tags: ["掘金", "AI 开发", "实战"],
-    priority: 72,
-    candidateType: "juejin"
-  },
-  {
-    type: "rss",
-    author: "Simon Willison",
-    platform: "个人博客",
-    url: "https://simonwillison.net/atom/everything/",
-    tags: ["LLM", "AI 工具", "英文文章"],
-    priority: 68,
-    candidateType: "site"
-  },
-  {
-    type: "rss",
-    author: "LangChain",
-    platform: "官方博客",
-    url: "https://blog.langchain.com/rss/",
-    tags: ["LangChain", "AI Agent", "英文文章"],
-    priority: 66,
-    candidateType: "site"
-  },
-  {
-    type: "youtube",
-    author: "OpenAI",
-    platform: "YouTube",
-    channelId: "UCXZCJLdBC09xxGZ6gcdrc6A",
-    tags: ["OpenAI", "ChatGPT", "视频"],
-    priority: 64
-  },
-  {
-    type: "github-search",
-    query: "topic:ai-agent stars:>500",
-    tags: ["GitHub", "AI Agent", "开源项目"],
-    priority: 62
-  },
-  {
-    type: "github-search",
-    query: "mcp server stars:>100",
-    tags: ["GitHub", "MCP", "开源项目"],
-    priority: 60
-  },
-  {
-    type: "github-search",
-    query: "llm workflow automation stars:>300",
-    tags: ["GitHub", "LLM", "工作流"],
-    priority: 58
-  }
-];
-
-const parser = new XMLParser({
-  ignoreAttributes: false,
-  attributeNamePrefix: "",
-  textNodeName: "text",
-  parseTagValue: false
-});
-
-function asArray<T>(value: T | T[] | undefined): T[] {
-  if (!value) return [];
-  return Array.isArray(value) ? value : [value];
-}
-
-function text(value: unknown): string {
-  if (!value) return "";
-  if (typeof value === "string") return value;
-  if (typeof value === "number") return String(value);
-  if (typeof value === "object" && value && "text" in value) return text((value as { text?: unknown }).text);
-  if (typeof value === "object" && value && "_" in value) return text((value as { _?: unknown })._);
-  return "";
-}
 
 function normalizeDate(value: string | undefined) {
   const date = value ? new Date(value) : new Date();
@@ -169,66 +114,195 @@ function stripHtml(value: string) {
     .replace(/<[^>]*>/g, " ")
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#39;/g, "'")
     .replace(/\s+/g, " ")
     .trim()
     .slice(0, 1200);
 }
 
-function slugPart(value: string) {
-  return value
-    .toLowerCase()
-    .replace(/https?:\/\//g, "")
-    .replace(/[^a-z0-9\u4e00-\u9fa5]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 72);
+function youtubePublishedAfter() {
+  return new Date(Date.now() - recentWindowDays * 86400000).toISOString();
 }
 
-async function fetchText(url: string) {
-  const response = await fetch(url, {
-    headers: {
-      "User-Agent": "AI Study Hub content collector (+https://github.com/LZKDreamer/ai-study-hub)"
-    },
-    signal: AbortSignal.timeout(15000)
+function bestThumbnail(thumbnails: YouTubeThumbnails | undefined) {
+  return (
+    thumbnails?.maxres?.url ??
+    thumbnails?.standard?.url ??
+    thumbnails?.high?.url ??
+    thumbnails?.medium?.url ??
+    thumbnails?.default?.url
+  );
+}
+
+function youtubeWatchUrl(videoId: string) {
+  return `https://www.youtube.com/watch?v=${videoId}`;
+}
+
+function youtubeApiUrl(pathname: string, params: Record<string, string | number | undefined>) {
+  const url = new URL(`https://www.googleapis.com/youtube/v3/${pathname}`);
+
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== "") url.searchParams.set(key, String(value));
   });
 
-  if (!response.ok) {
-    throw new Error(`${url} returned ${response.status}`);
-  }
-
-  return response.text();
+  return url.toString();
 }
 
-async function fetchJson<T>(url: string) {
-  const response = await fetch(url, {
-    headers: {
-      "User-Agent": "AI Study Hub content collector (+https://github.com/LZKDreamer/ai-study-hub)",
-      Accept: "application/vnd.github+json"
-    },
-    signal: AbortSignal.timeout(15000)
-  });
+async function fetchYouTubeJson<T>(url: string) {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "AI Study Hub content collector (+https://github.com/LZKDreamer/ai-study-hub)"
+      },
+      signal: AbortSignal.timeout(15000)
+    });
 
-  if (!response.ok) {
-    throw new Error(`${url} returned ${response.status}`);
+    if (!response.ok) {
+      const safeUrl = new URL(url);
+      safeUrl.searchParams.delete("key");
+      const body = await response.text().catch(() => "");
+      throw new Error(`${safeUrl.pathname} returned ${response.status}${body ? `: ${body.slice(0, 240)}` : ""}`);
+    }
+
+    return (await response.json()) as T;
+  } catch (error) {
+    if (process.platform !== "win32") throw error;
+    return await fetchYouTubeJsonWithPowerShell<T>(url, error);
   }
-
-  return (await response.json()) as T;
 }
 
-function rssLink(entry: Record<string, unknown>) {
-  const link = entry.link;
-  if (typeof link === "string") return link;
-  if (Array.isArray(link)) {
-    const preferred = link.find((item) => typeof item === "object" && item && "href" in item && (item as { rel?: string }).rel !== "self");
-    return rssLink({ link: preferred ?? link[0] });
+async function fetchYouTubeJsonWithPowerShell<T>(url: string, originalError: unknown) {
+  const outputPath = path.join(os.tmpdir(), `ai-study-hub-youtube-${Date.now()}-${Math.random().toString(16).slice(2)}.json`);
+
+  try {
+    await execFileAsync(
+      "powershell.exe",
+      [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "$ProgressPreference='SilentlyContinue'; $headers=@{Accept='application/json'; 'Accept-Encoding'='identity'; 'User-Agent'='AI Study Hub content collector'}; $json=Invoke-RestMethod -Uri $env:AI_STUDY_HUB_FETCH_URL -Headers $headers | ConvertTo-Json -Depth 100 -Compress; [System.IO.File]::WriteAllText($env:AI_STUDY_HUB_FETCH_OUTPUT, $json, [System.Text.UTF8Encoding]::new($false))"
+      ],
+      {
+        env: {
+          ...process.env,
+          AI_STUDY_HUB_FETCH_URL: url,
+          AI_STUDY_HUB_FETCH_OUTPUT: outputPath
+        },
+        maxBuffer: 5 * 1024 * 1024,
+        timeout: 20000,
+        windowsHide: true
+      }
+    );
+
+    const content = (await readFile(outputPath, "utf8")).trim();
+    if (!content) throw new Error("empty response body");
+    return JSON.parse(content) as T;
+  } catch (fallbackError) {
+    const safeUrl = new URL(url);
+    safeUrl.searchParams.delete("key");
+    const originalMessage = originalError instanceof Error ? originalError.message : String(originalError);
+    const fallbackMessage = fallbackError instanceof Error ? fallbackError.message : String(fallbackError);
+    throw new Error(`${safeUrl.pathname} fetch failed. Node fetch: ${originalMessage}. PowerShell fallback: ${fallbackMessage}`);
+  } finally {
+    await rm(outputPath, { force: true }).catch(() => undefined);
   }
-  if (typeof link === "object" && link && "href" in link) return text((link as { href?: unknown }).href);
-  return "";
+}
+
+async function fetchYouTubeChannels(apiKey: string, channelIds: string[]) {
+  const channels = new Map<string, { title: string; avatarUrl?: string }>();
+  const uniqueIds = Array.from(new Set(channelIds.filter(Boolean)));
+
+  for (let index = 0; index < uniqueIds.length; index += 50) {
+    const ids = uniqueIds.slice(index, index + 50);
+    const url = youtubeApiUrl("channels", {
+      part: "snippet",
+      id: ids.join(","),
+      key: apiKey
+    });
+    const data = await fetchYouTubeJson<YouTubeChannelsResponse>(url);
+
+    for (const item of data.items ?? []) {
+      if (!item.id) continue;
+      channels.set(item.id, {
+        title: stripHtml(item.snippet?.title ?? "") || item.id,
+        avatarUrl: bestThumbnail(item.snippet?.thumbnails)
+      });
+    }
+  }
+
+  return channels;
+}
+
+async function collectYouTubeSearch(apiKey: string): Promise<Candidate[]> {
+  const publishedAfter = youtubePublishedAfter();
+  const groupedItems = await Promise.all(
+    youtubeSearchQueries.map(async (query, queryIndex) => {
+      console.error(`[collect] YouTube search ${queryIndex + 1}/${youtubeSearchQueries.length}: ${query}`);
+    const url = youtubeApiUrl("search", {
+      part: "snippet",
+      type: "video",
+      maxResults: searchMaxResults,
+      q: query,
+      relevanceLanguage: "zh-Hans",
+      safeSearch: "none",
+      publishedAfter,
+      key: apiKey
+    });
+    const data = await fetchYouTubeJson<YouTubeSearchResponse>(url);
+      return { queryIndex, items: data.items ?? [] };
+    })
+  );
+
+  console.error("[collect] Fetching YouTube channel metadata");
+  const channelMap = await fetchYouTubeChannels(
+    apiKey,
+    groupedItems.flatMap((group) => group.items.map((item) => item.snippet?.channelId ?? ""))
+  );
+
+  return groupedItems.flatMap((group) =>
+    group.items.flatMap((item, resultIndex): Candidate[] => {
+      const videoId = item.id?.videoId?.trim();
+      const snippet = item.snippet;
+      if (!videoId || !snippet) return [];
+
+      const channelId = snippet.channelId?.trim();
+      const channel = channelId ? channelMap.get(channelId) : undefined;
+      const title = stripHtml(snippet.title ?? "");
+      const url = youtubeWatchUrl(videoId);
+
+      return [
+        {
+          id: `youtube-${videoId}`,
+          author: channel?.title || stripHtml(snippet.channelTitle ?? "") || "YouTube",
+          platform: "YouTube",
+          sourceUrl: url,
+          title,
+          originalTitle: title,
+          url,
+          sourceKind: "video",
+          youtubeVideoId: videoId,
+          channelId,
+          channelAvatarUrl: channel?.avatarUrl,
+          imageUrl: bestThumbnail(snippet.thumbnails),
+          publishedAt: normalizeDate(snippet.publishedAt),
+          summary: stripHtml(snippet.description ?? ""),
+          tags: ["YouTube", "AI 学习"],
+          candidateType: "youtube",
+          priority: 100 - group.queryIndex * 2 - resultIndex * 0.4
+        }
+      ];
+    })
+  );
 }
 
 function looksLikeLowValueUpdate(candidate: Pick<Candidate, "title" | "url" | "summary">) {
   const value = `${candidate.title} ${candidate.url} ${candidate.summary}`.toLowerCase();
 
-  if (value.includes("github.com/") && value.includes("/releases")) return true;
+  if (value.includes("/releases")) return true;
   if (value.includes("/changelog")) return true;
   if (value.includes("release notes")) return true;
   if (value.includes("released version")) return true;
@@ -247,24 +321,37 @@ function isExcludedCandidate(candidate: Pick<Candidate, "url" | "sourceUrl" | "y
 }
 
 function getMatchedKeywords(candidate: Pick<Candidate, "title" | "summary" | "tags">) {
-  const value = `${candidate.title} ${candidate.summary}`.toLowerCase();
+  const value = `${candidate.title} ${candidate.summary} ${candidate.tags.join(" ")}`.toLowerCase();
   return aiKeywords.filter((keyword) => value.includes(keyword.toLowerCase()));
 }
 
 function hasStrongTitleMatch(value: string) {
   const title = value.toLowerCase();
-  return (
-    /\bai\b/i.test(title) ||
-    ["agent", "chatgpt", "codex", "claude", "gemini", "openai", "mcp", "llm", "rag", "豆包", "即梦", "插件", "工作流"].some((keyword) =>
-      title.includes(keyword.toLowerCase())
-    )
-  );
+  return aiKeywords.some((keyword) => title.includes(keyword.toLowerCase()));
 }
 
 function hasReusableSignal(candidate: Pick<Candidate, "title" | "summary">) {
   const value = `${candidate.title} ${candidate.summary}`.toLowerCase();
-  return /tutorial|guide|demo|walkthrough|workflow|automation|agent|mcp|skill|plugin|project|build|case|教程|指南|实战|案例|工作流|自动化|插件|项目|变现|复用/.test(
+  return /tutorial|guide|demo|walkthrough|workflow|automation|agent|mcp|skill|plugin|project|build|case|prompt|use|how to|教程|指南|实战|案例|工作流|自动化|插件|项目|变现|复用|使用|演示|搭建|部署|完整流程|从零开始/.test(
     value
+  );
+}
+
+function hasUsefulTutorialSignal(candidate: Pick<Candidate, "title" | "summary">) {
+  const value = `${candidate.title} ${candidate.summary}`.toLowerCase();
+  return /tutorial|guide|demo|walkthrough|course|lesson|build|workflow|project|case|how to|教程|指南|实战|案例|工作流|项目|使用|演示|搭建|部署|复盘|从零开始/.test(
+    value
+  );
+}
+
+function hasExcludedLowLearningSignal(candidate: Pick<Candidate, "title" | "summary">) {
+  const value = `${candidate.title} ${candidate.summary}`.toLowerCase();
+  if (hasUsefulTutorialSignal(candidate)) return false;
+
+  return (
+    /\b(news|breaking|rumor|leak|reaction|trailer|teaser|shorts|clip|podcast|interview|livestream|live stream|replay|highlights)\b/.test(
+      value
+    ) || /新闻|资讯|快讯|爆料|泄露|反应|预告|花絮|娱乐|直播|回放|录播|切片|访谈|播客|合集|速看|震惊|爆款|必看/.test(value)
   );
 }
 
@@ -275,32 +362,10 @@ function hasLearningValue(candidate: Pick<Candidate, "title" | "summary" | "tags
   const hasExplicitAi = /\bai\b/i.test(value) || value.includes("人工智能");
   const reusable = hasReusableSignal(candidate);
 
-  if (candidate.sourceKind === "video") return strongTitleMatch || matched.length >= 2 || reusable;
-  if (candidate.candidateType === "github") return matched.length >= 1 || reusable;
-
-  if (candidate.candidateType === "site") return strongTitleMatch;
-  if (candidate.candidateType === "juejin") return strongTitleMatch;
+  if (hasExcludedLowLearningSignal(candidate)) return false;
+  if (candidate.sourceKind === "video") return (strongTitleMatch || matched.length >= 2 || hasExplicitAi) && reusable;
 
   return matched.length >= 2 || (hasExplicitAi && matched.length >= 1) || (strongTitleMatch && candidate.summary.length >= 60);
-}
-
-function metricNumber(value: string | undefined) {
-  if (!value) return 0;
-  const normalized = value.trim().toLowerCase().replace(/,/g, "");
-  const numeric = Number.parseFloat(normalized);
-  if (!Number.isFinite(numeric)) return 0;
-  if (normalized.includes("k")) return numeric * 1000;
-  if (normalized.includes("m")) return numeric * 1000000;
-  return numeric;
-}
-
-function heatScore(metrics: Candidate["metrics"]) {
-  const reads = metricNumber(metrics?.reads);
-  const views = metricNumber(metrics?.views);
-  const likes = metricNumber(metrics?.likes);
-  const stars = metricNumber(metrics?.stars);
-  const signal = reads * 0.25 + views * 0.2 + likes * 1.2 + stars * 2;
-  return signal > 0 ? Math.min(12, Math.log10(signal + 1) * 3) : 0;
 }
 
 function freshnessScore(publishedAt: string) {
@@ -314,158 +379,18 @@ function freshnessScore(publishedAt: string) {
   return 1;
 }
 
-function sourceCredibilityScore(candidate: Pick<Candidate, "candidateType" | "platform" | "author">) {
-  if (candidate.candidateType === "github") return 8;
-  if (candidate.platform === "YouTube") return 6;
-  if (candidate.platform === "官方博客") return 7;
-  if (candidate.author === "Simon Willison") return 7;
-  if (candidate.platform === "掘金") return 5;
-  return 4;
-}
-
 function candidateQualityScore(candidate: Candidate) {
   const value = `${candidate.title} ${candidate.summary}`.toLowerCase();
   const matched = getMatchedKeywords(candidate);
   const reusable = hasReusableSignal(candidate);
-  const hasProjectSignal = /github|repo|project|workflow|case|demo|build|开源|项目|案例|工作流|实战|变现/.test(value);
+  const hasProjectSignal = /github|repo|project|workflow|case|demo|build|项目|案例|工作流|实战|变现|搭建|部署/.test(value);
   const hasSpecificTitle = candidate.title.length >= 12 && !/[!?！？]{2,}|震惊|爆款|速看/.test(candidate.title);
   const topicScore = Math.min(30, matched.length * 5 + (hasStrongTitleMatch(candidate.title) ? 8 : 0));
   const learningScore = reusable ? 22 : candidate.summary.length >= 80 ? 12 : 4;
   const projectScore = hasProjectSignal ? 16 : 0;
   const specificityScore = hasSpecificTitle ? 8 : 2;
 
-  return (
-    candidate.priority * 0.3 +
-    topicScore +
-    learningScore +
-    projectScore +
-    specificityScore +
-    heatScore(candidate.metrics) +
-    freshnessScore(candidate.publishedAt) +
-    sourceCredibilityScore(candidate)
-  );
-}
-
-function manualCandidate(source: ManualSource): Candidate {
-  return {
-    id: `${slugPart(source.platform)}-${slugPart(source.title)}`,
-    author: source.author,
-    platform: source.platform,
-    sourceUrl: source.url,
-    title: source.title,
-    url: source.url,
-    sourceKind: source.sourceKind,
-    youtubeVideoId: source.youtubeVideoId,
-    publishedAt: normalizeDate(source.publishedAt),
-    summary: source.summary,
-    tags: source.tags,
-    candidateType: "manual",
-    priority: source.priority,
-    metrics: source.metrics
-  };
-}
-
-async function collectRss(source: RssSource): Promise<Candidate[]> {
-  const raw = await fetchText(source.url);
-  const parsed = parser.parse(raw) as {
-    rss?: { channel?: { item?: Record<string, unknown>[] | Record<string, unknown> } };
-    feed?: { entry?: Record<string, unknown>[] | Record<string, unknown> };
-  };
-  const rssItems = asArray(parsed.rss?.channel?.item);
-  const atomItems = asArray(parsed.feed?.entry);
-  const entries = rssItems.length > 0 ? rssItems : atomItems;
-
-  return entries.slice(0, 15).map((entry, index) => {
-    const title = text(entry.title).trim();
-    const url = rssLink(entry) || source.url;
-    const summary = stripHtml(text(entry.description) || text(entry.summary) || text(entry.content) || text((entry as { encoded?: unknown }).encoded));
-    const publishedAt = normalizeDate(text(entry.pubDate) || text(entry.published) || text(entry.updated));
-
-    return {
-      id: `${slugPart(source.platform)}-${slugPart(title || url)}-${index}`,
-      author: source.author,
-      platform: source.platform,
-      sourceUrl: source.url,
-      title: title || url,
-      url,
-      sourceKind: source.sourceKind ?? "article",
-      publishedAt,
-      summary,
-      tags: source.tags,
-      candidateType: source.candidateType ?? "site",
-      priority: source.priority - index
-    };
-  });
-}
-
-async function collectYouTube(source: YouTubeSource): Promise<Candidate[]> {
-  const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${source.channelId}`;
-  const raw = await fetchText(feedUrl);
-  const parsed = parser.parse(raw) as { feed?: { entry?: Record<string, unknown>[] | Record<string, unknown> } };
-
-  return asArray(parsed.feed?.entry)
-    .slice(0, 8)
-    .map((entry, index) => {
-      const title = text(entry.title).trim();
-      const videoId = text((entry as { "yt:videoId"?: unknown })["yt:videoId"]);
-      const url = videoId ? `https://www.youtube.com/watch?v=${videoId}` : rssLink(entry) || feedUrl;
-      const media = (entry as { "media:group"?: Record<string, unknown> })["media:group"];
-      const description = media ? text(media["media:description"]) : "";
-      const publishedAt = normalizeDate(text(entry.published) || text(entry.updated));
-
-      return {
-        id: `${slugPart(source.author)}-${slugPart(title || videoId || url)}-${index}`,
-        author: source.author,
-        platform: source.platform,
-        sourceUrl: feedUrl,
-        title: title || url,
-        url,
-        sourceKind: "video",
-        youtubeVideoId: videoId || undefined,
-        publishedAt,
-        summary: stripHtml(description),
-        tags: source.tags,
-        candidateType: "youtube",
-        priority: source.priority - index
-      };
-    });
-}
-
-type GitHubRepo = {
-  full_name: string;
-  html_url: string;
-  description: string | null;
-  language: string | null;
-  stargazers_count: number;
-  updated_at: string;
-  pushed_at: string;
-  owner: { login: string };
-};
-
-async function collectGitHub(source: GitHubSearchSource): Promise<Candidate[]> {
-  const url = `https://api.github.com/search/repositories?q=${encodeURIComponent(source.query)}&sort=stars&order=desc&per_page=10`;
-  const data = await fetchJson<{ items?: GitHubRepo[] }>(url);
-
-  return (data.items ?? []).map((repo, index) => {
-    const description = repo.description?.trim() || `${repo.full_name} is an AI-related open source project.`;
-    const languageTag = repo.language ? [repo.language] : [];
-
-    return {
-      id: `github-${slugPart(repo.full_name)}`,
-      author: repo.owner.login,
-      platform: "GitHub",
-      sourceUrl: repo.html_url,
-      title: repo.full_name,
-      url: repo.html_url,
-      sourceKind: "link",
-      publishedAt: normalizeDate(repo.pushed_at || repo.updated_at),
-      summary: description,
-      tags: [...source.tags, ...languageTag].slice(0, 6),
-      candidateType: "github",
-      priority: source.priority - index,
-      metrics: repo.stargazers_count > 0 ? { stars: String(repo.stargazers_count) } : undefined
-    };
-  });
+  return candidate.priority * 0.3 + topicScore + learningScore + projectScore + specificityScore + freshnessScore(candidate.publishedAt);
 }
 
 function dedupe(candidates: Candidate[]) {
@@ -483,39 +408,33 @@ function dedupe(candidates: Candidate[]) {
 }
 
 export async function collectCandidates() {
-  const settled = await Promise.allSettled(
-    sources.map(async (source) => {
-      try {
-        if (source.type === "manual") return [manualCandidate(source)];
-        if (source.type === "youtube") return await collectYouTube(source);
-        if (source.type === "github-search") return await collectGitHub(source);
-        return await collectRss(source);
-      } catch (error) {
-        const name = source.type === "github-search" ? `GitHub ${source.query}` : source.platform;
-        throw new Error(`${name}: ${error instanceof Error ? error.message : String(error)}`);
-      }
-    })
-  );
+  const apiKey = process.env.YOUTUBE_API_KEY?.trim();
 
-  const failures = settled
-    .filter((result): result is PromiseRejectedResult => result.status === "rejected")
-    .map((result) => String(result.reason));
+  if (!apiKey) {
+    return {
+      candidates: [],
+      failures: ["YOUTUBE_API_KEY not set; kept checked-in data."]
+    };
+  }
 
-  const candidates = dedupe(
-    settled
-      .filter((result): result is PromiseFulfilledResult<Candidate[]> => result.status === "fulfilled")
-      .flatMap((result) => result.value)
+  try {
+    const candidates = dedupe(await collectYouTubeSearch(apiKey))
       .filter((candidate) => candidate.title && candidate.url)
       .filter((candidate) => !isExcludedCandidate(candidate))
       .filter((candidate) => !looksLikeLowValueUpdate(candidate))
       .filter((candidate) => hasLearningValue(candidate))
-  )
-    .sort((a, b) => {
-      const quality = candidateQualityScore(b) - candidateQualityScore(a);
-      if (quality !== 0) return quality;
-      return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-    })
-    .slice(0, 60);
+      .sort((a, b) => {
+        const quality = candidateQualityScore(b) - candidateQualityScore(a);
+        if (quality !== 0) return quality;
+        return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+      })
+      .slice(0, 60);
 
-  return { candidates, failures };
+    return { candidates, failures: [] };
+  } catch (error) {
+    return {
+      candidates: [],
+      failures: [`YouTube API: ${error instanceof Error ? error.message : String(error)}`]
+    };
+  }
 }

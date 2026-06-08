@@ -468,8 +468,9 @@ button {
 }
 
 .case-card.has-media {
-  grid-template-columns: minmax(0, 1fr) 230px;
-  min-height: 176px;
+  grid-template-columns: 286px minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 184px;
 }
 
 .case-card:hover,
@@ -488,6 +489,7 @@ button {
 
 .card-body {
   min-width: 0;
+  align-self: center;
 }
 
 .meta-row {
@@ -506,13 +508,46 @@ button {
 }
 
 .case-card h2 {
-  margin: 0.58rem 0 0.32rem;
+  margin: 0 0 0.48rem;
   font-size: clamp(1rem, 1.85vw, 1.32rem);
   line-height: 1.35;
 }
 
+.channel-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.48rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.channel-row span + span::before {
+  content: "·";
+  margin-right: 0.48rem;
+  color: var(--faint);
+}
+
+.channel-avatar {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 999px;
+  object-fit: cover;
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.channel-avatar-fallback {
+  display: inline-block;
+  background:
+    radial-gradient(circle at 38% 34%, rgba(125, 211, 252, 0.9) 0 3px, transparent 4px),
+    linear-gradient(135deg, rgba(56, 189, 248, 0.3), rgba(34, 197, 94, 0.16)),
+    rgba(15, 23, 42, 0.86);
+}
+
 .summary {
-  margin: 0;
+  margin: 0.6rem 0 0;
   color: #cbd5e1;
   font-size: 0.92rem;
 }
@@ -618,7 +653,8 @@ button {
 .card-media {
   position: relative;
   align-self: center;
-  min-height: 126px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 8px;
   overflow: hidden;
@@ -629,7 +665,6 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 126px;
   object-fit: cover;
 }
 
@@ -1066,13 +1101,18 @@ button {
     line-height: 1.62;
   }
 
-  .meta-row {
+  .channel-row {
     gap: 0.38rem;
     font-size: 0.74rem;
   }
 
-  .meta-row span + span::before {
+  .channel-row span + span::before {
     margin-right: 0.38rem;
+  }
+
+  .channel-avatar {
+    width: 27px;
+    height: 27px;
   }
 
   .tags {

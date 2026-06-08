@@ -1,4 +1,4 @@
-import type { Candidate, ContentItem, ContentMetrics, LatestData, SourceKind } from "./content-types";
+import type { Candidate, ContentItem, LatestData, SourceKind } from "./content-types";
 import { type DailyCallLimit, generateText } from "./ai-provider";
 
 function slugify(value: string) {
@@ -18,12 +18,14 @@ function compactCandidate(candidate: Candidate, index: number) {
     url: candidate.url,
     sourceKind: candidate.sourceKind,
     youtubeVideoId: candidate.youtubeVideoId,
+    channelId: candidate.channelId,
+    channelAvatarUrl: candidate.channelAvatarUrl,
     imageUrl: candidate.imageUrl,
     title: candidate.title,
+    originalTitle: candidate.originalTitle,
     publishedAt: candidate.publishedAt,
     summary: candidate.summary.slice(0, 520),
     tags: candidate.tags,
-    metrics: candidate.metrics,
     priority: candidate.priority
   };
 }
@@ -43,46 +45,39 @@ function normalizeSourceKind(value: string | undefined, candidate: Candidate): S
   return "article";
 }
 
-function visibleMetric(value: string | undefined) {
-  if (!value) return undefined;
-  const normalized = value.trim();
-  if (!normalized || normalized === "0") return undefined;
-  if (/待获取|unknown|n\/a/i.test(normalized)) return undefined;
-  return normalized;
-}
+function normalizeTags(value: string[] | undefined, candidate: Candidate) {
+  const tags = [...(value ?? []), ...candidate.tags]
+    .map((tag) => tag.trim())
+    .filter(Boolean)
+    .filter((tag) => !/^youtube$/i.test(tag));
 
-function cleanMetrics(metrics: ContentMetrics | undefined): ContentMetrics | undefined {
-  if (!metrics) return undefined;
-  const cleaned = {
-    reads: visibleMetric(metrics.reads),
-    views: visibleMetric(metrics.views),
-    likes: visibleMetric(metrics.likes),
-    stars: visibleMetric(metrics.stars)
-  };
-
-  return Object.values(cleaned).some(Boolean) ? cleaned : undefined;
+  return Array.from(new Set(tags)).slice(0, 6);
 }
 
 function normalizeGeneratedItem(item: Partial<ContentItem>, candidate: Candidate, index: number): ContentItem {
-  const title = item.title?.trim() || candidate.title;
+  const title = candidate.originalTitle?.trim() || candidate.title;
   const sourceKind = normalizeSourceKind(item.sourceKind, candidate);
-  const tags = Array.from(new Set([...(item.tags ?? []), ...candidate.tags])).filter(Boolean).slice(0, 6);
-  const fallbackSummary = candidate.summary || `${title} 值得推荐，因为它围绕 AI 工具、项目实践或工作流展开，读者可以直接回到原文学习具体方法。`;
+  const tags = normalizeTags(item.tags, candidate);
+  const fallbackSummary =
+    candidate.summary ||
+    `${title} 值得加入学习列表，因为它围绕 AI 工具、项目实践或工作流展开，适合回到原视频学习具体方法。`;
 
   return {
-    id: item.id?.trim() || `item-${slugify(title)}`,
-    slug: item.slug?.trim() || slugify(title),
-    author: item.author?.trim() || candidate.author,
-    platform: item.platform?.trim() || candidate.platform,
-    sourceUrl: item.sourceUrl?.trim() || candidate.url,
+    id: item.id?.trim() || `youtube-${candidate.youtubeVideoId ?? slugify(title)}`,
+    slug: item.slug?.trim() || slugify(`${candidate.youtubeVideoId ?? ""}-${title}`),
+    author: candidate.author,
+    platform: candidate.platform,
+    sourceUrl: candidate.url,
     sourceKind,
-    youtubeVideoId: item.youtubeVideoId?.trim() || candidate.youtubeVideoId,
-    imageUrl: item.imageUrl?.trim() || candidate.imageUrl,
-    publishedAt: item.publishedAt?.trim() || candidate.publishedAt,
+    youtubeVideoId: candidate.youtubeVideoId,
+    channelId: candidate.channelId,
+    channelAvatarUrl: candidate.channelAvatarUrl,
+    originalTitle: candidate.originalTitle || title,
+    imageUrl: candidate.imageUrl,
+    publishedAt: candidate.publishedAt,
     title,
     summary: item.summary?.trim() || fallbackSummary.slice(0, 180),
-    tags,
-    metrics: cleanMetrics(item.metrics ?? candidate.metrics),
+    tags: tags.length >= 2 ? tags : [...tags, "AI 学习", "视频教程"].slice(0, 6),
     featured: index === 0
   };
 }
@@ -124,30 +119,21 @@ function dedupeAndBackfillItems(items: ContentItem[], selected: Candidate[]) {
 
 export async function generateLatestFromCandidates(candidates: Candidate[], date: string, limit: DailyCallLimit): Promise<LatestData> {
   const selected = candidates.slice(0, 60);
-  const prompt = `你要为 AI Study Hub 生成今日 20 条 AI 学习内容推荐。站点可以收中文和英文内容，最终展示语言必须是中文。
+  const prompt = `You are generating today's 20 AI Study Hub YouTube learning recommendations.
+Return JSON only, with this top-level shape: {"items":[...]}.
 
-硬性要求：
-1. 只输出 JSON，不要 Markdown。
-2. JSON 顶层格式：{"items":[...]}。
-3. 必须正好 20 条。
-4. 不要生成二级页正文，不要替代原文；只生成卡片标题、推荐理由和标签。
-5. 如果候选标题是中文，title 使用原始标题；如果候选标题是英文，title 翻译或改写成自然中文，但保留项目名、产品名、工具名。
-6. GitHub 项目可以进入推荐流：根据 repo 名称、description、stars、语言、更新时间生成中文标题和推荐理由；不要把 GitHub release/changelog 当内容。
-7. summary 写“为什么推荐这篇文章/视频/项目”，80-160 字中文，说明内容或项目大概是什么、读者能学到什么、适合怎样复用。
-8. tags 生成 2-6 个短标签，优先包含具体工具或主题，如 ChatGPT、Codex、Claude、Gemini、OpenAI、豆包、即梦、RunningHub、libtv、MCP、Agent、Skill、插件、AI 工作流、GitHub 开源。
-9. 只保留真实候选里有的 imageUrl；不要编造图片。
-10. 如果阅读量、观看量、点赞数或 stars 不存在、未知或为 0，不要输出对应 metrics 字段。
-11. 视频必须 sourceKind 为 "video" 且保留 youtubeVideoId。
-12. 不得重复 candidateIndex、sourceUrl 或 youtubeVideoId。
-13. 每条必须有 id, slug, author, platform, sourceUrl, sourceKind, publishedAt, title, summary, tags。
+Hard requirements:
+1. Output exactly 20 items.
+2. Each item must include candidateIndex, summary, and tags.
+3. Do not translate or rewrite YouTube titles.
+4. Do not invent video facts beyond candidate metadata.
+5. The recommendation summary must be Chinese, 80-160 Chinese characters.
+6. Tags must be 2-6 short Chinese tags and should mention concrete tools or topics when present.
+7. Do not output metrics, views, likes, reads, or stars.
+8. Prefer videos about Codex, Codex Skills, MCP, AI Agents, AI workflows, AI tools, automation, tutorials, demos, projects, and monetization.
+9. Filter out pure news, empty opinions, clickbait, generic hype, entertainment, and version-only updates.
 
-推荐算法：
-- 先过滤主题：AI 工具使用、项目实践、开源项目、AI 赚钱/副业、工作流、Skill/插件、MCP、Agent、国产 AI 工具实践。
-- 再按质量评分：是否讲清具体工具用法、是否有真实项目或流程、是否可复用、标题是否可信、内容是否具体、公开热度信号、时效性与来源可信度。
-- 过滤纯资讯搬运、空泛观点、标题党、只有版本号或功能清单的更新。
-- 公众号不能在网页端稳定自动搜索；只处理已经公开可访问、能拿到元数据的公众号链接或外部公开索引。
-
-候选内容：
+Candidates:
 ${JSON.stringify(selected.map(compactCandidate), null, 2)}`;
 
   const content = await generateText(
@@ -155,7 +141,8 @@ ${JSON.stringify(selected.map(compactCandidate), null, 2)}`;
       messages: [
         {
           role: "system",
-          content: "你是严谨的中文 AI 内容推荐编辑。你只能基于候选信息生成推荐卡片 JSON，不编造候选中没有的事实。"
+          content:
+            "You are a careful Chinese AI learning content editor. Only generate summaries and tags from candidate metadata. Preserve all source metadata."
         },
         { role: "user", content: prompt }
       ],

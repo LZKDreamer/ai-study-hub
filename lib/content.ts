@@ -17,6 +17,9 @@ export type ContentItem = {
   sourceUrl: string;
   sourceKind: SourceKind;
   youtubeVideoId?: string;
+  channelId?: string;
+  channelAvatarUrl?: string;
+  originalTitle?: string;
   imageUrl?: string;
   publishedAt: string;
   title: string;

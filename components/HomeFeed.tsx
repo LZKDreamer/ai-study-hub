@@ -12,40 +12,29 @@ function getMedia(item: ContentItem) {
   if (item.imageUrl) {
     return {
       src: item.imageUrl,
-      alt: `${item.title} 封面图`
+      alt: `${item.title} video thumbnail`
     };
   }
 
   if (item.youtubeVideoId) {
     return {
       src: `https://i.ytimg.com/vi/${item.youtubeVideoId}/hqdefault.jpg`,
-      alt: `${item.title} 视频封面`
+      alt: `${item.title} video thumbnail`
     };
   }
 
   return null;
 }
 
-function isVisibleMetric(value: string | undefined) {
-  if (!value) return false;
-  const normalized = value.trim().toLowerCase();
-  if (!normalized || normalized === "0") return false;
-  if (normalized.includes("待获取") || normalized.includes("unknown") || normalized.includes("n/a")) return false;
-  return true;
-}
+function ChannelAvatar({ item }: { item: ContentItem }) {
+  if (!item.channelAvatarUrl) {
+    return <span className="channel-avatar channel-avatar-fallback" aria-hidden="true" />;
+  }
 
-function metricText(item: ContentItem) {
-  const metrics = item.metrics;
-  if (!metrics) return null;
-
-  const parts = [
-    isVisibleMetric(metrics.reads) ? `阅读 ${metrics.reads}` : null,
-    isVisibleMetric(metrics.views) ? `观看 ${metrics.views}` : null,
-    isVisibleMetric(metrics.likes) ? `点赞 ${metrics.likes}` : null,
-    isVisibleMetric(metrics.stars) ? `Stars ${metrics.stars}` : null
-  ].filter(Boolean);
-
-  return parts.length ? parts.join(" · ") : null;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img className="channel-avatar" alt="" src={item.channelAvatarUrl} />
+  );
 }
 
 export function HomeFeed({ items }: HomeFeedProps) {
@@ -60,7 +49,6 @@ export function HomeFeed({ items }: HomeFeedProps) {
 
 function ArticleCard({ item }: { item: ContentItem }) {
   const media = getMedia(item);
-  const metrics = metricText(item);
 
   return (
     <Link
@@ -70,14 +58,20 @@ function ArticleCard({ item }: { item: ContentItem }) {
       rel="noreferrer"
       target="_blank"
     >
+      {media ? (
+        <div className="card-media">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img alt={media.alt} src={media.src} />
+        </div>
+      ) : null}
       <div className="card-body">
-        <div className="meta-row">
+        <h2>{item.originalTitle || item.title}</h2>
+        <div className="channel-row">
+          <ChannelAvatar item={item} />
           <span>{item.author}</span>
           <span>{item.platform}</span>
           <span>{formatPublishedLabel(item.publishedAt)}</span>
-          {metrics ? <span>{metrics}</span> : null}
         </div>
-        <h2>{item.title}</h2>
         <p className="summary">{item.summary}</p>
         <div className="tags">
           {item.tags.map((tag) => (
@@ -85,12 +79,6 @@ function ArticleCard({ item }: { item: ContentItem }) {
           ))}
         </div>
       </div>
-      {media ? (
-        <div className="card-media">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img alt={media.alt} src={media.src} />
-        </div>
-      ) : null}
     </Link>
   );
 }

@@ -1,3 +1,4 @@
+import "./load-env";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { createDailyCallLimit } from "./ai-provider";

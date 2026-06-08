@@ -15,6 +15,9 @@ export type ContentItem = {
   sourceUrl: string;
   sourceKind: SourceKind;
   youtubeVideoId?: string;
+  channelId?: string;
+  channelAvatarUrl?: string;
+  originalTitle?: string;
   imageUrl?: string;
   publishedAt: string;
   title: string;
@@ -38,9 +41,12 @@ export type Candidate = {
   platform: string;
   sourceUrl: string;
   title: string;
+  originalTitle?: string;
   url: string;
   sourceKind: SourceKind;
   youtubeVideoId?: string;
+  channelId?: string;
+  channelAvatarUrl?: string;
   imageUrl?: string;
   publishedAt: string;
   summary: string;

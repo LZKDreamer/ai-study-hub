@@ -1,3 +1,4 @@
+import "./load-env";
 import { collectCandidates } from "./content-sources";
 
 async function main() {

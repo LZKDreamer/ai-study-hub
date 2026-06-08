@@ -49,11 +49,17 @@ function validateItem(item: ContentItem, index: number, seenSlugs: Set<string>, 
   assert(isVisibleMetric(item.metrics?.likes), `Item ${item.id} has an unavailable likes metric.`);
   assert(isVisibleMetric(item.metrics?.stars), `Item ${item.id} has an unavailable stars metric.`);
 
+  if (item.platform === "YouTube") {
+    assert(!item.metrics, `YouTube item ${item.id} should not include metrics.`);
+  }
+
   if (item.sourceKind === "video") {
     const videoId = item.youtubeVideoId;
     if (!isNonEmptyString(videoId)) throw new Error(`Video item ${item.id} needs youtubeVideoId.`);
     assert(!seenVideoIds.has(videoId), `Duplicate youtubeVideoId: ${videoId}`);
     seenVideoIds.add(videoId);
+    assert(isNonEmptyString(item.imageUrl), `Video item ${item.id} needs imageUrl.`);
+    assert(item.platform === "YouTube", `Video item ${item.id} should use YouTube platform.`);
   }
 }
 
