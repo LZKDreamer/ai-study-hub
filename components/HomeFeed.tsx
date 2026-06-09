@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import type { ContentItem } from "@/lib/content";
 import { formatPublishedLabel, getItemHref } from "@/lib/content";
 
@@ -37,40 +38,28 @@ function ChannelAvatar({ item }: { item: ContentItem }) {
   );
 }
 
-function ExternalLinkIcon() {
-  return (
-    <span className="external-indicator" aria-hidden="true">
-      <svg viewBox="0 0 20 20">
-        <path d="M7 5H5.5A2.5 2.5 0 0 0 3 7.5v7A2.5 2.5 0 0 0 5.5 17h7A2.5 2.5 0 0 0 15 14.5V13" />
-        <path d="M10 3h7v7" />
-        <path d="m9 11 8-8" />
-      </svg>
-    </span>
-  );
-}
-
 export function HomeFeed({ items }: HomeFeedProps) {
   return (
     <section className="feed" aria-label="AI 学习内容推荐列表">
-      {items.map((item) => (
-        <ArticleCard item={item} key={item.id} />
+      {items.map((item, index) => (
+        <ArticleCard item={item} index={index} key={item.id} />
       ))}
     </section>
   );
 }
 
-function ArticleCard({ item }: { item: ContentItem }) {
+function ArticleCard({ item, index }: { item: ContentItem; index: number }) {
   const media = getMedia(item);
 
   return (
     <Link
-      className={`case-card ${media ? "has-media" : ""}`}
+      className={`case-card ${media ? "has-media" : ""} ${item.featured ? "is-featured" : ""}`}
       href={getItemHref(item)}
       aria-label={`打开来源：${item.title}`}
       rel="noopener noreferrer"
+      style={{ "--card-index": index } as CSSProperties}
       target="_blank"
     >
-      <ExternalLinkIcon />
       {media ? (
         <div className="card-media">
           {/* eslint-disable-next-line @next/next/no-img-element */}
