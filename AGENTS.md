@@ -93,6 +93,12 @@ AI may generate recommendation summaries and tags only. It must not invent origi
 - Daily automation must be failure tolerant: if public sources, network, or AI generation fail, keep the checked-in data rather than publishing broken JSON.
 - Do not hard-code secrets. Agnes AI credentials must come from `.env.local`, GitHub Secrets, or deployment environment variables.
 
+## Local Codex Skill Installation
+
+- Install Codex skills as real directories under `C:\Users\admin\.codex\skills\<skill-name>`.
+- Do not use `D:\software\Codex\home\Skill` plus Junction links for new skill installs unless explicitly requested.
+- A valid skill directory must contain `SKILL.md` directly under the skill folder.
+
 ## Current User Preferences
 
 - Public content is required; English content is allowed when the displayed title and summary are Chinese.
