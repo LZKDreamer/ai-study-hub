@@ -406,6 +406,10 @@ button {
   white-space: nowrap;
 }
 
+.updated-label-short {
+  display: none;
+}
+
 .icon-button {
   display: grid;
   place-items: center;
@@ -458,7 +462,7 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 1.1rem;
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 1rem;
   border: 1px solid var(--border-soft);
   border-radius: 8px;
   background: rgba(17, 24, 39, 0.78);
@@ -479,6 +483,38 @@ button {
   border-color: rgba(71, 85, 105, 0.95);
   background: rgba(23, 32, 51, 0.8);
   outline: none;
+}
+
+.external-indicator {
+  position: absolute;
+  top: 0.92rem;
+  right: 0.92rem;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(71, 85, 105, 0.72);
+  border-radius: 7px;
+  color: #9fb4d2;
+  background: rgba(15, 23, 42, 0.42);
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.external-indicator svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.case-card:hover .external-indicator,
+.case-card:focus-visible .external-indicator {
+  border-color: rgba(56, 189, 248, 0.58);
+  color: var(--blue);
+  background: rgba(56, 189, 248, 0.1);
 }
 
 .case-card:focus-visible {
@@ -993,8 +1029,17 @@ button {
     padding: 0.65rem 0;
   }
 
-  .header-actions span {
+  .header-actions {
+    align-self: center;
+    font-size: 0.72rem;
+  }
+
+  .updated-label-full {
     display: none;
+  }
+
+  .updated-label-short {
+    display: inline;
   }
 
   .brand small {
@@ -1086,7 +1131,7 @@ button {
   }
 
   .case-card {
-    padding: 0.78rem;
+    padding: 0.78rem 2.8rem 0.78rem 0.78rem;
   }
 
   .case-card h2 {
@@ -1128,5 +1173,31 @@ button {
 
   .article-page {
     padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body::after,
+  .brand strong::after,
+  .cursor-glow {
+    animation: none !important;
+  }
+
+  .cursor-glow {
+    display: none;
+  }
+
+  .case-card:hover,
+  .case-card:focus-visible {
+    transform: none;
   }
 }

@@ -36,7 +36,8 @@ export function SiteHeader({ lastUpdatedLabel }: SiteHeaderProps) {
         </span>
       </Link>
       <div className="header-actions">
-        <span>最后更新 {lastUpdatedLabel}</span>
+        <span className="updated-label-full">最后更新 {lastUpdatedLabel}</span>
+        <span className="updated-label-short">{lastUpdatedLabel} 更新</span>
       </div>
     </header>
   );

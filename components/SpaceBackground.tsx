@@ -82,6 +82,44 @@ export function SpaceBackground() {
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     if (!ctx) return;
 
+    const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduceMotionQuery.matches) {
+      const staticCanvas = canvas;
+      const staticCtx = ctx;
+
+      function drawStaticBackground() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        staticCanvas.width = Math.floor(width * dpr);
+        staticCanvas.height = Math.floor(height * dpr);
+        staticCanvas.style.width = `${width}px`;
+        staticCanvas.style.height = `${height}px`;
+        staticCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const background = staticCtx.createLinearGradient(0, 0, 0, height);
+        background.addColorStop(0, "#050510");
+        background.addColorStop(1, "#071426");
+        staticCtx.fillStyle = background;
+        staticCtx.fillRect(0, 0, width, height);
+
+        for (let index = 0; index < Math.floor((width * height) / 14000); index += 1) {
+          const x = hash(index * 11.7) * width;
+          const y = hash(index * 23.3) * height;
+          const radius = hash(index * 5.1) * 1.1 + 0.25;
+          const alpha = hash(index * 9.2) * 0.42 + 0.2;
+          dot(staticCtx, x, y, radius, `rgba(220,240,255,${alpha})`);
+        }
+      }
+
+      drawStaticBackground();
+      window.addEventListener("resize", drawStaticBackground);
+
+      return () => {
+        window.removeEventListener("resize", drawStaticBackground);
+      };
+    }
+
     const milkyCanvas = document.createElement("canvas");
     const milkyCtx = milkyCanvas.getContext("2d") as CanvasRenderingContext2D;
     const glowCanvas = document.createElement("canvas");
@@ -473,6 +511,9 @@ export function SpaceBackground() {
   }, []);
 
   useEffect(() => {
+    const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduceMotionQuery.matches) return;
+
     function onMove(event: MouseEvent) {
       document.documentElement.style.setProperty("--mouse-x", `${event.clientX}px`);
       document.documentElement.style.setProperty("--mouse-y", `${event.clientY}px`);

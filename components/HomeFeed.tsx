@@ -33,7 +33,19 @@ function ChannelAvatar({ item }: { item: ContentItem }) {
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img className="channel-avatar" alt="" src={item.channelAvatarUrl} />
+    <img className="channel-avatar" alt="" src={item.channelAvatarUrl} loading="lazy" decoding="async" />
+  );
+}
+
+function ExternalLinkIcon() {
+  return (
+    <span className="external-indicator" aria-hidden="true">
+      <svg viewBox="0 0 20 20">
+        <path d="M7 5H5.5A2.5 2.5 0 0 0 3 7.5v7A2.5 2.5 0 0 0 5.5 17h7A2.5 2.5 0 0 0 15 14.5V13" />
+        <path d="M10 3h7v7" />
+        <path d="m9 11 8-8" />
+      </svg>
+    </span>
   );
 }
 
@@ -55,17 +67,18 @@ function ArticleCard({ item }: { item: ContentItem }) {
       className={`case-card ${media ? "has-media" : ""}`}
       href={getItemHref(item)}
       aria-label={`打开来源：${item.title}`}
-      rel="noreferrer"
+      rel="noopener noreferrer"
       target="_blank"
     >
+      <ExternalLinkIcon />
       {media ? (
         <div className="card-media">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img alt={media.alt} src={media.src} />
+          <img alt={media.alt} src={media.src} loading="lazy" decoding="async" />
         </div>
       ) : null}
       <div className="card-body">
-        <h2>{item.originalTitle || item.title}</h2>
+        <h2 title={item.originalTitle || item.title}>{item.title}</h2>
         <div className="channel-row">
           <ChannelAvatar item={item} />
           <span>{item.author}</span>
